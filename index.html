@@ -129,6 +129,10 @@
 </style>
 <style>
   #analize,#oblasti,#metod{scroll-margin-top:72px}
+.brand{display:inline-flex;align-items:center;gap:12px;color:#201e1d;text-decoration:none}
+.brand .by{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;letter-spacing:.02em;color:#605d5d;padding-left:12px;border-left:2px solid #d7d3d3;line-height:1;white-space:nowrap}
+.brand .by img{display:block;width:20px;height:20px}
+@media (max-width:420px){.brand .byw{display:none}.brand > span:first-child{font-size:17px !important}.brand{gap:8px}.brand .by{font-size:11px;gap:5px;padding-left:8px}.brand .by img{width:16px;height:16px}}
   .card{transition:background .2s ease}
   .card:hover{background:#fff0f1}
   .card-soon{color:#605d5d}
@@ -146,7 +150,7 @@
 
   <div style="position:sticky;top:0;z-index:20;background:#f3f2f2;border-bottom:2px solid #201e1d">
     <div id="bar" style="max-width:1280px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-      <a href="#top" style="font-size:19px;font-weight:800;letter-spacing:-.03em;color:#201e1d">Podaci<span style="color:#d40511">.me</span></a>
+      <a href="#top" class="brand" aria-label="Podaci.me by Fidelity Consulting"><span style="font-size:19px;font-weight:800;letter-spacing:-.03em">Podaci<span style="color:#d40511">.me</span></span><span class="by"><span class="byw">by</span><img src="/fidelity-logo.svg" alt="" width="20" height="20"><span>Fidelity Consulting</span></span></a>
       <button type="button" id="nav-toggle" aria-label="Meni" aria-expanded="false" aria-controls="nav" style="display:none;border:2px solid #201e1d;background:transparent;font:inherit;font-weight:700;font-size:13px;letter-spacing:.06em;padding:8px 12px;cursor:pointer">MENI</button>
       <div id="nav" style="display:flex;align-items:center;gap:28px">
         <a href="#analize" style="font-size:13px;font-weight:600;letter-spacing:.02em;color:#201e1d">Analize</a>

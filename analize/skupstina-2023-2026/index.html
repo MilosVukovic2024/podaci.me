@@ -255,6 +255,11 @@ a{color:inherit}
 .sitebar .in{max-width:1280px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .sitebar .logo{font-size:19px;font-weight:800;letter-spacing:-.03em;color:#201e1d;text-decoration:none}
 .sitebar .logo span{color:#d40511}
+.brand{display:inline-flex;align-items:center;gap:12px;color:#201e1d;text-decoration:none}
+.brand .by{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;letter-spacing:.02em;color:#605d5d;padding-left:12px;border-left:2px solid #d7d3d3;line-height:1;white-space:nowrap}
+.brand .by img{display:block;width:20px;height:20px}
+@media (max-width:420px){.brand .byw{display:none}.brand > span:first-child{font-size:17px !important}.sitebar nav a.cta{display:none}.sitebar .in{gap:10px}.sitebar nav a.cta{padding:9px 12px}.brand{gap:8px}.brand .by{font-size:11px;gap:5px;padding-left:8px}.brand .by img{width:16px;height:16px}}
+
 .sitebar nav{display:flex;align-items:center;gap:28px}
 .sitebar nav a{font-size:13px;font-weight:600;letter-spacing:.02em;color:#201e1d;text-decoration:none}
 .sitebar nav a:hover{color:#d40511}
@@ -290,7 +295,7 @@ section.panel{border:2px solid #201e1d;scroll-margin-top:120px}
 </head>
 <body>
 <div class="sitebar"><div class="in">
-  <a class="logo" href="/">Podaci<span>.me</span></a>
+  <a class="brand" href="/" aria-label="Podaci.me by Fidelity Consulting"><span class="logo">Podaci<span>.me</span></span><span class="by"><span class="byw">by</span><img src="/fidelity-logo.svg" alt="" width="20" height="20"><span>Fidelity Consulting</span></span></a>
   <nav aria-label="Sajt">
     <a href="/#analize">Analize</a>
     <a href="/#oblasti">Oblasti</a>

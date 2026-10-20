@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="sr-Latn-ME" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Velje brdo: obećano 20.000 stanova, izgrađeno 0 — Podaci.me</title>
+<meta name="description" content="Projekat Velje brdo dvije godine poslije najave: obećanja Vlade pored ugovora, budžeta, rokova i satelitskih snimaka terena. Ugovoreno 185 stanova, izgrađeno 0.">
+<link rel="canonical" href="https://www.podaci.me/analize/velje-brdo/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.podaci.me/analize/velje-brdo/">
+<meta property="og:title" content="Velje brdo: obećano 20.000 stanova, izgrađeno 0 — Podaci.me">
+<meta property="og:description" content="Obećanja Vlade pored ugovora, budžeta, rokova i satelitskih snimaka. Sa satelita se vidi samo probijena trasa puta od 5,2 km.">
+<meta property="og:image" content="https://www.podaci.me/og-velje-brdo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="sr_ME">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.podaci.me/og-velje-brdo.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Velje brdo: obećano 20.000 stanova, izgrađeno 0","datePublished":"2026-10-20","inLanguage":"sr-Latn-ME","publisher":{"@id":"https://www.podaci.me/#organization","@type":"Organization","name":"Podaci.me"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: data-journalism long-read on a 1280px grid; sticky bar with reading progress, split hero,
+   then numbered plates framed by 2px rules. Red marks promises and what is missing; the satellite
+   shows the terrain. Motion: each plate has its own data-driven choreography, replayable. */
+:root{
+  --page:#ffffff; --surface:#ffffff; --raised:#ffffff;
+  --ink:#201e1d; --ink-2:#444141; --muted:#605d5d;
+  --rule:#201e1d; --rule-soft:#d7d3d3;
+  --grid:#e3e7eb; --axis:#c3c9cf;
+  --accent:#d40511; --accent-ink:#96040e; --on-accent:#ffffff; --accent-wash:rgba(212,5,17,.08); --accent-soft:rgba(212,5,17,.18);
+  --g1:#cdd2d8; --g2:#7b828b;
+  --halo:rgba(20,18,17,.78); --on-photo:#ffffff;
+  --tip-bg:#201e1d; --tip-ink:#f3f2f2;
+  --f-ui:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-io:cubic-bezier(.65,0,.35,1);
+  --gutter:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+}
+:root{color-scheme:light}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--f-ui);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--page)}
+a{color:var(--accent-ink);text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 1.5px no-repeat;transition:background-size .35s var(--ease-out),color .2s}
+a:hover{color:var(--accent);background-size:100% 1.5px}
+::selection{background:var(--accent-soft)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button{font-family:inherit}
+.in{max-width:1280px;margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
+@media (min-width:900px){.in{padding-left:max(32px, env(safe-area-inset-left, 0px));padding-right:max(32px, env(safe-area-inset-right, 0px))}}
+
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes scan{0%{top:-2%;opacity:0}8%{opacity:1}100%{top:100%;opacity:.8}}
+@keyframes stamp{0%{transform:scale(2.6) rotate(-16deg);opacity:0;filter:blur(2px)}55%{transform:scale(.9) rotate(-5deg);opacity:1;filter:none}75%{transform:scale(1.04) rotate(-6deg)}100%{transform:scale(1) rotate(-6deg);opacity:1}}
+@keyframes shake{0%,100%{transform:none}20%{transform:translate(-3px,1px)}40%{transform:translate(3px,-1px)}60%{transform:translate(-2px,1px)}80%{transform:translate(1px,0)}}
+@keyframes pop{0%{transform:scale(0);opacity:.2}65%{transform:scale(1.22);opacity:1}100%{transform:scale(1);opacity:1}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes ring{0%{transform:scale(1);opacity:.9}100%{transform:scale(3.2);opacity:0}}
+@keyframes kb{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.08) translate(-1.5%,-1%)}}
+@keyframes flipIn{0%{transform:translateY(-110%);opacity:0}100%{transform:none;opacity:1}}
+@keyframes flash{0%{background:var(--accent-soft)}100%{background:transparent}}
+@keyframes comet{from{stroke-dashoffset:0}to{stroke-dashoffset:calc(-1px * var(--L, 2000))}}
+@keyframes zero{0%{transform:scale(1.9);opacity:.35}60%{transform:scale(.94);opacity:1}100%{transform:none;opacity:1}}
+.zero{display:inline-block;animation:zero .7s var(--ease-out) both}
+
+/* Podaci.me traka (ista kao na Skupštinskom monitoru) + traka napretka čitanja */
+.sitebar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--page);border-bottom:2px solid #201e1d}
+.sitebar .in{max-width:1280px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.sitebar a{background:none}
+.sitebar .logo{font-size:19px;font-weight:800;letter-spacing:-.03em;color:#201e1d;text-decoration:none}
+.sitebar .logo span{color:#d40511}
+.brand{display:inline-flex;align-items:center;gap:12px;color:#201e1d;text-decoration:none}
+.brand:hover{color:#201e1d}
+.brand .by{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;letter-spacing:.02em;color:#605d5d;padding-left:12px;border-left:2px solid #d7d3d3;line-height:1;white-space:nowrap}
+.brand .by img{display:block;width:20px;height:20px}
+@media (max-width:420px){.brand .byw{display:none}.brand > span:first-child{font-size:17px !important}.sitebar nav a.cta{display:none}.sitebar .in{gap:10px}.sitebar nav a.cta{padding:9px 12px}.brand{gap:8px}.brand .by{font-size:11px;gap:5px;padding-left:8px}.brand .by img{width:16px;height:16px}}
+.sitebar nav{display:flex;align-items:center;gap:28px}
+.sitebar nav a{font-size:13px;font-weight:600;letter-spacing:.02em;color:#201e1d;text-decoration:none}
+.sitebar nav a:hover{color:#d40511}
+.sitebar nav a.cta{background:#d40511;color:#fff;padding:10px 18px;font-weight:700}
+.sitebar nav a.cta:hover{background:#b00410;color:#fff}
+@media (max-width:900px){.sitebar .in{padding:0 20px}.sitebar nav a:not(.cta){display:none}}
+.prog{position:absolute;left:0;right:0;bottom:-2px;height:3px;pointer-events:none}
+.prog i{display:block;height:100%;background:var(--accent);transform:scaleX(0);transform-origin:left}
+
+/* hero */
+.hero{border-bottom:2px solid var(--rule)}
+.hero .split{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+.hero .copy{padding:72px 48px 56px 0;min-width:0}
+.eyebrow{display:flex;align-items:center;gap:10px;margin:0 0 26px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow i{width:9px;height:9px;background:var(--accent);animation:blink 1.6s infinite;flex:none}
+h1{margin:0;font-size:clamp(40px,6vw,86px);font-weight:800;letter-spacing:-.035em;line-height:.96;text-wrap:balance}
+h1 .ln{display:block}
+h1 .red{color:var(--accent);position:relative;isolation:isolate}
+h1 .num{font-variant-numeric:tabular-nums;display:inline-block;min-width:1ch}
+h1 .hl{position:absolute;left:-.08em;right:-.08em;bottom:.06em;height:.16em;background:var(--accent-soft);transform:scaleX(1);transform-origin:left;z-index:-1}
+.lede{margin:26px 0 0;max-width:46ch;font-size:clamp(18px,1.5vw,22px);line-height:1.38;font-weight:500;color:var(--ink-2);text-wrap:pretty}
+.flag{margin:18px 0 0;max-width:50ch;padding-left:16px;border-left:3px solid var(--accent);font-size:clamp(15px,1.2vw,18px);line-height:1.42;font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{position:relative;z-index:0;overflow:hidden;display:inline-flex;align-items:center;gap:10px;padding:15px 22px;font-size:15px;font-weight:700;letter-spacing:.01em;border:2px solid var(--rule);color:var(--ink);background:transparent;cursor:pointer;transition:color .3s var(--ease-out)}
+.btn::before{content:"";position:absolute;inset:0;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease-out);z-index:-1}
+.btn:hover{color:var(--page);background-size:0 0}
+.btn:hover::before{transform:scaleX(1)}
+.btn.red{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.red:hover{border-color:var(--ink);color:var(--page)}
+.btn .arr{transition:transform .35s var(--ease-out)}
+.btn:hover .arr{transform:translateX(4px)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;margin-top:48px;border-top:2px solid var(--rule);background:var(--rule-soft)}
+.stats > div{background:var(--page);padding:18px 18px 4px 0;min-width:0}
+.stats > div + div{padding-left:20px}
+.stats .v{font-size:clamp(28px,3.2vw,44px);font-weight:800;letter-spacing:-.035em;line-height:1;font-variant-numeric:tabular-nums}
+.stats .v.red{color:var(--accent)}
+.stats .l{font-size:12.5px;font-weight:600;letter-spacing:.03em;color:var(--muted);margin-top:6px;line-height:1.35}
+.hero .vis{border-left:2px solid var(--rule);position:relative;overflow:hidden;min-width:0;display:flex;flex-direction:column}
+.terrain{position:relative;flex:1;min-height:420px;background:#2a2826;overflow:hidden}
+.terrain .kb{position:absolute;inset:0;transform-origin:55% 52%}
+.terrain img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.15) brightness(1.02)}
+.terrain svg{position:absolute;inset:0;width:100%;height:100%}
+.terrain .scanline{position:absolute;left:0;right:0;height:2px;background:var(--accent);box-shadow:0 0 18px 4px rgba(212,5,17,.55);top:-2%;opacity:0;pointer-events:none;z-index:2}
+.terrain.run .scanline{animation:scan 2.4s var(--ease-out) 1 forwards}
+.terrain .vignette{position:absolute;inset:0;background:radial-gradient(ellipse at 55% 52%,transparent 45%,rgba(0,0,0,.35) 100%);pointer-events:none}
+.route-glow{fill:none;stroke:rgba(255,255,255,.6);stroke-width:13;stroke-linecap:round;stroke-linejoin:round}
+.route{fill:none;stroke:#ff1e2d;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+.comet{fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round;stroke-dasharray:70 100000;filter:drop-shadow(0 0 6px rgba(255,255,255,.9))}
+.comet.on{animation:comet 5.5s linear infinite}
+.ring{fill:none;stroke:#ff1e2d;stroke-width:3;transform-box:fill-box;transform-origin:center;opacity:0}
+.ring.on{animation:ring 2.2s var(--ease-out) infinite}
+.ptxt{font-family:var(--f-mono);font-size:24px;fill:var(--on-photo);paint-order:stroke;stroke:var(--halo);stroke-width:6px;stroke-linejoin:round}
+.ptxt.big{font-family:var(--f-ui);font-weight:800;font-size:40px;letter-spacing:-.02em}
+.vis .readout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--rule);border-top:2px solid var(--rule)}
+.vis .readout > div{background:var(--surface);padding:12px 16px}
+.vis .readout .k{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.vis .readout .x{font-size:22px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.vis .readout .x.red{color:var(--accent)}
+@media (max-width:900px){
+  .hero .split{grid-template-columns:minmax(0,1fr)}
+  .hero .copy{padding:44px 0 36px}
+  .hero .vis{border-left:0;border-top:2px solid var(--rule);margin-inline:calc(-1 * var(--gutter)) calc(-1 * var(--gutter-r))}
+  .terrain{min-height:300px}
+  .stats{grid-template-columns:minmax(0,1fr)}
+  .stats > div + div{padding-left:0}
+  .stats > div{padding:14px 0 10px}
+}
+/* entrance helper: always starts from a visible state */
+.rise{transition:transform .9s var(--ease-out),opacity .9s var(--ease-out)}
+.rise.pre{transform:translateY(18px);opacity:.3;transition:none}
+
+/* marquee */
+.marquee{border-bottom:2px solid var(--rule);background:var(--ink);color:var(--page);overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.marquee .track{display:flex;width:max-content;animation:marquee 80s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.marquee span{display:inline-flex;align-items:center;gap:12px;padding:14px 28px;font-size:15px;font-weight:600;white-space:nowrap}
+.marquee span b{font-family:var(--f-mono);font-weight:500;font-size:12px;color:var(--accent);letter-spacing:.04em}
+.marquee span::after{content:"";width:8px;height:8px;background:var(--accent);margin-left:22px}
+
+/* index with sliding indicator */
+.idx{position:sticky;top:calc(env(safe-area-inset-top,0px) + 64px);z-index:15;background:var(--page);border-bottom:2px solid var(--rule)}
+.idx nav{display:flex;gap:0;overflow-x:auto;scrollbar-width:none;position:relative}
+.idx nav::-webkit-scrollbar{display:none}
+.idx a{flex:none;font-size:13px;font-weight:600;color:var(--ink-2);padding:11px 14px;border-right:2px solid var(--rule-soft);background:none}
+.idx a:first-child{padding-left:0}
+.idx a:hover,.idx a.on{color:var(--accent);background:none}
+.idx .ind{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--accent);transition:transform .55s var(--ease-out),width .55s var(--ease-out)}
+
+/* plates */
+main{display:flex;flex-direction:column;gap:28px;padding-block:32px 24px}
+.plate{background:var(--surface);border:2px solid var(--rule);padding:30px 30px 24px;min-width:0;position:relative;scroll-margin-top:140px}
+@media (max-width:640px){.plate{padding:22px 16px 18px}}
+.plate-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 20px;align-items:start;margin-bottom:18px}
+.plate-head > *:not(.replay){grid-column:1}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px;display:flex;align-items:center}
+.kicker .no{font-family:var(--f-mono);font-weight:500;letter-spacing:.04em;color:var(--muted);margin-right:8px}
+.kicker::after{content:"";height:2px;width:48px;background:var(--accent);margin-left:12px;transform-origin:left;transition:transform .9s var(--ease-out) .15s}
+.plate.k0 .kicker::after{transform:scaleX(0);transition:none}
+.plate h2{font-size:clamp(24px,2.8vw,36px);line-height:1.08;font-weight:800;letter-spacing:-.025em;margin:0 0 10px;max-width:28ch;text-wrap:balance}
+.plate h2 .w{display:inline-block;transition:transform .8s var(--ease-out),opacity .8s var(--ease-out)}
+.plate h2.pre .w{transform:translateY(.42em);opacity:.25;transition:none}
+.plate .sub{font-size:16px;color:var(--ink-2);margin:0;max-width:70ch}
+.plate .sub strong{color:var(--accent);font-weight:700}
+.replay{grid-column:2;grid-row:1 / span 3;align-self:start;font:600 12px/1 var(--f-ui);letter-spacing:.04em;color:var(--ink);background:transparent;border:2px solid var(--rule);padding:9px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:background .2s,color .2s}
+.replay:hover{background:var(--ink);color:var(--page)}
+.replay svg{width:14px;height:14px;transition:transform .5s var(--ease-out)}
+.replay:hover svg{transform:rotate(-200deg)}
+@media (max-width:640px){.replay{position:absolute;top:14px;right:12px;width:38px;height:38px;padding:0;justify-content:center}.replay span{display:none}.plate-head .kicker{padding-right:46px}}
+.cap{font-family:var(--f-mono);font-size:11.5px;line-height:1.55;color:var(--muted);margin-top:12px;max-width:110ch}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.two > *{min-width:0}
+@media (max-width:900px){.two{grid-template-columns:minmax(0,1fr)}}
+.panel{border:2px solid var(--rule);background:var(--raised);padding:18px 18px 14px;min-width:0}
+.panel h3{font-size:17px;font-weight:800;letter-spacing:-.01em;margin:0 0 4px}
+.panel .h3sub{font-size:13px;color:var(--muted);margin:0 0 12px}
+.stage svg{display:block;width:100%;height:auto;overflow:visible}
+.stage text{font-family:var(--f-ui);fill:var(--ink-2);font-size:12px}
+.stage .ax{font-family:var(--f-mono);font-size:11px;fill:var(--muted)}
+.stage .gl{stroke:var(--grid);stroke-width:1;shape-rendering:crispEdges}
+.stage .lbl{fill:var(--ink);font-weight:700}
+.stage .lbl-acc{fill:var(--accent);font-weight:800}
+.stage [data-tip]{cursor:crosshair}
+.scroll-x{overflow-x:auto}
+@media (max-width:640px){#price,#slip{min-width:640px}#money,#subsidy,#pace{min-width:460px}}
+
+/* tooltip */
+#tip{position:fixed;z-index:60;pointer-events:none;background:var(--tip-bg);color:var(--tip-ink);padding:8px 11px;font:600 12.5px/1.35 var(--f-ui);max-width:280px;opacity:0;transform:translateY(6px);transition:opacity .15s,transform .2s var(--ease-out)}
+#tip.on{opacity:1;transform:none}
+
+/* stories player + compare */
+.player{display:grid;gap:12px}
+.frames{position:relative;aspect-ratio:1100/800;max-width:100%;background:#2a2826;overflow:hidden;border:2px solid var(--rule)}
+.frames img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:circle(0% at 53.5% 52%);transform:scale(1.07);z-index:0;transition:clip-path 1.25s var(--ease-io),transform 1.8s var(--ease-out)}
+.frames img.on{clip-path:circle(150% at 53.5% 52%);transform:scale(1);z-index:2}
+.frames img.prev{clip-path:circle(150% at 53.5% 52%);transform:scale(1);z-index:1;transition:none}
+.frames.static img{transition:none}
+.frames svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+#frameRoute{transition:opacity .5s}
+.frames .stampdate{position:absolute;left:14px;top:14px;z-index:4;overflow:hidden;font-family:var(--f-mono);font-size:13px;font-weight:500;background:var(--halo);color:var(--on-photo);padding:6px 10px}
+.frames .stampdate span{display:inline-block}
+.frames .stampdate span.flip{animation:flipIn .55s var(--ease-out)}
+.frames .stampnote{position:absolute;left:14px;bottom:14px;right:14px;z-index:4;font-size:14px;font-weight:700;color:var(--on-photo);text-shadow:0 1px 3px rgba(0,0,0,.8),0 0 10px rgba(0,0,0,.5);max-width:46ch;transition:opacity .4s,transform .5s var(--ease-out)}
+.frames .stampnote.pre{opacity:0;transform:translateY(8px);transition:none}
+.story{display:grid;grid-template-columns:auto repeat(4,minmax(0,1fr));gap:10px;align-items:start}
+.story .st{background:none;border:0;padding:0;cursor:pointer;text-align:left;display:grid;gap:6px;color:var(--muted);min-width:0}
+.story .st .bar{display:block;height:4px;background:var(--rule-soft);overflow:hidden}
+.story .st .bar i{display:block;height:100%;width:100%;background:var(--ink);transform:scaleX(0);transform-origin:left}
+.story .st.hit .bar i{background:var(--accent)}
+.story .st .lab{font-family:var(--f-mono);font-size:12px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.story .st[aria-current="true"] .lab{color:var(--ink)}
+.story .st.hit[aria-current="true"] .lab{color:var(--accent)}
+.playbtn{font:700 13px/1 var(--f-ui);color:var(--on-accent);background:var(--accent);border:0;width:40px;height:40px;cursor:pointer;display:inline-grid;place-items:center;margin-top:-14px}
+.playbtn svg{width:14px;height:14px;fill:currentColor}
+.compare{position:relative;aspect-ratio:1100/800;overflow:hidden;background:#2a2826;border:2px solid var(--rule);touch-action:pan-y;cursor:ew-resize}
+.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.compare .after{position:absolute;inset:0;clip-path:inset(0 0 0 var(--cut,50%))}
+.compare .div{position:absolute;top:0;bottom:0;left:var(--cut,50%);width:3px;margin-left:-1.5px;background:var(--on-photo);box-shadow:0 0 0 1px rgba(0,0,0,.35)}
+.compare .knob{position:absolute;top:50%;left:var(--cut,50%);width:42px;height:42px;margin:-21px 0 0 -21px;background:var(--accent);border:2px solid #fff;display:grid;place-items:center;color:#fff;font-weight:800;font-size:15px;transition:transform .3s var(--ease-out),box-shadow .3s}
+.compare.drag .knob,.compare:hover .knob{transform:scale(1.15);box-shadow:0 0 0 8px rgba(212,5,17,.25)}
+.compare .tag{position:absolute;top:12px;font-family:var(--f-mono);font-size:12px;color:var(--on-photo);background:var(--halo);padding:5px 8px;transition:opacity .2s}
+.compare .tag.l{left:12px}.compare .tag.r{right:12px}
+.range{display:flex;align-items:center;gap:12px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:10px}
+.range input{flex:1;accent-color:var(--accent);min-width:0}
+
+/* promises */
+.tally{display:flex;flex-wrap:wrap;gap:2px;background:var(--rule);border:2px solid var(--rule);margin-bottom:18px}
+.tally > div{background:var(--raised);padding:12px 16px;flex:1 1 140px;min-width:0}
+.tally .n{font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.tally .t{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.promises{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));border-top:2px solid var(--rule);border-left:2px solid var(--rule);perspective:1200px}
+.promise{background:var(--raised);border-right:2px solid var(--rule);border-bottom:2px solid var(--rule);padding:18px 18px 16px;position:relative;min-width:0;display:grid;gap:8px;align-content:start;overflow:hidden;transition:transform .8s var(--ease-out),opacity .8s var(--ease-out),background .25s}
+.promise:hover{background:var(--accent-wash)}
+.promises.pre .promise{transform:translateY(28px) rotateX(-14deg);opacity:.3;transition:none}
+.promise.hit{animation:shake .35s linear}
+.promise q{font-size:18px;font-weight:800;letter-spacing:-.015em;line-height:1.2;quotes:"„" "“";padding-right:96px}
+.promise .who{font-family:var(--f-mono);font-size:11.5px;color:var(--muted)}
+.promise .fact{font-size:14.5px;color:var(--ink-2);line-height:1.45;margin:0}
+.promise .fact b{color:var(--ink)}
+.stampx{position:absolute;top:16px;right:12px;font:800 11px/1.1 var(--f-ui);letter-spacing:.08em;text-transform:uppercase;padding:6px 8px;border:2.5px solid currentColor;transform:rotate(-6deg);max-width:96px;text-align:center}
+.stampx.no{color:var(--accent)}
+.stampx.late{color:var(--accent-ink)}
+.stampx.dispute{color:var(--ink)}
+.stampx.wait{color:var(--muted)}
+.play-stamps .stampx{animation:stamp .6s var(--ease-out) both}
+
+/* units + pace */
+.units{display:grid;grid-template-columns:repeat(25,minmax(0,1fr));gap:4px}
+.units i{aspect-ratio:1;border:1.5px solid var(--accent);position:relative;overflow:hidden;display:block;transition:opacity .9s var(--ease-out)}
+.units i.a1{background:var(--accent-wash)}
+.units i .f{position:absolute;inset:0;background:var(--accent);transform-origin:left;transition:transform 1s var(--ease-out)}
+.units.play i{animation:pop .45s var(--ease-out) both}
+.units.ghost i:not(.a1){opacity:.32}
+.units.nofill i .f{transform:scaleX(0) !important;transition:none}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin:12px 0 0;font-size:13px;color:var(--ink-2);padding:0;list-style:none}
+.legend li{display:inline-flex;align-items:center;gap:7px}
+.legend .sw{width:12px;height:12px;border:1.5px solid var(--accent);display:inline-block;flex:none}
+.legend .sw.soft{background:var(--accent-wash)}
+.legend .sw.solid{background:var(--accent)}
+.bigcount{display:flex;flex-wrap:wrap;gap:2px;background:var(--rule);border:2px solid var(--rule);margin-bottom:16px}
+.bigcount > div{background:var(--raised);padding:14px 18px;flex:1 1 160px;min-width:0}
+.bigcount .v{font-size:clamp(32px,4vw,54px);font-weight:800;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.bigcount .v.red{color:var(--accent)}
+.bigcount .t{font-size:12.5px;font-weight:600;color:var(--muted);margin-top:6px}
+
+/* obstacles */
+.obs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));border-top:2px solid var(--rule);border-left:2px solid var(--rule)}
+.ob{background:var(--raised);border-right:2px solid var(--rule);border-bottom:2px solid var(--rule);padding:18px;display:grid;gap:10px;align-content:start;min-width:0;transition:transform .8s var(--ease-out),opacity .8s var(--ease-out),background .25s}
+.ob:hover{background:var(--accent-wash)}
+.obs.pre .ob{transform:translateY(22px);opacity:.3;transition:none}
+.ob .top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ob svg.ic{width:40px;height:40px;flex:none;stroke:var(--ink);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.ob svg.ic *{stroke-dasharray:1;stroke-dashoffset:0;transition:stroke-dashoffset 1.2s var(--ease-io)}
+.obs.pre svg.ic *{stroke-dashoffset:1;transition:none}
+.ob h3{font-size:18px;font-weight:800;letter-spacing:-.01em;margin:0}
+.ob p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.45}
+.ob .src{font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.chip{font:700 11px/1 var(--f-ui);letter-spacing:.08em;text-transform:uppercase;padding:6px 8px;border:2px solid var(--accent);color:var(--accent);white-space:nowrap;transition:transform .7s var(--ease-out) .4s,opacity .7s var(--ease-out) .4s}
+.chip.grey{border-color:var(--muted);color:var(--muted)}
+.obs.pre .chip{transform:translateX(16px);opacity:.2;transition:none}
+
+/* voices */
+.notice{border:2px solid var(--rule);background:var(--raised);padding:18px 20px 18px 24px;display:grid;gap:8px;margin-bottom:18px;position:relative}
+.notice::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--accent);transform-origin:top;transition:transform 1s var(--ease-out)}
+.vo.pre .notice::before{transform:scaleY(0);transition:none}
+.notice .k{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink)}
+.quotes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));border-top:2px solid var(--rule);border-left:2px solid var(--rule)}
+.qt{background:var(--raised);border-right:2px solid var(--rule);border-bottom:2px solid var(--rule);padding:18px;display:grid;gap:8px;align-content:start;min-width:0;margin:0;transition:transform .85s var(--ease-out),opacity .85s var(--ease-out),background .25s}
+.qt:hover{background:var(--accent-wash)}
+.vo.pre .qt{opacity:.3;transition:none}
+.vo.pre .qt:nth-child(odd){transform:translateX(-24px)}
+.vo.pre .qt:nth-child(even){transform:translateX(24px)}
+.qt .side{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.qt .side.gov{color:var(--muted)}
+.qt .side.crit{color:var(--accent-ink)}
+.qt blockquote{margin:0;font-size:17px;font-weight:700;letter-spacing:-.01em;line-height:1.3}
+.qt cite{font-style:normal;font-family:var(--f-mono);font-size:11.5px;color:var(--muted)}
+
+/* footprint */
+.fp{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:760px){.fp{grid-template-columns:minmax(0,1fr)}}
+.facts{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:2px;background:var(--rule);border:2px solid var(--rule);margin:0}
+.facts dt,.facts dd{background:var(--raised);padding:10px 14px;margin:0}
+.facts dt{font-family:var(--f-mono);font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.facts dd{font-size:14.5px;font-variant-numeric:tabular-nums}
+@media (max-width:520px){.facts{grid-template-columns:minmax(0,1fr)}.facts dt{padding-bottom:2px}.facts dd{padding-top:0}}
+
+.srcs{columns:2 320px;column-gap:32px;margin:0;padding-left:18px;font-size:14px}
+.srcs li{break-inside:avoid;margin-bottom:6px}
+footer{border-top:2px solid var(--rule);margin-top:8px}
+footer .in{padding-block:28px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;font-size:12px;font-weight:600;color:var(--muted)}
+footer .sitefoot{border-top:2px solid var(--rule-soft)}
+footer .sitefoot a{color:var(--muted)}
+.plate .sub.disclose{margin-top:10px;font-size:14px;color:var(--muted)}
+
+/* satellite heat */
+.heatsat{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px;margin-top:28px;padding-top:24px;border-top:2px solid var(--rule)}
+@media (max-width:900px){.heatsat{grid-template-columns:minmax(0,1fr)}}
+.hs-stage{position:relative;aspect-ratio:1100/800;overflow:hidden;background:#2a2826;border:2px solid var(--rule)}
+.hs-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hs-base{filter:grayscale(1) contrast(1.1) brightness(.92)}
+.hs-heat{clip-path:circle(150% at 53.5% 52%);transition:clip-path 2.2s var(--ease-io),opacity .3s;mix-blend-mode:normal}
+.hs-stage.pre .hs-heat{clip-path:circle(0% at 53.5% 52%);transition:none}
+.hs-stage svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hs-area{fill:none;stroke:#fff;stroke-width:2.5;stroke-dasharray:8 7;opacity:.85}
+.hs-ringfx{fill:none;stroke:#ffb000;stroke-width:3;opacity:0}
+.hs-side{display:grid;gap:12px;align-content:start;min-width:0}
+.hs-side h3{font-size:22px;font-weight:800;letter-spacing:-.02em;margin:0;line-height:1.15}
+.hs-side p{margin:0;font-size:15px;color:var(--ink-2)}
+.hs-legend{display:grid;gap:6px}
+.hs-legend .bar{height:12px;background:linear-gradient(90deg,rgba(255,170,0,.45),#ff5000 45%,#dc001e 75%,#ffe9e9)}
+.hs-legend .lab{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.hs-ctrl{display:flex;align-items:center;gap:12px;font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.hs-ctrl input{flex:1;accent-color:var(--accent);min-width:0}
+
+/* radar */
+.radar-wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:28px;align-items:center}
+@media (max-width:900px){.radar-wrap{grid-template-columns:minmax(0,1fr)}}
+#radar text{font-family:var(--f-ui);font-size:13.5px;fill:var(--ink);font-weight:700}
+#radar .rl{font-family:var(--f-mono);font-size:10.5px;fill:var(--muted);font-weight:400}
+#radar .rp{font-family:var(--f-mono);fill:var(--accent);font-weight:500}
+@media (max-width:640px){#radar text{font-size:20px}#radar .rl{font-size:14px}}
+.rtab{width:100%;border-collapse:collapse;font-size:14px}
+.rtab th{text-align:left;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:0 8px 8px 0;border-bottom:2px solid var(--rule)}
+.rtab td{padding:9px 8px 9px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+.rtab td.p{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;width:64px}
+.rtab td .d{display:block;font-family:var(--f-mono);font-size:11px;color:var(--muted);margin-top:2px}
+.rtab .mb{display:block;height:5px;background:var(--rule-soft);margin-top:6px}
+.rtab .mb i{display:block;height:100%;background:var(--accent);transform-origin:left;transition:transform 1.2s var(--ease-out)}
+.rtab.pre .mb i{transform:scaleX(0)!important;transition:none}
+.rtab tr:hover td{background:var(--accent-wash)}
+
+/* event heatmap */
+#cal .cell{transition:transform .5s var(--ease-out),opacity .5s;transform-box:fill-box;transform-origin:center}
+#cal.pre .cell{transform:scale(.2);opacity:0;transition:none}
+#cal .rowlbl{font-family:var(--f-ui);font-size:12.5px;font-weight:700;fill:var(--ink)}
+#cal .rowlbl.empty{fill:var(--accent)}
+#cal .mlbl{font-family:var(--f-mono);font-size:10.5px;fill:var(--muted)}
+#cal .tot{font-family:var(--f-mono);font-size:11px;fill:var(--ink-2)}
+.cal-legend{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;font-size:12.5px;color:var(--ink-2);margin-top:10px}
+.cal-legend i{display:inline-block;width:14px;height:14px;margin-right:6px;vertical-align:-2px}
+
+/* network */
+.net-wrap{position:relative;border:2px solid var(--rule);background:var(--raised);overflow:hidden}
+#net{display:block;width:100%;height:auto;touch-action:none;user-select:none}
+#net .edge{fill:none;transition:opacity .3s}
+#net .edge.t-nadleznost{stroke:var(--ink);stroke-width:1.4;opacity:.55}
+#net .edge.t-ugovor{stroke:var(--accent);opacity:.9}
+#net .edge.t-kontrola{stroke:#2a78d6;stroke-width:1.6;stroke-dasharray:6 5;opacity:.85}
+#net .edge.t-kritika{stroke:#c27c00;stroke-width:1.6;stroke-dasharray:2 4;opacity:.9}
+#net .flow{fill:none;stroke:#fff;stroke-width:2;stroke-dasharray:4 16;opacity:.9;pointer-events:none}
+#net.flowing .flow{animation:netflow 1.6s linear infinite}
+@keyframes netflow{to{stroke-dashoffset:-40}}
+#net .node{cursor:grab;transition:opacity .3s}
+#net .node circle{stroke:var(--raised);stroke-width:2.5}
+#net .node text{font-family:var(--f-ui);font-size:12px;font-weight:700;fill:var(--ink);paint-order:stroke;stroke:var(--raised);stroke-width:4px;stroke-linejoin:round;pointer-events:none}
+#net .node.g-projekat text{font-size:15px;font-weight:800}
+#net .money{font-family:var(--f-mono);font-size:10.5px;fill:var(--accent);font-weight:500;paint-order:stroke;stroke:var(--raised);stroke-width:3.5px;pointer-events:none;transition:opacity .3s}
+#net.focus .edge,#net.focus .node,#net.focus .money,#net.focus .flow{opacity:.08}
+#net.focus .on{opacity:1!important}
+#net .halo{fill:none;stroke:var(--accent);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center}
+#net .halo.on{animation:ring 2.4s var(--ease-out) infinite}
+.net-legend{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.net-legend button{display:inline-flex;align-items:center;gap:8px;font:600 12.5px/1 var(--f-ui);color:var(--ink);background:transparent;border:2px solid var(--rule);padding:8px 11px;cursor:pointer;transition:background .2s,opacity .2s}
+.net-legend button[aria-pressed="false"]{opacity:.4}
+.net-legend button:hover{background:var(--accent-wash)}
+.net-legend .ln{display:inline-block;width:22px;height:0;border-top:2px solid}
+.net-legend .dot{display:inline-block;width:11px;height:11px;border-radius:50%}
+.net-hint{position:absolute;right:12px;bottom:10px;font-family:var(--f-mono);font-size:11px;color:var(--muted);background:var(--raised);padding:2px 6px}
+.net-list{margin-top:12px;font-size:13.5px}
+.net-list summary{cursor:pointer;font-weight:700}
+.net-list ul{columns:2 340px;column-gap:28px;margin:10px 0 0;padding-left:18px}
+.net-list li{break-inside:avoid;margin-bottom:4px;color:var(--ink-2)}
+@media (max-width:640px){#cal{min-width:760px}.net-wrap{overflow-x:auto}#net{min-width:760px;touch-action:pan-x pan-y}.net-hint{display:none}}
+
+/* scroll-linked entrance for plates, where the browser supports it; never hides content at rest */
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    @keyframes plateIn{from{opacity:.35;transform:translateY(44px) scale(.985)}to{opacity:1;transform:none}}
+    main > .plate{animation:plateIn linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+  }
+}
+@media (prefers-reduced-motion: no-preference){
+  .terrain .kb{animation:kb 28s ease-in-out infinite alternate}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .eyebrow i{animation:none}
+  .marquee{overflow-x:auto}
+  .marquee .track{animation:none}
+  .marquee .track [aria-hidden]{display:none}
+  .replay{display:none}
+  .frames img{transition:none}
+  *,*::before,*::after{transition-duration:0s !important;animation-duration:0s !important;animation-iteration-count:1 !important}
+}
+</style>
+</head>
+<body>
+
+<div class="sitebar"><div class="in">
+  <a class="brand" href="/" aria-label="Podaci.me by Fidelity Consulting"><span class="logo">Podaci<span>.me</span></span><span class="by"><span class="byw">by</span><img src="/fidelity-logo.svg" alt="" width="20" height="20"><span>Fidelity Consulting</span></span></a>
+  <nav aria-label="Sajt">
+    <a href="/#analize">Analize</a>
+    <a href="/#oblasti">Oblasti</a>
+    <a href="/#metod">Kako radimo</a>
+    <a href="https://www.tendering.me/">Tendering.me</a>
+    <a class="cta" href="mailto:office@fidelityconsulting.me?subject=Upit%20%E2%80%94%20Podaci.me">Kontakt</a>
+  </nav>
+</div><div class="prog" aria-hidden="true"><i id="prog"></i></div></div>
+
+<header class="hero" id="top">
+  <div class="in">
+    <div class="split">
+      <div class="copy">
+        <p class="eyebrow rise" data-d="0"><i aria-hidden="true"></i>Državni stambeni projekat · Podgorica · 20. 10. 2026.</p>
+        <h1><span class="ln rise" data-d="80">Obećano 20.000 stanova.</span> <span class="ln red rise" data-d="220"><span class="hl" id="heroHl" aria-hidden="true"></span>Izgrađeno: <span class="num" id="builtN">0</span>.</span></h1>
+        <p class="lede rise" data-d="420">Dvije godine poslije najave, na Veljem brdu se sa satelita vidi samo jedna probijena trasa puta. Ovdje su obećanja Vlade stavljena pored dokumenata, ugovora i snimaka terena.</p>
+        <p class="flag rise" data-d="540">Ugovor potpisan u avgustu 2026. obuhvata 185 stanova, sa rokom 21. 8. 2029.</p>
+        <div class="btns rise" data-d="660">
+          <a class="btn red" href="#teren">Pogledajte teren <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn" href="#obecanja">Obećanja na provjeri <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+        <div class="stats rise" data-d="780">
+          <div><div class="v red" data-count="20000">20.000</div><div class="l">stanova obećano (decembar 2024)</div></div>
+          <div><div class="v" data-count="185">185</div><div class="l">ugovoreno u prvoj fazi Bloka A1</div></div>
+          <div><div class="v red" data-count="0">0</div><div class="l">izgrađeno do 20. 10. 2026.</div></div>
+        </div>
+      </div>
+      <div class="vis">
+        <div class="terrain" id="heroTerrain">
+          <div class="kb">
+            <img src="img/teren-2026-10-07.jpg" width="1100" height="800" alt="Crno-bijeli satelitski snimak padine Veljeg brda 7. 10. 2026; crvenom linijom označena je probijena trasa puta sa serpentinama.">
+            <svg viewBox="0 0 1100 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <path class="route-glow" id="heroGlow"></path>
+              <path class="route" id="heroRoute"></path>
+              <path class="comet" id="heroComet"></path>
+              <circle class="ring" id="heroRing" r="10" cx="-50" cy="-50"></circle>
+              <circle id="heroDot" r="9" fill="#ff1e2d" stroke="#fff" stroke-width="3" cx="-50" cy="-50"></circle>
+              <text class="ptxt big" x="380" y="250" id="heroBig">5,2 km trase</text>
+              <text class="ptxt" x="380" y="284" id="heroSmall">sve što se vidi sa satelita</text>
+            </svg>
+          </div>
+          <div class="vignette" aria-hidden="true"></div>
+          <div class="scanline" aria-hidden="true"></div>
+        </div>
+        <div class="readout">
+          <div><div class="k">Snimak</div><div class="x">7. 10. 2026.</div></div>
+          <div><div class="k">Trasa (digitalizovano)</div><div class="x red"><span id="kmRead">5,2</span> km</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-label="Obećanja vlasti, hronološki">
+  <div class="track" id="mq"></div>
+</div>
+
+<div class="idx">
+  <div class="in">
+    <nav aria-label="Sadržaj" id="idx">
+      <a href="#teren">01 Teren</a>
+      <a href="#obecanja">02 Obećanja</a>
+      <a href="#profil">03 Profil</a>
+      <a href="#razmjera">04 Razmjera</a>
+      <a href="#cijena">05 Cijena</a>
+      <a href="#novac">06 Novac</a>
+      <a href="#rokovi">07 Rokovi</a>
+      <a href="#kalendar">08 Kalendar</a>
+      <a href="#prepreke">09 Prepreke</a>
+      <a href="#mreza">10 Mreža</a>
+      <a href="#glasovi">11 Glasovi</a>
+      <a href="#projekat">12 Projekat</a>
+      <a href="#izvori">13 Izvori</a>
+      <span class="ind" id="ind" aria-hidden="true"></span>
+    </nav>
+  </div>
+</div>
+
+<main class="in">
+
+  <section class="plate" id="teren" data-anim="teren" aria-labelledby="h1t">
+    <div class="plate-head">
+      <p class="kicker"><span class="no">01</span>Teren iz svemira</p>
+      <h2 id="h1t">Trasa se pojavila između marta i jula 2026. Od tada na snimcima nema novih radova.</h2>
+      <p class="sub">Četiri snimka Copernicus Sentinel-2 iste padine, sa istom skalom osvjetljenja. Vremenska linija se sama pušta; klikom na datum skačete na snimak.</p>
+      <button class="replay" type="button" data-replay="teren"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
+    </div>
+    <div class="two">
+      <div class="player">
+        <div class="frames static" id="frames">
+          <img src="img/teren-2024-10-02.jpg" width="1100" height="800" alt="Padina 2. 10. 2024, bez puteva.">
+          <img src="img/teren-2026-03-14.jpg" width="1100" height="800" alt="Padina 14. 3. 2026, bez novih radova.">
+          <img src="img/teren-2026-07-29.jpg" width="1100" height="800" alt="Padina 29. 7. 2026, probijena trasa sa serpentinama.">
+          <img src="img/teren-2026-10-07.jpg" width="1100" height="800" alt="Padina 7. 10. 2026, ista trasa, bez novih radova." class="on">
+          <svg viewBox="0 0 1100 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path id="frameRoute" fill="none" stroke="#ff1e2d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <div class="stampdate"><span id="frameDate">7. 10. 2026.</span></div>
+          <div class="stampnote" id="frameNote">Posljednji snimak bez oblaka: ista trasa, nema novih iskopa.</div>
+        </div>
+        <div class="story" id="story">
+          <button class="playbtn" type="button" id="playBtn" aria-label="Pusti vremensku liniju"><svg viewBox="0 0 14 14" aria-hidden="true"><path id="playIcon" d="M3 1.5v11l9-5.5z"/></svg></button>
+        </div>
+      </div>
+      <div>
+        <div class="compare" id="compare" style="--cut:50%">
+          <img src="img/teren-2024-10-02.jpg" width="1100" height="800" alt="Padina 2. 10. 2024.">
+          <div class="after"><img src="img/teren-2026-10-07.jpg" width="1100" height="800" alt="Padina 7. 10. 2026."></div>
+          <div class="div"></div>
+          <div class="knob" aria-hidden="true">⇆</div>
+          <span class="tag l" id="tagL">2. 10. 2024.</span><span class="tag r" id="tagR">7. 10. 2026.</span>
+        </div>
+        <div class="range"><label for="cut">Prije</label><input type="range" id="cut" min="0" max="100" value="50" aria-label="Granica između snimka iz 2024. i 2026."><span>Poslije</span></div>
+        <p class="cap">Trasa je ručno digitalizovana sa snimka od 7. 10. 2026. i duga je oko 5,2 km; zvanično najavljeni bulevar ima 5,3 km. Gradilište bulevara otvoreno je 25. 3. 2026, sa rokom od 120 dana za pripremne radove. Rezolucija je 10 m po pikselu, pa se ne vide mašine ni manji objekti. Sadrži modifikovane podatke Copernicus Sentinel (2024, 2026).</p>
+      </div>
+    </div>
+    <div class="heatsat">
+      <div class="hs-stage" id="hsStage">
+        <img class="hs-base" src="img/teren-2026-10-07.jpg" width="1100" height="800" alt="Crno-bijeli snimak padine 7. 10. 2026.">
+        <img class="hs-heat" id="hsHeat" src="img/promjena-heat.png" width="1100" height="800" alt="Toplotna mapa promjene tla: najjača promjena prati trasu puta sa serpentinama.">
+        <svg viewBox="0 0 1100 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <ellipse class="hs-area" cx="600" cy="410" rx="350" ry="210"></ellipse>
+          <circle class="hs-ringfx" id="hsRing" cx="588" cy="416" r="20"></circle>
+          <text class="ptxt" x="258" y="190">područje analize</text>
+        </svg>
+      </div>
+      <div class="hs-side">
+        <p class="kicker" style="margin:0">Toplotna mapa sa satelita</p>
+        <h3>Najjača promjena tla na padini je trasa puta. Gradilišta stanova nema.</h3>
+        <p>Boja pokazuje koliko je vegetacije nestalo i koliko je tlo posvijetlilo. Upoređeni su snimci od 2. 10. 2024. i 7. 10. 2026. Prikazana je samo promjena koja se vidi i u julu i u oktobru 2026, a nastala je poslije marta 2026.</p>
+        <div class="hs-legend"><div class="bar"></div><div class="lab"><span>slaba promjena</span><span>jaka promjena</span></div></div>
+        <div class="hs-ctrl"><label for="hsOp">Toplotna mapa</label><input type="range" id="hsOp" min="0" max="100" value="100"><span id="hsOpV">100%</span></div>
+        <p class="cap" style="margin:0">Indeks vegetacije NDVI i svjetlina iz kanala Sentinel-2 L2A, 10 m po pikselu. Manje mrlje u naselju i uz rijeku su vjerovatno bašte, njive i privatna gradnja. Izvan označenog područja prikaz je prigušen. Sadrži modifikovane podatke Copernicus Sentinel (2024, 2026).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="plate" id="obecanja" data-anim="obecanja" aria-labelledby="h2o">
+    <div class="plate-head">
+      <p class="kicker"><span class="no">02</span>Obećanja na provjeri</p>
+      <h2 id="h2o">Od devet obećanja sa rokom ili brojkom, tri roka su već prošla. Nijedno nije ispunjeno kako je najavljeno.</h2>
+      <p class="sub">Svako obećanje je upoređeno sa onim što pokazuju dokumenti, ugovori i izvještaji do 20. 10. 2026.</p>
+      <button class="replay" type="button" data-replay="obecanja"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
+    </div>
+    <div class="tally" id="tally"></div>
+    <div class="promises" id="promises"></div>
+    <p class="cap">„Sporno“: brojka zavisi od računice i strane koja je iznosi. „Čeka se“: rok još nije prošao. Izvori: CdM, Vlada, Dan, RTCG, Antena M, Investitor, RTPV.</p>
+  </section>
+
+  <section class="plate" id="profil" data-anim="profil" aria-labelledby="h3p">
+    <div class="plate-head">
+      <p class="kicker"><span class="no">03</span>Profil ostvarenja</p>
+      <h2 id="h3p">Odmakli su samo ugovori i put. Stanovi, dozvole, dokumenti i preduslovi su na nuli.</h2>
+      <p class="sub">Paukov dijagram: isprekidana mreža je ono što je obećano ili potrebno (100%), a crvena površina ono što postoji 20. 10. 2026. Svaka osa je jednostavan razlomak, objašnjen u tabeli.</p>
+      <button class="replay" type="button" data-replay="profil"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
+    </div>
+    <div class="radar-wrap">
+      <div class="stage"><svg id="radar" viewBox="0 0 640 560" role="img" aria-label="Paukov dijagram ostvarenja: ugovori za prvu fazu 100%, probijena trasa 98%, a stanovi, rokovi, dokumenti, dozvole i preduslovi blizu nule."></svg></div>
+      <table class="rtab" id="rtab"><thead><tr><th>Osa</th><th style="text-align:right">Ostvareno</th></tr></thead><tbody></tbody></table>
+    </div>
+  </section>
+
+  <section class="plate" id="razmjera" data-anim="razmjera" aria-labelledby="h3r">
+    <div class="plate-head">
+      <p class="kicker"><span class="no">04</span>Razmjera</p>
+      <h2 id="h3r">Ugovoreno je 0,9% obećanog. Tempom prve faze, 20.000 stanova gradilo bi se 324 godine.</h2>
+      <p class="sub">Svaki kvadratić je 100 stanova. Proračun tempa je ilustracija razmjera, ne prognoza: 108 faza po 185 stanova i 36 mjeseci, jedna za drugom.</p>
+      <button class="replay" type="button" data-replay="razmjera"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
+    </div>
+    <div class="bigcount">
+      <div><div class="v red" data-count="20000">20.000</div><div class="t">obećano</div></div>
+      <div><div class="v" data-count="557">557</div><div class="t">u cijelom Bloku A1 (projektovanje)</div></div>
+      <div><div class="v" data-count="185">185</div><div class="t">ugovoreno, rok 21. 8. 2029.</div></div>
+      <div><div class="v red" data-count="0">0</div><div class="t">izgrađeno</div></div>
+    </div>
+    <div class="two">
+      <div class="panel">
+        <h3>20.000 stanova u kvadratićima</h3>
+        <p class="h3sub">Popunjeno crveno: ugovoreno. Svijetlo: cijeli Blok A1.</p>
+        <div class="units" id="units" role="img" aria-label="Od 200 kvadratića po 100 stanova, Blok A1 zauzima pet i po, a ugovoreni stanovi manje od dva."></div>
+        <ul class="legend"><li><span class="sw"></span>20.000 obećano</li><li><span class="sw soft"></span>557 Blok A1</li><li><span class="sw solid"></span>185 ugovoreno</li></ul>
+      </div>
+      <div class="panel">
+        <h3>Koliko bi trajalo tempom prve faze</h3>
+        <p class="h3sub">Prva faza: 185 stanova za 36 mjeseci. Radunović: „radiće i deset vlada poslije nas“.</p>
+        <div class="stage scroll-x"><svg id="pace" viewBox="0 0 560 250" role="img" aria-label="Tempom prve faze, 20.000 stanova bilo bi završeno oko 2350. godine."></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="plate" id="cijena" data-anim="cijena" aria-labelledby="h4c">
+    <div class="plate-head">
+      <p class="kicker"><span class="no">05</span>Cijena kvadrata</p>
+      <h2 id="h4c">Obećano 1.000 € po kvadratu. Po računici iz ugovora, gradnja košta najmanje 2.808 €.</h2>
+      <p class="sub">Ministarka javnih radova Majda Adžović kaže da trošak iznosi 1.067 € i da razliku pokriva budžet. Računica od 2.808 € dijeli vrijednost ugovora neto površinom stanova (Investitor); <strong>ministarstvo je osporava</strong>.</p>
+      <button class="replay" type="button" data-replay="cijena"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
+    </div>
+    <div class="stage scroll-x"><svg id="price" viewBox="0 0 960 400" role="img" aria-label="Linijski grafikon: prosječna cijena novogradnje u Podgorici porasla je sa 1.761 € na 2.510 € po kvadratu; obećana cijena 1.000 €, računica iz ugovora 2.808 €."></svg></div>
+    <p class="cap">Linija: prosječna cijena prvih prodaja novih stanova u Podgorici (MONSTAT), €/m². Šuplje tačke: vrijednosti iz medijskih izvještaja o podacima MONSTAT-a. Ugovor: 40.049.774 € bez PDV-a za 14.260 m² neto stambene površine; uključuje glavni projekat, garaže i uređenje terena, a ne zemljište, priključke i PDV. Pređite mišem preko tačaka za vrijednosti.</p>
+  </section>
+
+  <section class="plate" id="novac" data-anim="novac" aria-labelledby="h5n">
+    <div class="plate-head">
+      <p class="kicker"><span class="no">06</span>Novac</p>
+      <h2 id="h5n">Po cijeni iz ugovora, 20.000 stanova koštalo bi oko 4,3 mlrd. €, više od cijelog državnog budžeta za 2026.</h2>
+      <p class="sub">Projekcija množi cijenu jednog stana iz ugovora (216.485 € bez PDV-a) sa 20.000. Ne uključuje zemljište, infrastrukturu ni PDV. Vlada svoju procjenu ukupne vrijednosti nije objavila.</p>
+      <button class="replay" type="button" data-replay="novac"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
+    </div>
+    <div class="two">
+      <div class="panel">
+        <h3>Projekcija naspram budžeta i stvarnog novca</h3>
+        <p class="h3sub">Milioni eura, ista skala. Isprekidana linija: cijeli budžet za 2026.</p>
+        <div class="stage scroll-x"><svg id="money" viewBox="0 0 560 280" role="img" aria-label="Projekcija 4.330 miliona eura, državni budžet za 2026. 3.790 miliona, ugovoreno do sada 72,7 miliona, u budžetima 2025. i 2026. po 10 miliona."></svg></div>
+      </div>
+      <div class="panel">
+        <h3>Koliko država dodaje po stanu</h3>
+        <p class="h3sub">Prosječan stan u prvoj fazi ima 77 m² i prodaje se za oko 77.000 €.</p>
+        <div class="stage scroll-x"><svg id="subsidy" viewBox="0 0 560 280" role="img" aria-label="Po ministarki država dodaje oko 5.200 eura po stanu; po računici iz ugovora oko 139.400 eura."></svg></div>
+      </div>
+    </div>
+    <p class="cap">Izvori: ugovor sa konzorcijumom Fidija i Ing Invest (Investitor, Sjever CG); budžet 2026. od 3,79 mlrd. € (Vlada); 10 mil. € u budžetima 2025. i 2026. (Press, Vodič kroz budžet Skupštine); izjava ministarke Adžović (Analitika). Proračuni po stanu su naši.</p>
+  </section>
+
+  <section class="plate" id="rokovi" data-anim="rokovi" aria-labelledby="h6r">
+    <div class="plate-head">
+      <p class="kicker"><span class="no">07</span>Rokovi</p>
+      <h2 id="h6r">Rok za prve stanove pomjeren je sa sredine 2026. na avgust 2029.</h2>
+      <p class="sub">Od obećanog useljenja sredinom 2026. prošlo je <strong id="lateDays">112</strong> dana.</p>
+      <button class="replay" type="button" data-replay="rokovi"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
+    </div>
+    <div class="stage scroll-x"><svg id="slip" viewBox="0 0 960 380" role="img" aria-label="Obećani rok za prve stanove: sredina 2026, pa kraj 2026, pa kraj 2027; rok iz ugovora za 185 stanova je 21. 8. 2029."></svg></div>
+    <p class="cap">Vodoravno: kada je rok izgovoren. Uspravno: koji je rok obećan. Šuplji krug je rok koji je već prošao. Izvori: CdM (21. 9. 2024), Vlada (27. 12. 2024), RTPV (22. 3. 2026), ugovor (21. 8. 2026).</p>
+  </section>
+
+  <section class="plate" id="kalendar" data-anim="kalendar" aria-labelledby="h8k">
+    <div class="plate-head">
+      <p class="kicker"><span class="no">08</span>Kalendar projekta</p>
+      <h2 id="h8k">26 mjeseci, 55 događaja: ugovori, kritike i istrage. Red za gradnju stanova je prazan.</h2>
+      <p class="sub">Toplotna mapa broji događaje iz naše hronologije po mjesecu i temi. Tamnija ćelija znači više događaja. Pređite mišem preko ćelije za spisak.</p>
+      <button class="replay" type="button" data-replay="kalendar"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
+    </div>
+    <div class="stage scroll-x"><svg id="cal" viewBox="0 0 1000 400" role="img" aria-label="Toplotna mapa događaja po mjesecima od septembra 2024. do oktobra 2026. i po temama; red Gradnja stanova nema nijedan događaj."></svg></div>
+    <div class="cal-legend"><span><i style="background:#f1efef"></i>0</span><span><i style="background:#f7c4c7"></i>1</span><span><i style="background:#ee7d86"></i>2</span><span><i style="background:#d40511"></i>3</span><span><i style="background:#7d020a"></i>4 i više događaja</span></div>
+    <p class="cap">Broj događaja iz hronologije ovog istraživanja, ne mjera ukupne medijske pažnje. Gdje tačan datum nije potvrđen, mjesec je približan.</p>
+  </section>
+
+  <section class="plate" id="prepreke" data-anim="prepreke" aria-labelledby="h7p">
+    <div class="plate-head">
+      <p class="kicker"><span class="no">09</span>Prepreke</p>
+      <h2 id="h7p">Za stanove još nema vode, dozvole ni procjene uticaja.</h2>
+      <button class="replay" type="button" data-replay="prepreke"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
+    </div>
+    <div class="obs" id="obs">
+      <div class="ob"><div class="top"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path pathLength="1" d="M20 5c6 8 11 14 11 20a11 11 0 0 1-22 0c0-6 5-12 11-20z"/><path pathLength="1" d="M14 26a6 6 0 0 0 6 5"/></svg><span class="chip">Otvoreno</span></div><h3>Voda</h3><p>Prema Standardu, Vodovod je u novembru 2025. odbio uslove za priključenje dok se ne istraže izvorišta. Mareza daje oko 60% vode Podgorici; studija kaže da se uticaj ne može isključiti. Ministarka Adžović: projekat neće ugroziti vodosnabdijevanje.</p><span class="src">Standard · 24kroz7 · Antena M</span></div>
+      <div class="ob"><div class="top"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path pathLength="1" d="M20 4 12 36M20 4l8 32M14 28h12M16 20h8M10 12h20"/></svg><span class="chip">Otvoreno</span></div><h3>Dalekovodi 400 kV</h3><p>Dva voda, Podgorica–Tirana i Podgorica–Ribarevine. Prema Standardu, CGES kaže da uslovi ne dozvoljavaju izmještanje dok su to dva odvojena dalekovoda. Ministarstvo: u koridoru se gradi samo bulevar.</p><span class="src">Standard · Press</span></div>
+      <div class="ob"><div class="top"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path pathLength="1" d="M8 32c0-14 10-24 24-24 0 14-10 24-24 24z"/><path pathLength="1" d="M8 32 22 18"/></svg><span class="chip">Nije urađeno</span></div><h3>Procjena uticaja</h3><p>Agencija za zaštitu životne sredine odlučila je da je procjena za Blok A1 obavezna. Elaborat nije urađen; postupak obično traje 12 do 18 mjeseci.</p><span class="src">Dan · PV Informer</span></div>
+      <div class="ob"><div class="top"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path pathLength="1" d="M10 4h14l6 6v26H10z"/><path pathLength="1" d="M24 4v6h6M15 20h10M15 26h10"/></svg><span class="chip">Nema</span></div><h3>Građevinska dozvola</h3><p>Nema dozvole ni za Blok A1 ni za bulevar. Za Blok A1 najavljivana je za novembar ili decembar 2026; glavni projekat je u izradi.</p><span class="src">Dan · Investitor · Antena M</span></div>
+      <div class="ob"><div class="top"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><circle pathLength="1" cx="14" cy="13" r="5"/><circle pathLength="1" cx="27" cy="15" r="4"/><path pathLength="1" d="M5 33c1-7 5-11 9-11s8 4 9 11M22 33c1-5 3-9 5-9s5 3 6 9"/></svg><span class="chip">Nacrt</span></div><h3>Pravila za kupce</h3><p>Postoji samo nacrt pravilnika: prednost imaju podstanari i mladi bračni parovi. Usvajanje je najavljeno za prvu polovinu 2026. Zabrana preprodaje nije propisana.</p><span class="src">Dan · RTCG</span></div>
+      <div class="ob"><div class="top"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><ellipse pathLength="1" cx="20" cy="10" rx="11" ry="4"/><path pathLength="1" d="M9 10v8c0 2 5 4 11 4s11-2 11-4v-8M9 18v8c0 2 5 4 11 4s11-2 11-4v-8"/></svg><span class="chip">Nije objavljeno</span></div><h3>Finansijski model</h3><p>Studija izvodljivosti, finansijska analiza i izvještaji Koordinacionog tijela nisu objavljeni. Banka za kamatu od 1,2% nije imenovana. Prema saopštenju podstanara, AZLP je utvrdila da ministarstvo nije u roku odlučilo o njihovom zahtjevu.</p><span class="src">MINA · RTNK</span></div>
+      <div class="ob"><div class="top"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path pathLength="1" d="M6 30 14 8l20 6-6 20z"/><path pathLength="1" d="M14 8l4 16 16-10M18 24l10 10"/></svg><span class="chip grey">Nejasno</span></div><h3>Zemljište</h3><p>Ministarka Adžović kaže da je više od 90% parcela državno. Površina i trošak eksproprijacije ostatka nisu objavljeni.</p><span class="src">CdM · Antena M · Dan</span></div>
+    </div>
+  </section>
+
+  <section class="plate" id="mreza" data-anim="mreza" aria-labelledby="h10m">
+    <div class="plate-head">
+      <p class="kicker"><span class="no">10</span>Mreža aktera</p>
+      <h2 id="h10m">Ko je s kim povezan: novac teče od jednog ministarstva, a kritike i kontrola dolaze sa svih strana.</h2>
+      <p class="sub">Svaka veza je dokumentovana u izvorima. Debljina crvene linije prati vrijednost ugovora. Pređite mišem preko čvora da vidite njegove veze, a čvorove možete i pomjerati.</p>
+      <button class="replay" type="button" data-replay="mreza"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
+    </div>
+    <div class="net-legend" id="netLegend" role="group" aria-label="Prikaži ili sakrij vrste veza">
+      <button type="button" data-type="nadleznost" aria-pressed="true"><span class="ln" style="border-color:var(--ink)"></span>Nadležnost</button>
+      <button type="button" data-type="ugovor" aria-pressed="true"><span class="ln" style="border-color:var(--accent);border-top-width:4px"></span>Ugovor ili nagrada</button>
+      <button type="button" data-type="kontrola" aria-pressed="true"><span class="ln" style="border-color:#2a78d6;border-top-style:dashed"></span>Kontrola i uslovi</button>
+      <button type="button" data-type="kritika" aria-pressed="true"><span class="ln" style="border-color:#c27c00;border-top-style:dotted"></span>Kritika i mediji</button>
+      <span style="display:inline-flex;align-items:center;gap:12px;font-size:12.5px;color:var(--ink-2);margin-left:6px"><span><span class="dot" style="background:var(--ink)"></span> vlast</span><span><span class="dot" style="background:var(--accent)"></span> izvođači</span><span><span class="dot" style="background:#2a78d6"></span> institucije</span><span><span class="dot" style="background:#c27c00"></span> kritičari, mediji</span></span>
+    </div>
+    <div class="net-wrap"><svg id="net" viewBox="0 0 1000 660" role="img" aria-label="Mreža aktera projekta Velje brdo; spisak veza nalazi se ispod mreže."></svg><span class="net-hint">povucite čvor</span></div>
+    <details class="net-list"><summary>Spisak svih veza</summary><ul id="netList"></ul></details>
+  </section>
+
+  <section class="plate vo" id="glasovi" data-anim="glasovi" aria-labelledby="h8g">
+    <div class="plate-head">
+      <p class="kicker"><span class="no">11</span>Saslušanje i glasovi</p>
+      <h2 id="h8g">Šta kažu vlast, kritičari i institucije</h2>
+      <button class="replay" type="button" data-replay="glasovi"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
+    </div>
+    <div class="notice">
+      <span class="k">Saslušanje u SPO-u · objavljeno 14. 10. 2026.</span>
+      <p style="margin:0">Prema izvještaju Vijesti, koji je potvrdio kabinet ministra, Specijalno policijsko odjeljenje saslušalo je ministra Slavena Radunovića i Mirjanu Đurišić, v.d. generalne direktorice Direktorata glavnog državnog arhitekte. Povod je, prema ministru, anonimna prijava „jednog od protivnika projekta“ o navodnim proceduralnim manjkavostima konkursa. Datum saslušanja nije poznat. Radunović kaže da ništa nije bilo nezakonito. Niko nije optužen; saopštenje tužilaštva ni policije nismo našli.</p>
+    </div>
+    <div class="quotes">
+      <figure class="qt"><span class="side gov">Vlada</span><blockquote>„Crnogorski san konačno može da počne.“</blockquote><cite>Milojko Spajić, 27. 12. 2024.</cite></figure>
+      <figure class="qt"><span class="side gov">Vlada</span><blockquote>„Projekat Velje brdo radiće i deset vlada poslije nas.“</blockquote><cite>Slaven Radunović, mart 2026.</cite></figure>
+      <figure class="qt"><span class="side gov">Vlada</span><blockquote>„I ako istraživanje pokaže da se Velje brdo nalazi u zoni sanitarne zaštite izvorišta Mareza, to ne znači zabranu gradnje.“</blockquote><cite>Majda Adžović, Skupština, jun 2026.</cite></figure>
+      <figure class="qt"><span class="side crit">Iz Vlade, upozorenje</span><blockquote>„Bilo kakve izgradnje na Veljem brdu neće i ne može biti“ dok se ne sprovede procjena uticaja.</blockquote><cite>Zoran Dabetić, državni sekretar Ministarstva ekologije, jesen 2026.</cite></figure>
+      <figure class="qt"><span class="side crit">Struka</span><blockquote>„Velje brdo se može samo u snovima zamisliti.“</blockquote><cite>Radenko Pejović, penzionisani profesor Građevinskog fakulteta, Monitor, 8. 5. 2026.</cite></figure>
+      <figure class="qt"><span class="side crit">Opozicija</span><blockquote>„Rokovi za Velje brdo ponovo se pomjeraju.“</blockquote><cite>Ana Novaković Đurović, URA, 19. 10. 2026.</cite></figure>
+      <figure class="qt"><span class="side crit">Civilni sektor</span><blockquote>„Nema zakona niti odluke Vlade koji bi formalno garantovali realizaciju prema prvobitnim najavama.“</blockquote><cite>Udruženje podstanara Crne Gore</cite></figure>
+      <figure class="qt"><span class="side crit">Civilni sektor</span><blockquote>„Velje Brdo je obmana – 3,5 milijardi za iluziju bez pokrića.“</blockquote><cite>Sonja Dragović, NVO KANA, april 2026. Ministarstvo kaže da je konkurs sproveden zakonito.</cite></figure>
+    </div>
+  </section>
+
+  <section class="plate" id="projekat" data-anim="projekat" aria-labelledby="h9p">
+    <div class="plate-head">
+      <p class="kicker"><span class="no">12</span>Kako bi naselje trebalo da izgleda</p>
+      <h2 id="h9p">Prvi blok zauzima manje od jednog procenta planirane zone.</h2>
+      <p class="sub">Za Blok A1 izabrano je rješenje Dejana Milanovića i Grozdane Šišović iz Srbije, od 29 radova na međunarodnom konkursu. Zvanične vizualizacije objavljene su <a href="https://www.architecturalcompetitions.me/me/detaljno/rezultati-medunarodnog-konkursa-za-urbanisticko-ahitektonsko-idejno-rjesenje-bloka-a1-u-okviru-prve-faze-realizacije-naselja-velje-brdo">na sajtu konkursa Ministarstva prostornog planiranja</a>.</p>
+      <button class="replay" type="button" data-replay="projekat"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
+    </div>
+    <div class="fp">
+      <div class="stage"><svg id="foot" viewBox="0 0 320 360" role="img" aria-label="Kvadrat zone od 912 hektara i mali kvadrat Bloka A1 od 6,1 hektar, 0,7 posto zone."></svg></div>
+      <dl class="facts">
+        <dt>Zona naselja</dt><dd>912 ha, od toga 393 ha zelenih površina; plan za 40.000–42.000 stanovnika</dd>
+        <dt>Blok A1</dt><dd>61.356 m², 557 stanova: 296 od 60 m² i 261 od 100 m², u tri etape</dd>
+        <dt>Prva faza</dt><dd>6 zgrada, 185 stanova (106 od 60 m², 79 od 100 m²), 2 podzemne garaže sa 384 mjesta</dd>
+        <dt>Izvođač</dt><dd>Konzorcijum IGP Fidija i Ing Invest, jedina ponuda; 9 podizvođača</dd>
+        <dt>Bulevar</dt><dd>5,3 km, Eurozox, 30,86 mil. € bez PDV-a, rok 540 dana</dd>
+        <dt>Cijelo naselje</dt><dd>najmanje 3,5 mlrd. € prema anonimnom izvoru iz građevinarstva (Vijesti, 2024); Vlada nije objavila procjenu</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="plate" id="izvori" aria-labelledby="h10i">
+    <div class="plate-head">
+      <p class="kicker"><span class="no">13</span>Izvori</p>
+      <h2 id="h10i">Dokumenti i tekstovi na kojima se stranica zasniva</h2>
+      <p class="sub">Glavni izvori su navedeni ispod. Tvrdnje koje potiču iz samo jednog izvora navedene su uz ime tog izvora. Naše računice, kao projekcija troška i tempo gradnje, označene su kao naše.</p>
+      <p class="sub disclose">Napomena: Podaci.me izdaje Fidelity Consulting, koji je o ovom projektu i ranije javno objavljivao kritike. Te kritike su u analizi prikazane kao i ostali izvori, u kalendaru i u mreži aktera.</p>
+    </div>
+    <ul class="srcs">
+      <li><a href="https://www.cdm.me/ekonomija/spajic-na-predstavljanju-projekta-velje-brdo-prvi-stanovi-sredinom-2026-godine-kvadrat-ce-biti-1-000-eura-sa-kamatom-12-odsto/">CdM: predstavljanje projekta, 21. 9. 2024.</a></li>
+      <li><a href="https://www.gov.me/en/article/nothing-will-halt-the-implementation-of-the-velje-brdo-project-spatial-and-urban-plan-to-be-adopted-by-year-end">Vlada: „Ništa neće zaustaviti realizaciju projekta“</a></li>
+      <li><a href="https://www.gov.me/clanak/otvoreno-gradiliste-za-izgradnju-bulevara-velje-brdo">Vlada: otvoreno gradilište bulevara</a></li>
+      <li><a href="https://cejn.gov.me/tenders/view-tender/117917">Portal javnih nabavki: tender i ugovor za Blok A1</a></li>
+      <li><a href="https://investitor.me/2026/08/25/drzava-potpisala-ugovor-s-fidijom-kvadrat-stana-na-veljem-brdu-kostace-najmanje-2-808-eura/">Investitor: kvadrat će koštati najmanje 2.808 €</a></li>
+      <li><a href="https://www.portalanalitika.me/clanak/pocinje-gradnja-na-veljem-brdu-potpisan-ugovor-vrijedan-40-miliona-eura">Analitika: Adžović o cijeni od 1.067 €</a></li>
+      <li><a href="https://www.sjevercg.me/sta-pise-u-ugovoru-od-485-miliona-za-velje-brdo-fidija-vodi-posao-devet-podizvodaca-penali-za-kasnjenje/">Sjever CG: šta piše u ugovoru</a></li>
+      <li><a href="https://monstat.org/uploads/files/gradjevinarstvo/Cijene%20stanova%20u%20novogradnji/2026/2/Cijene%20stanova%20u%20novogradnji_II_kvartal_2026.pdf">MONSTAT: cijene novogradnje, II kvartal 2026.</a></li>
+      <li><a href="https://standard.co.me/biznis/vodovod-ne-da-uslove-za-velje-brdo-izmedju-zedji-i-dalekovoda-brojne-prepreke-za-realizaciju-planiranog-naselja">Standard: Vodovod ne da uslove</a></li>
+      <li><a href="https://www.dan.co.me/vijesti/hronika/radunovic-saslusan-zbog-veljeg-brda-spo-ispituje-valjanost-vladinog-projekta-gradnje-najavljenih-stanova/">Dan: Radunović saslušan zbog Veljeg brda</a></li>
+      <li><a href="https://www.dan.co.me/vijesti/drustvo/nishta-od-pochietka-ghradnjie-stanova-u-dietsiembru-1054103/">Dan: Ništa od početka gradnje u decembru</a></li>
+      <li><a href="https://investitor.me/2026/10/16/velje-brdo-skijalista-i-bolnice-predlozeno-preusmjeravanje-skoro-29-miliona-eura-iz-kapitalnog-budzeta/">Investitor: preusmjeravanje 4,83 mil. €</a></li>
+      <li><a href="https://tvpljevlja.me/2026/03/22/radunovic-projekat-velje-brdo-radice-i-deset-vlada-poslije-nas/">RTPV: Radunović o „deset vlada“</a></li>
+      <li><a href="https://www.gov.me/clanak/vlada-crne-gore-utvrdila-predlog-zakona-o-budzetu-za-2026-godinu-i-odluku-o-zaduzivanju">Vlada: budžet za 2026.</a></li>
+      <li><a href="https://registry.opendata.aws/sentinel-2-l2a-cogs/">Copernicus Sentinel-2 L2A, arhiva na AWS Open Data</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="in">
+    <span>Stanje informacija: 20. 10. 2026.</span>
+    <span>Satelitski snimci: Copernicus Sentinel-2 L2A, prirodne boje. Sadrži modifikovane podatke Copernicus Sentinel (2024, 2026).</span>
+  </div>
+  <div class="in sitefoot">
+    <span>© 2026 Podaci.me · Fidelity Consulting d.o.o. Podgorica</span>
+    <span><a href="/">Početna</a> · <a href="/#analize">Analize</a> · <a href="/analize/skupstina-2023-2026/">Skupštinski monitor</a> · <a href="https://www.tendering.me/">Tendering.me</a></span>
+    <span>Biznis analitika iz Crne Gore i svijeta.</span>
+  </div>
+</footer>
+<div id="tip" aria-hidden="true"></div>
+
+<script>
+(function () {
+  'use strict';
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS = 'http://www.w3.org/2000/svg';
+  var $ = function (id) { return document.getElementById(id); };
+  var each = function (list, fn) { Array.prototype.forEach.call(list, fn); };
+  function el(tag, attrs, parent, text) {
+    var n = document.createElementNS(NS, tag);
+    if (attrs) for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (text != null) n.textContent = text;
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function nf(v, d) { return Number(v).toLocaleString('de-DE', { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 }); }
+  var E = {
+    out: function (t) { return 1 - Math.pow(1 - t, 3); },
+    io: function (t) { return t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; },
+    back: function (t) { var c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2); },
+    bounce: function (t) { var n = 7.5625, d = 2.75; if (t < 1 / d) return n * t * t; if (t < 2 / d) return n * (t -= 1.5 / d) * t + .75; if (t < 2.5 / d) return n * (t -= 2.25 / d) * t + .9375; return n * (t -= 2.625 / d) * t + .984375; }
+  };
+  var runs = {};
+  function tween(ms, step, done, ease, key) {
+    ease = ease || E.out;
+    if (key) runs[key] = (runs[key] || 0) + 1;
+    var token = key ? runs[key] : 0;
+    if (reduce) { step(1); if (done) done(); return; }
+    var t0 = performance.now();
+    function f(now) {
+      if (key && runs[key] !== token) return;
+      var t = Math.max(0, Math.min(1, (now - t0) / ms)); step(ease(t));
+      if (t < 1) requestAnimationFrame(f); else if (done) done();
+    }
+    requestAnimationFrame(f);
+  }
+  function later(fn, ms) { if (reduce) fn(); else setTimeout(fn, ms); }
+  function restart(node, cls) { node.classList.remove(cls); void node.getBoundingClientRect(); node.classList.add(cls); }
+  function drawPath(path, ms, delay) {
+    var len = path.getTotalLength();
+    path.style.transition = 'none';
+    path.style.strokeDasharray = len + ' ' + len;
+    path.style.strokeDashoffset = reduce ? 0 : len;
+    void path.getBoundingClientRect();
+    if (reduce) return;
+    setTimeout(function () { path.style.transition = 'stroke-dashoffset ' + ms + 'ms cubic-bezier(.65,0,.35,1)'; path.style.strokeDashoffset = 0; }, delay || 0);
+  }
+  function enterPre(node) { node.classList.add('pre'); void node.getBoundingClientRect(); }
+
+  // ---------- data ----------
+  var ROUTE = [[792.5,411],[782.5,425],[765,432.5],[740,439],[715,446.5],[690,455],[665,464],[640,472.5],[620,480],[600,482.5],[580,476],[565,467.5],[550,459],[537.5,455],[520,462.5],[500,470],[480,477.5],[460,486],[440,494],[422.5,502.5],[410,507.5],[402.5,506],[401,500],[407.5,492.5],[415,490],[430,477.5],[445,462.5],[460,442.5],[475,422.5],[490,407.5],[505,394],[525,382.5],[545,370],[560,360],[567.5,354],[571,347.5],[565,337.5],[555,332],[540,330],[525,331.5],[512.5,336],[502.5,345],[492.5,360],[482.5,375],[470,387.5],[457.5,397.5],[442.5,406],[427.5,414],[417.5,416],[412.5,411],[415,402.5],[425,392.5],[437.5,380],[447.5,365],[453,347.5],[449,332.5],[440,325],[429,325],[415,334],[400,345],[384,357.5]];
+  var METERS_PER_UNIT = 5;
+  var routeLen = 0;
+  for (var i = 1; i < ROUTE.length; i++) routeLen += Math.hypot(ROUTE[i][0] - ROUTE[i - 1][0], ROUTE[i][1] - ROUTE[i - 1][1]);
+  var routeKm = routeLen * METERS_PER_UNIT / 1000;
+  function smooth(pts) {
+    var d = 'M' + pts[0][0] + ',' + pts[0][1];
+    for (var i = 0; i < pts.length - 1; i++) {
+      var p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
+      d += ' C' + (p1[0] + (p2[0] - p0[0]) / 6).toFixed(1) + ',' + (p1[1] + (p2[1] - p0[1]) / 6).toFixed(1) + ' ' + (p2[0] - (p3[0] - p1[0]) / 6).toFixed(1) + ',' + (p2[1] - (p3[1] - p1[1]) / 6).toFixed(1) + ' ' + p2[0] + ',' + p2[1];
+    }
+    return d;
+  }
+  var ROUTE_D = smooth(ROUTE);
+  var FRAMES = [
+    { d: '2. 10. 2024.', note: 'Deset dana poslije predstavljanja projekta. Nema puteva.', route: false },
+    { d: '14. 3. 2026.', note: 'Jedanaest dana prije otvaranja gradilišta bulevara. Nema novih radova.', route: false },
+    { d: '29. 7. 2026.', note: 'Četiri mjeseca poslije početka pripremnih radova: trasa je probijena.', route: true },
+    { d: '7. 10. 2026.', note: 'Posljednji snimak bez oblaka: ista trasa, nema novih iskopa.', route: true }
+  ];
+  var PROMISES = [
+    { q: 'Prvi stanovi sredinom 2026.', who: 'Milojko Spajić, 21. 9. 2024.', s: 'no', st: 'Nije ispunjeno', fact: 'Rok je prošao. Ugovor za prvih <b>185 stanova</b> ističe <b>21. 8. 2029.</b>' },
+    { q: 'Kvadrat 1.000 €', who: 'Milojko Spajić, 21. 9. 2024.', s: 'dispute', st: 'Sporno', fact: 'Po računici iz ugovora gradnja košta najmanje <b>2.808 €</b> po m²; ministarka Adžović kaže <b>1.067 €</b> i da razliku plaća budžet.' },
+    { q: 'Kamata 1,2%, 30 godina, bez učešća', who: 'Milojko Spajić, 21. 9. 2024.', s: 'wait', st: 'Bez potvrde', fact: 'Banka ili fond koji bi dao takvu kamatu <b>nije imenovan</b>. Obećane rate od 290 i 390 € ne odgovaraju cijeni od 1.000 €.' },
+    { q: '20.000 stanova', who: 'Koordinaciono tijelo Vlade, decembar 2024.', s: 'dispute', st: 'Bez plana', fact: 'Ugovoreno je <b>185</b>, odnosno 0,9%. Plan finansiranja za ostatak nije objavljen.' },
+    { q: 'PUP usvojen do 31. 12. 2024.', who: 'Vlada, 14. 12. 2024.', s: 'late', st: 'Kasnilo 227 dana', fact: 'Plan je usvojen <b>15. 8. 2025.</b> na telefonskoj sjednici.' },
+    { q: 'Pravilnik o dodjeli u prvoj polovini 2026.', who: 'Ministarstvo, 2026.', s: 'no', st: 'Nije ispunjeno', fact: 'Postoji samo <b>nacrt</b>; usvojen pravilnik nismo našli.' },
+    { q: 'Građevinska dozvola u novembru', who: 'Slaven Radunović, 14. 4. 2026.', s: 'wait', st: 'Čeka se', fact: 'Glavni projekat je u izradi; procjena uticaja nije urađena.' },
+    { q: 'Gradnja stanova od decembra 2026.', who: 'Majda Adžović, avgust 2026.', s: 'wait', st: 'Čeka se', fact: 'Dan i URA navode da gradnja <b>neće početi ni u decembru</b>.' },
+    { q: 'Useljenje do kraja 2027.', who: 'Slaven Radunović, mart 2026.', s: 'wait', st: 'Čeka se', fact: 'Rok iz ugovora za prvu fazu je <b>avgust 2029.</b>' }
+  ];
+  var STATUS_ORDER = [['no', 'Nije ispunjeno'], ['late', 'Kasnilo'], ['dispute', 'Sporno / bez plana'], ['wait', 'Čeka se / bez potvrde']];
+  var MARKET = [
+    { q: 'I/24', v: 1761, src: 'MONSTAT' }, { q: 'II/24', v: 1760, src: 'mediji' }, { q: 'III/24', v: 1824, src: 'mediji' },
+    { q: 'IV/24', v: 1938, src: 'mediji' }, { q: 'I/25', v: 2066, src: 'MONSTAT' }, { q: 'II/25', v: 2108, src: 'MONSTAT' },
+    { q: 'III/25', v: 2153, src: 'MONSTAT' }, { q: 'IV/25', v: 2140, src: 'mediji' }, { q: 'I/26', v: 2395, src: 'MONSTAT' },
+    { q: 'II/26', v: 2510, src: 'MONSTAT' }
+  ];
+  var CONTRACT = { value: 40049774, area: 14260, flats: 185, months: 36 };
+  var PROMISE_PRICE = 1000, MINISTRY_PRICE = 1067;
+  var contractPerM2 = CONTRACT.value / CONTRACT.area;
+  var perFlat = CONTRACT.value / CONTRACT.flats;
+  var avgArea = CONTRACT.area / CONTRACT.flats;
+  var projection = perFlat * 20000;
+  var BUDGET_2026 = 3790;
+  var MONEY = [
+    { k: 'Projekcija: 20.000 stanova po cijeni iz ugovora', v: projection / 1e6, red: true },
+    { k: 'Cijeli državni budžet za 2026.', v: BUDGET_2026 },
+    { k: 'Ugovoreno do sada (bulevar, Blok A1, ostalo)', v: 72.65 },
+    { k: 'U budžetima 2025. i 2026. (po 10 mil. €)', v: 20 }
+  ];
+  var SUBSIDY = [
+    { k: 'Po ministarki (1.067 €/m²)', v: (MINISTRY_PRICE - PROMISE_PRICE) * avgArea },
+    { k: 'Po računici iz ugovora (2.808 €/m²)', v: perFlat - PROMISE_PRICE * avgArea, red: true }
+  ];
+  var SLIPS = [
+    { said: '2024-09-21', due: '2026-06-30', label: 'sredina 2026.', who: 'Spajić', dx: 12, dy: 18, a: 'start' },
+    { said: '2024-12-27', due: '2026-12-31', label: 'kraj 2026.', who: 'Vlada, portal', dx: -12, dy: -24, a: 'end' },
+    { said: '2026-03-22', due: '2027-12-31', label: 'kraj 2027.', who: 'Radunović', dx: -12, dy: -24, a: 'end' },
+    { said: '2026-08-21', due: '2029-08-21', label: '21. 8. 2029.', who: 'ugovor, 185 stanova', dx: -12, dy: -10, a: 'end' }
+  ];
+  var TODAY = '2026-10-20';
+
+  // ---------- tooltip ----------
+  var tip = $('tip');
+  function showTip(e, text) { tip.textContent = text; tip.classList.add('on'); moveTip(e); }
+  function moveTip(e) {
+    var x = e.clientX + 14, y = e.clientY + 16, w = tip.offsetWidth, h = tip.offsetHeight;
+    if (x + w > window.innerWidth - 8) x = e.clientX - w - 14;
+    if (y + h > window.innerHeight - 8) y = e.clientY - h - 16;
+    tip.style.left = x + 'px'; tip.style.top = y + 'px';
+  }
+  document.addEventListener('pointerover', function (e) { var t = e.target.closest && e.target.closest('[data-tip]'); if (t) showTip(e, t.getAttribute('data-tip')); });
+  document.addEventListener('pointermove', function (e) { if (tip.classList.contains('on')) moveTip(e); });
+  document.addEventListener('pointerout', function (e) { var t = e.target.closest && e.target.closest('[data-tip]'); if (t) tip.classList.remove('on'); });
+  window.addEventListener('scroll', function () { tip.classList.remove('on'); }, { passive: true });
+
+  // ---------- counters ----------
+  function countUp(node, to, ms) {
+    if (to === 0) { node.textContent = '0'; restart(node, 'zero'); return; }
+    tween(ms || 1500, function (t) { node.textContent = nf(Math.round(to * t)); });
+  }
+  function runCounters(scope, delay) {
+    each(scope.querySelectorAll('[data-count]'), function (n, i) { later(function () { countUp(n, +n.getAttribute('data-count')); }, (delay || 0) + i * 120); });
+  }
+
+  // ---------- hero choreography ----------
+  var heroRoute = $('heroRoute'), heroGlow = $('heroGlow'), heroDot = $('heroDot'), heroRing = $('heroRing'), heroComet = $('heroComet');
+  heroRoute.setAttribute('d', ROUTE_D); heroGlow.setAttribute('d', ROUTE_D); heroComet.setAttribute('d', ROUTE_D);
+  var routeL = heroRoute.getTotalLength();
+  heroComet.style.setProperty('--L', Math.round(routeL + 70));
+  var routeEnd = heroRoute.getPointAtLength(routeL);
+  heroDot.setAttribute('cx', routeEnd.x); heroDot.setAttribute('cy', routeEnd.y);
+  heroRing.setAttribute('cx', routeEnd.x); heroRing.setAttribute('cy', routeEnd.y);
+  $('kmRead').textContent = nf(routeKm, 1);
+  $('heroBig').textContent = nf(routeKm, 1) + ' km trase';
+  function playHero() {
+    // every state of the hero stays truthful: the route is always fully drawn, the zero never changes
+    var rises = document.querySelectorAll('.hero .rise');
+    each(rises, function (n) { n.classList.add('pre'); });
+    void document.body.getBoundingClientRect();
+    each(rises, function (n) { n.style.transitionDelay = (+n.getAttribute('data-d') || 0) + 'ms'; n.classList.remove('pre'); });
+    var hl = $('heroHl');
+    hl.style.transition = 'none'; hl.style.transform = 'scaleX(0)'; void hl.getBoundingClientRect();
+    later(function () { restart($('builtN'), 'zero'); }, 650);
+    later(function () { hl.style.transition = 'transform .9s cubic-bezier(.16,1,.3,1)'; hl.style.transform = 'scaleX(1)'; }, 1000);
+    restart($('heroTerrain'), 'run');
+    if (reduce) return;
+    later(function () { heroComet.classList.add('on'); heroRing.classList.add('on'); }, 900);
+  }
+
+  // ---------- marquee ----------
+  var MQ = [
+    ['21. 9. 2024.', '„Prvi stanovi sredinom 2026. godine“ — Spajić'],
+    ['21. 9. 2024.', '„Kvadrat stana biće 1.000 eura“ — Spajić'],
+    ['14. 12. 2024.', '„Ništa neće zaustaviti realizaciju projekta Velje brdo“ — Vlada'],
+    ['27. 12. 2024.', '„Crnogorski san konačno može da počne“ — Spajić'],
+    ['22. 3. 2026.', '„Radiće i deset vlada poslije nas“ — Radunović'],
+    ['25. 3. 2026.', '„Danas počinje vizija koja se spaja sa realnošću“ — Spajić'],
+    ['14. 4. 2026.', '„Građevinska dozvola za prvi blok u novembru“ — Radunović'],
+    ['avgust 2026.', '„Cilj je da kvadrat košta 1.000 eura, ali na to utiče veliki broj faktora“ — Adžović']
+  ];
+  var mq = $('mq');
+  for (var r = 0; r < 2; r++) MQ.forEach(function (m) {
+    var s = document.createElement('span'); if (r) s.setAttribute('aria-hidden', 'true');
+    var b = document.createElement('b'); b.textContent = m[0]; s.appendChild(b); s.appendChild(document.createTextNode(m[1])); mq.appendChild(s);
+  });
+
+  // ---------- headings: split words once ----------
+  each(document.querySelectorAll('main .plate h2'), function (h) {
+    var words = h.textContent.trim().split(/\s+/);
+    h.textContent = '';
+    words.forEach(function (w, i) { var s = document.createElement('span'); s.className = 'w'; s.textContent = w; s.style.transitionDelay = (i * 35) + 'ms'; h.appendChild(s); if (i < words.length - 1) h.appendChild(document.createTextNode(' ')); });
+  });
+  function headIn(plate) {
+    var h = plate.querySelector('h2');
+    plate.classList.add('k0'); if (h) enterPre(h);
+    requestAnimationFrame(function () { plate.classList.remove('k0'); if (h) h.classList.remove('pre'); });
+  }
+
+  // ---------- 01 terrain: stories player ----------
+  var frameBox = $('frames'), frames = Array.prototype.slice.call(frameBox.querySelectorAll('img'));
+  var frameRoute = $('frameRoute'); frameRoute.setAttribute('d', ROUTE_D);
+  var story = $('story'), fDate = $('frameDate'), fNote = $('frameNote'), playBtn = $('playBtn'), playIcon = $('playIcon');
+  var STEP = 2600, cur = 3, timer = null, playing = false, inView = false;
+  var segs = FRAMES.map(function (f, i) {
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'st' + (f.route ? ' hit' : '');
+    b.innerHTML = '<span class="bar"><i></i></span><span class="lab">' + f.d + '</span>';
+    b.setAttribute('aria-label', 'Snimak od ' + f.d);
+    b.addEventListener('click', function () { pause(); go(i, true); fillTo(i, 1, 0); });
+    story.appendChild(b); return b;
+  });
+  function fillTo(i, done, ms) {
+    segs.forEach(function (s, j) {
+      var bar = s.querySelector('i'); bar.style.transition = 'none';
+      bar.style.transform = 'scaleX(' + (j < i ? 1 : j > i ? 0 : (done ? 1 : 0)) + ')';
+      s.setAttribute('aria-current', j === i ? 'true' : 'false');
+    });
+    if (!done && ms) {
+      var bar = segs[i].querySelector('i'); void bar.getBoundingClientRect();
+      bar.style.transition = 'transform ' + ms + 'ms linear'; bar.style.transform = 'scaleX(1)';
+    }
+  }
+  function go(i, animate) {
+    if (i === cur && animate) return;
+    frameBox.classList.toggle('static', !animate || reduce);
+    frames.forEach(function (im, j) { im.classList.remove('prev'); if (j === cur && j !== i) im.classList.add('prev'); im.classList.toggle('on', j === i); });
+    var prevIdx = cur; cur = i;
+    setTimeout(function () { frames.forEach(function (im, j) { if (j !== cur) im.classList.remove('prev'); }); }, 1300);
+    fDate.textContent = FRAMES[i].d; restart(fDate, 'flip');
+    enterPre(fNote); fNote.textContent = FRAMES[i].note; later(function () { fNote.classList.remove('pre'); }, 450);
+    frameRoute.style.opacity = FRAMES[i].route ? 1 : 0;
+    if (FRAMES[i].route && !FRAMES[prevIdx].route) drawPath(frameRoute, 1700, 500);
+  }
+  function setIcon(isPlaying) { playIcon.setAttribute('d', isPlaying ? 'M2.5 1.5h3v11h-3zM8.5 1.5h3v11h-3z' : 'M3 1.5v11l9-5.5z'); playBtn.setAttribute('aria-label', isPlaying ? 'Pauziraj vremensku liniju' : 'Pusti vremensku liniju'); }
+  function tick() {
+    var next = cur + 1;
+    if (next >= FRAMES.length) { next = 0; }
+    go(next, true); fillTo(next, false, STEP);
+  }
+  function play(fromStart) {
+    if (reduce) return;
+    clearInterval(timer); playing = true; setIcon(true);
+    if (fromStart) { go(0, true); fillTo(0, false, STEP); } else fillTo(cur, false, STEP);
+    timer = setInterval(function () { if (inView) tick(); }, STEP);
+  }
+  function pause() { clearInterval(timer); timer = null; playing = false; setIcon(false); fillTo(cur, 1, 0); }
+  playBtn.addEventListener('click', function () { if (playing) pause(); else play(cur === FRAMES.length - 1); });
+  fillTo(3, 1, 0); setIcon(false);
+
+  var cmp = $('compare'), cut = $('cut'), tagL = $('tagL'), tagR = $('tagR');
+  function setCut(v) {
+    cmp.style.setProperty('--cut', v + '%'); cut.value = Math.round(v);
+    tagL.style.opacity = Math.min(1, v / 25); tagR.style.opacity = Math.min(1, (100 - v) / 25);
+  }
+  cut.addEventListener('input', function () { runs.sweep = (runs.sweep || 0) + 1; setCut(+cut.value); });
+  var drag = false;
+  function fromPointer(e) { var rc = cmp.getBoundingClientRect(); setCut(Math.max(0, Math.min(100, (e.clientX - rc.left) / rc.width * 100))); }
+  cmp.addEventListener('pointerdown', function (e) { drag = true; runs.sweep = (runs.sweep || 0) + 1; cmp.classList.add('drag'); fromPointer(e); });
+  window.addEventListener('pointermove', function (e) { if (drag) fromPointer(e); });
+  window.addEventListener('pointerup', function () { drag = false; cmp.classList.remove('drag'); });
+  function sweepCompare() { tween(3000, function (t) { setCut(50 + 44 * Math.sin(t * Math.PI * 2)); }, function () { setCut(50); }, function (t) { return t; }, 'sweep'); }
+
+  // ---------- 02 promises ----------
+  var pw = $('promises'), tally = $('tally');
+  PROMISES.forEach(function (p, i) {
+    var d = document.createElement('article'); d.className = 'promise';
+    d.innerHTML = '<span class="stampx ' + p.s + '">' + p.st + '</span><q>' + p.q + '</q><span class="who">' + p.who + '</span><p class="fact">' + p.fact + '</p>';
+    d.style.transitionDelay = (i * 70) + 'ms';
+    pw.appendChild(d);
+  });
+  STATUS_ORDER.forEach(function (s) {
+    var n = PROMISES.filter(function (p) { return p.s === s[0]; }).length;
+    var d = document.createElement('div'); d.innerHTML = '<div class="n">' + n + '</div><div class="t">' + s[1] + '</div>';
+    d.querySelector('.n').setAttribute('data-to', n);
+    if (s[0] === 'no') d.querySelector('.n').style.color = 'var(--accent)';
+    tally.appendChild(d);
+  });
+  function playPromises() {
+    enterPre(pw); pw.classList.remove('play-stamps');
+    requestAnimationFrame(function () { pw.classList.remove('pre'); });
+    each(pw.querySelectorAll('.promise'), function (card, i) {
+      var delay = 850 + i * 190;
+      card.querySelector('.stampx').style.animationDelay = delay + 'ms';
+      later(function () { restart(card, 'hit'); }, delay + 320);
+    });
+    restart(pw, 'play-stamps');
+    each(tally.querySelectorAll('.n'), function (n) { var to = +n.getAttribute('data-to'); tween(1100, function (t) { n.textContent = Math.round(to * t); }); });
+  }
+
+  // ---------- 03 scale ----------
+  var units = $('units');
+  for (var u = 0; u < 200; u++) {
+    var sq = document.createElement('i'); if (u * 100 < 557) sq.className = 'a1';
+    var share = Math.max(0, Math.min(1, (185 - u * 100) / 100));
+    if (share > 0) { var f = document.createElement('span'); f.className = 'f'; f.style.transform = 'scaleX(' + share + ')'; sq.appendChild(f); }
+    var row = Math.floor(u / 25), col = u % 25;
+    sq.style.animationDelay = ((row + col) * 28) + 'ms';
+    if (u === 0) sq.setAttribute('data-tip', 'Svaki kvadratić: 100 stanova. Ugovoreno 185.');
+    units.appendChild(sq);
+  }
+  var pace = $('pace');
+  var phases = 20000 / CONTRACT.flats, years = phases * CONTRACT.months / 12, endYear = 2026 + years;
+  var paceX;
+  (function buildPace() {
+    var x0 = 20, x1 = 540, y = 120;
+    paceX = function (yr) { return x0 + (yr - 2026) / (endYear - 2026 + 6) * (x1 - x0); };
+    [2026, 2100, 2200, 2300].forEach(function (yr) { el('line', { x1: paceX(yr), x2: paceX(yr), y1: 70, y2: 170, 'class': 'gl' }, pace); el('text', { x: paceX(yr), y: 190, 'text-anchor': 'middle', 'class': 'ax' }, pace, yr + '.'); });
+    el('rect', { x: x0, y: y - 18, width: paceX(endYear) - x0, height: 36, fill: 'var(--accent-wash)', stroke: 'var(--accent)', 'stroke-width': 1.5, 'stroke-dasharray': '5 4', id: 'paceAll', 'data-tip': '20.000 stanova tempom prve faze: oko ' + Math.round(endYear) + '. godine' }, pace);
+    el('rect', { x: x0, y: y - 18, width: Math.max(3, paceX(2029.6) - x0), height: 36, fill: 'var(--accent)', 'data-tip': 'Prva faza: 185 stanova, 2026–2029.' }, pace);
+    el('line', { x1: paceX(endYear), x2: paceX(endYear), y1: y - 26, y2: y + 26, stroke: 'var(--accent)', 'stroke-width': 2, id: 'paceHead' }, pace);
+    el('text', { x: x0, y: 36, 'class': 'lbl' }, pace, 'Prva faza: 185 stanova, 2026–2029.');
+    el('text', { x: paceX(endYear), y: 60, 'text-anchor': 'end', 'class': 'lbl-acc', id: 'paceEnd' }, pace, '20.000 stanova: oko ' + Math.round(endYear) + '.');
+    el('text', { x: x0, y: 230, 'class': 'ax' }, pace, nf(phases, 0) + ' faza × ' + CONTRACT.months + ' mjeseci = ' + nf(years, 0) + ' godine');
+  })();
+  function playScale() {
+    units.classList.remove('ghost'); units.classList.add('nofill'); restart(units, 'play');
+    later(function () { units.classList.remove('nofill'); }, 1500);
+    later(function () { units.classList.add('ghost'); }, 2300);
+    runCounters($('razmjera').querySelector('.bigcount'), 0);
+    var all = $('paceAll'), head = $('paceHead'), endT = $('paceEnd'), x0 = 20, W = paceX(endYear) - x0;
+    tween(3200, function (t) {
+      var w = Math.max(3, W * t); all.setAttribute('width', w);
+      head.setAttribute('x1', x0 + w); head.setAttribute('x2', x0 + w);
+      var yr = Math.round(2026 + years * t);
+      endT.textContent = '20.000 stanova: oko ' + yr + '.';
+      endT.setAttribute('x', Math.max(x0 + 220, x0 + w));
+    }, null, E.io, 'pace');
+  }
+
+  // ---------- 04 price ----------
+  var price = $('price');
+  var PY;
+  (function buildPrice() {
+    var x0 = 70, x1 = 820, yb = 340, yt = 40, vmax = 3000;
+    var X = function (i) { return x0 + i * (x1 - x0) / (MARKET.length - 1); };
+    PY = function (v) { return yb - v / vmax * (yb - yt); };
+    [0, 1000, 2000, 3000].forEach(function (v) { el('line', { x1: x0, x2: x1, y1: PY(v), y2: PY(v), 'class': 'gl' }, price); el('text', { x: x0 - 10, y: PY(v) + 4, 'text-anchor': 'end', 'class': 'ax' }, price, nf(v) + ' €'); });
+    el('rect', { x: x0, y: PY(contractPerM2), width: x1 - x0, height: PY(PROMISE_PRICE) - PY(contractPerM2), fill: 'var(--accent-wash)', id: 'gapBand' }, price);
+    el('line', { x1: x0, x2: x1, y1: PY(PROMISE_PRICE), y2: PY(PROMISE_PRICE), stroke: 'var(--ink)', 'stroke-width': 2, 'stroke-dasharray': '7 5' }, price);
+    el('text', { x: x0 + 8, y: PY(PROMISE_PRICE) + 20, 'class': 'lbl' }, price, nf(PROMISE_PRICE) + ' € · obećana prodajna cijena');
+    el('line', { x1: x0, x2: x1, y1: PY(MINISTRY_PRICE), y2: PY(MINISTRY_PRICE), stroke: 'var(--g2)', 'stroke-width': 1.5, 'stroke-dasharray': '2 3' }, price);
+    el('text', { x: x1, y: PY(MINISTRY_PRICE) - 8, 'text-anchor': 'end' }, price, nf(MINISTRY_PRICE) + ' € · po ministarki Adžović');
+    el('line', { x1: x0, x2: x1, y1: PY(contractPerM2), y2: PY(contractPerM2), stroke: 'var(--accent)', 'stroke-width': 3.5, id: 'contractLine', 'data-tip': 'Računica iz ugovora: ' + nf(contractPerM2, 2) + ' €/m² (40.049.774 € / 14.260 m²)' }, price);
+    el('text', { x: x0 + 8, y: PY(contractPerM2) - 10, 'class': 'lbl-acc', id: 'contractLbl' }, price, nf(Math.floor(contractPerM2)) + ' € · po računici iz ugovora');
+    // bracket showing the gap
+    var bx = x1 + 14;
+    el('path', { d: 'M' + bx + ',' + PY(contractPerM2) + ' h8 V' + PY(PROMISE_PRICE) + ' h-8', fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2, id: 'bracket' }, price);
+    el('text', { x: bx + 16, y: (PY(contractPerM2) + PY(PROMISE_PRICE)) / 2 - 6, 'class': 'lbl-acc' }, price, 'razlika');
+    el('text', { x: bx + 16, y: (PY(contractPerM2) + PY(PROMISE_PRICE)) / 2 + 12, 'class': 'lbl-acc', id: 'gapTxt' }, price, nf(Math.floor(contractPerM2 - PROMISE_PRICE)) + ' €');
+    var d = MARKET.map(function (r, i) { return (i ? 'L' : 'M') + X(i) + ',' + PY(r.v); }).join(' ');
+    el('path', { d: d, fill: 'none', stroke: 'var(--ink)', 'stroke-width': 2.5, id: 'marketLine' }, price);
+    MARKET.forEach(function (r, i) {
+      el('circle', { cx: X(i), cy: PY(r.v), r: 5.5, fill: r.src === 'MONSTAT' ? 'var(--ink)' : 'var(--raised)', stroke: 'var(--ink)', 'stroke-width': 2, 'class': 'mpt', 'data-tip': r.q + ': ' + nf(r.v) + ' €/m² (' + (r.src === 'MONSTAT' ? 'MONSTAT' : 'medijski izvještaj o podacima MONSTAT-a') + ')' }, price);
+      if (r.q.indexOf('I/') === 0 || i === MARKET.length - 1) el('text', { x: X(i), y: yb + 22, 'text-anchor': 'middle', 'class': 'ax' }, price, r.q);
+    });
+    el('circle', { r: 6, fill: 'var(--accent)', id: 'leadDot', cx: -20, cy: -20 }, price);
+    el('text', { x: X(0) + 8, y: PY(MARKET[0].v) + 24, 'class': 'lbl' }, price, nf(MARKET[0].v) + ' €');
+    el('text', { x: X(MARKET.length - 1) - 12, y: PY(MARKET[MARKET.length - 1].v) - 12, 'text-anchor': 'end', 'class': 'lbl' }, price, 'tržište: ' + nf(MARKET[MARKET.length - 1].v) + ' €');
+  })();
+  function playPrice() {
+    var ml = $('marketLine'), lead = $('leadDot'), L = ml.getTotalLength();
+    drawPath(ml, 2000, 100);
+    later(function () {
+      tween(2000, function (t) { var p = ml.getPointAtLength(L * t); lead.setAttribute('cx', p.x); lead.setAttribute('cy', p.y); }, function () { lead.setAttribute('cx', -20); }, E.io, 'lead');
+    }, 100);
+    each(price.querySelectorAll('.mpt'), function (c, i) {
+      c.style.transition = 'none'; c.style.transformBox = 'fill-box'; c.style.transformOrigin = 'center'; c.style.transform = reduce ? 'none' : 'scale(0)';
+      later(function () { c.style.transition = 'transform .45s cubic-bezier(.34,1.56,.64,1)'; c.style.transform = 'scale(1)'; }, 200 + i * 200);
+    });
+    var cl = $('contractLine'), lbl = $('contractLbl'), band = $('gapBand'), br = $('bracket'), gapTxt = $('gapTxt');
+    var yEnd = PY(contractPerM2), yStart = PY(PROMISE_PRICE);
+    band.setAttribute('y', yStart); band.setAttribute('height', 0);
+    cl.setAttribute('y1', yStart); cl.setAttribute('y2', yStart); lbl.setAttribute('y', yStart - 10);
+    br.style.opacity = reduce ? 1 : 0; gapTxt.textContent = '0 €';
+    later(function () {
+      tween(1500, function (t) {
+        var y = yStart + (yEnd - yStart) * t;
+        cl.setAttribute('y1', y); cl.setAttribute('y2', y); lbl.setAttribute('y', y - 10);
+        band.setAttribute('y', Math.min(y, yStart)); band.setAttribute('height', Math.abs(yStart - y));
+        lbl.textContent = nf(Math.max(PROMISE_PRICE, Math.floor(PROMISE_PRICE + (contractPerM2 - PROMISE_PRICE) * t))) + ' € · po računici iz ugovora';
+      }, function () {
+        br.style.transition = 'opacity .4s'; br.style.opacity = 1;
+        tween(900, function (t) { gapTxt.textContent = nf(Math.floor((contractPerM2 - PROMISE_PRICE) * t)) + ' €'; });
+      }, E.back, 'contract');
+    }, 2300);
+  }
+
+  // ---------- 05 money ----------
+  function hbars(svg, rows, fmt, max, marker) {
+    var x0 = 10, x1 = 540, bh = 26, gap = 34, y0 = 26, span = x1 - x0 - 110;
+    if (marker) {
+      var mx = x0 + marker.v / max * span;
+      el('line', { x1: mx, x2: mx, y1: 8, y2: y0 + rows.length * (bh + gap) - gap + 8, stroke: 'var(--ink)', 'stroke-width': 1.5, 'stroke-dasharray': '4 4', 'class': 'mk' }, svg);
+    }
+    rows.forEach(function (r, i) {
+      var y = y0 + i * (bh + gap);
+      el('text', { x: x0, y: y - 6, 'class': 'lbl' }, svg, r.k);
+      var w = Math.max(2, (r.v / max) * span);
+      el('rect', { x: x0, y: y, width: w, height: bh, fill: r.red ? 'var(--accent)' : 'var(--g2)', 'data-w': w, 'data-v': r.v, 'class': 'hb', 'data-tip': r.k + ': ' + fmt(r.v) }, svg);
+      el('text', { x: x0 + w + 8, y: y + bh - 8, 'class': (r.red ? 'lbl-acc' : 'lbl') + ' hv', 'data-v': r.v }, svg, fmt(r.v));
+    });
+    svg._fmt = fmt;
+  }
+  var moneyFmt = function (v) { return v >= 1000 ? nf(v / 1000, 2) + ' mlrd. €' : nf(v, v % 1 ? 2 : 0) + ' mil. €'; };
+  hbars($('money'), MONEY, moneyFmt, 4400, { v: BUDGET_2026 });
+  hbars($('subsidy'), SUBSIDY, function (v) { return nf(Math.round(v / 100) * 100) + ' €'; }, 150000);
+  function playBars(svg, base) {
+    var rects = svg.querySelectorAll('.hb'), vals = svg.querySelectorAll('.hv');
+    each(rects, function (rc, i) {
+      var w = +rc.getAttribute('data-w'), v = +rc.getAttribute('data-v'), tx = vals[i], x0 = +rc.getAttribute('x');
+      rc.setAttribute('width', reduce ? w : 0); tx.setAttribute('x', x0 + (reduce ? w : 0) + 8);
+      later(function () {
+        tween(1700, function (t) {
+          var ww = Math.max(0, w * t); rc.setAttribute('width', ww); tx.setAttribute('x', x0 + ww + 8);
+          tx.textContent = svg._fmt(v * t || 0);
+        }, function () { tx.textContent = svg._fmt(v); }, E.out, svg.id + i);
+      }, base + i * 260);
+    });
+  }
+  function playMoney() { playBars($('money'), 0); playBars($('subsidy'), 400); }
+
+  // ---------- 06 deadlines ----------
+  var slip = $('slip');
+  var tms = function (iso) { return Date.parse(iso + 'T00:00:00Z'); };
+  function fmtDate(iso) { var p = iso.split('-'); return (+p[2]) + '. ' + (+p[1]) + '. ' + p[0] + '.'; }
+  var SX, SY;
+  (function buildSlip() {
+    var sx0 = 80, sx1 = 900, sy0 = 330, sy1 = 30;
+    var dx0 = tms('2024-07-01'), dx1 = tms('2027-01-01'), dy0 = tms('2026-01-01'), dy1 = tms('2030-01-01');
+    SX = function (iso) { return sx0 + (tms(iso) - dx0) / (dx1 - dx0) * (sx1 - sx0); };
+    SY = function (iso) { return sy0 - (tms(iso) - dy0) / (dy1 - dy0) * (sy0 - sy1); };
+    ['2026', '2027', '2028', '2029', '2030'].forEach(function (yr) { var yy = SY(yr + '-01-01'); el('line', { x1: sx0, x2: sx1, y1: yy, y2: yy, 'class': 'gl' }, slip); el('text', { x: sx0 - 10, y: yy + 4, 'text-anchor': 'end', 'class': 'ax' }, slip, yr + '.'); });
+    ['2025', '2026', '2027'].forEach(function (yr) { var xx = SX(yr + '-01-01'); el('line', { x1: xx, x2: xx, y1: sy0, y2: sy0 + 6, stroke: 'var(--axis)' }, slip); el('text', { x: xx, y: sy0 + 22, 'text-anchor': 'middle', 'class': 'ax' }, slip, yr + '.'); });
+    el('rect', { x: sx0, y: SY(TODAY), width: sx1 - sx0, height: sy0 - SY(TODAY), fill: 'var(--accent-wash)', id: 'pastBand' }, slip);
+    el('line', { x1: sx0, x2: sx1, y1: SY(TODAY), y2: SY(TODAY), stroke: 'var(--ink)', 'stroke-width': 1.5, 'stroke-dasharray': '4 4' }, slip);
+    el('text', { x: sx1, y: SY(TODAY) + 18, 'text-anchor': 'end', 'class': 'lbl' }, slip, 'ispod linije: rok je već prošao (danas 20. 10. 2026.)');
+    var d = SLIPS.map(function (r, i) { return (i ? 'L' : 'M') + SX(r.said) + ',' + SY(r.due); }).join(' ');
+    el('path', { d: d, fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2.5, id: 'slipLine' }, slip);
+    SLIPS.forEach(function (r) {
+      var missed = tms(r.due) < tms(TODAY);
+      var g = el('g', { 'class': 'slipPt' }, slip);
+      if (missed) el('circle', { cx: SX(r.said), cy: SY(r.due), r: 8, fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2, 'class': 'ring2', style: 'transform-box:fill-box;transform-origin:center;opacity:0' }, g);
+      el('circle', { cx: SX(r.said), cy: SY(r.due), r: 7, fill: missed ? 'var(--raised)' : 'var(--accent)', stroke: 'var(--accent)', 'stroke-width': 2.5, 'data-tip': r.who + ' (' + fmtDate(r.said) + '): rok ' + r.label }, g);
+      el('text', { x: SX(r.said) + r.dx, y: SY(r.due) + r.dy, 'text-anchor': r.a, 'class': 'lbl-acc' }, g, r.label);
+      el('text', { x: SX(r.said) + r.dx, y: SY(r.due) + r.dy + 15, 'text-anchor': r.a }, g, r.who);
+    });
+  })();
+  var late = Math.max(0, Math.floor((Date.now() - tms('2026-06-30')) / 864e5));
+  var lateNode = $('lateDays'); lateNode.textContent = nf(late);
+  function playSlip() {
+    var band = $('pastBand'), h = +band.getAttribute('height');
+    tween(1000, function (t) { band.setAttribute('height', h * t); });
+    drawPath($('slipLine'), 2600, 400);
+    each(slip.querySelectorAll('.slipPt'), function (g, i) {
+      g.style.transition = 'none'; g.style.transform = reduce ? 'none' : 'translateY(-60px)'; g.style.opacity = reduce ? 1 : 0;
+      later(function () {
+        tween(800, function (t) { g.style.transform = 'translateY(' + (-60 * (1 - t)) + 'px)'; g.style.opacity = Math.min(1, t * 2.5); }, null, E.bounce, 'slip' + i);
+      }, 400 + i * 650);
+    });
+    each(slip.querySelectorAll('.ring2'), function (p) { p.style.animation = 'none'; void p.getBoundingClientRect(); if (!reduce) p.style.animation = 'ring 1.8s cubic-bezier(.16,1,.3,1) 3.4s 3'; });
+    tween(1800, function (t) { lateNode.textContent = nf(Math.round(late * t)); }, null, E.out, 'late');
+  }
+
+  // ---------- 07 obstacles, 08 voices ----------
+  function playObstacles() {
+    var obs = $('obs'); enterPre(obs);
+    each(obs.querySelectorAll('.ob'), function (o, i) { o.style.transitionDelay = (i * 90) + 'ms'; each(o.querySelectorAll('svg.ic *'), function (p) { p.style.transitionDelay = (300 + i * 90) + 'ms'; }); o.querySelector('.chip').style.transitionDelay = (450 + i * 90) + 'ms'; });
+    requestAnimationFrame(function () { obs.classList.remove('pre'); });
+  }
+  function playVoices() {
+    var vo = $('glasovi'); enterPre(vo);
+    each(vo.querySelectorAll('.qt'), function (q, i) { q.style.transitionDelay = (200 + i * 90) + 'ms'; });
+    requestAnimationFrame(function () { vo.classList.remove('pre'); });
+  }
+
+  // ---------- 09 footprint: zoom out from the block to the zone ----------
+  var foot = $('foot'), S = 300, a1 = Math.sqrt(6.1356 / 912) * S, zoomMax = S / a1;
+  (function buildFoot() {
+    var defs = el('defs', null, foot), cp = el('clipPath', { id: 'fpClip' }, defs);
+    el('rect', { x: 9, y: 9, width: S + 2, height: S + 2 }, cp);
+    var clipG = el('g', { 'clip-path': 'url(#fpClip)' }, foot);
+    var g = el('g', { id: 'zoomG' }, clipG);
+    el('rect', { x: 10, y: 10, width: S, height: S, fill: 'var(--accent-wash)', stroke: 'var(--rule)', 'stroke-width': 2, 'vector-effect': 'non-scaling-stroke', 'data-tip': 'Zona naselja: 912 ha' }, g);
+    el('rect', { x: 10, y: 10, width: a1, height: a1, fill: 'var(--accent)', 'data-tip': 'Blok A1: 6,1 ha (0,7% zone)' }, g);
+    el('text', { x: 10 + a1 + 8, y: 10 + a1 - 6, 'class': 'lbl-acc', id: 'a1Lbl' }, foot, 'Blok A1 · 6,1 ha');
+    el('text', { x: 10, y: S + 38, 'class': 'ax', id: 'zoomTxt' }, foot, 'Zona 912 ha · Blok A1 je 0,7% zone');
+  })();
+  function playFoot() {
+    var g = $('zoomG'), lbl = $('a1Lbl'), txt = $('zoomTxt');
+    lbl.style.opacity = reduce ? 1 : 0;
+    g.setAttribute('transform', 'translate(10 10) scale(' + (reduce ? 1 : zoomMax) + ') translate(-10 -10)');
+    txt.textContent = 'Blok A1: 6,1 ha';
+    later(function () {
+      tween(2600, function (t) {
+        var s = zoomMax + (1 - zoomMax) * t;
+        g.setAttribute('transform', 'translate(10 10) scale(' + s + ') translate(-10 -10)');
+        var vis = 912 / (s * s); txt.textContent = 'U kadru: ' + nf(vis, vis < 100 ? 1 : 0) + ' ha';
+      }, function () { txt.textContent = 'Zona 912 ha · Blok A1 je 0,7% zone'; lbl.style.transition = 'opacity .5s'; lbl.style.opacity = 1; }, E.io, 'zoom');
+    }, 500);
+  }
+
+  // ---------- 01b satellite heat ----------
+  var hsStage = $('hsStage'), hsHeat = $('hsHeat'), hsOp = $('hsOp'), hsOpV = $('hsOpV'), hsRing = $('hsRing');
+  hsOp.addEventListener('input', function () { hsHeat.style.opacity = hsOp.value / 100; hsOpV.textContent = hsOp.value + '%'; });
+  function playHeat() {
+    enterPre(hsStage);
+    later(function () { hsStage.classList.remove('pre'); }, 250);
+    if (reduce) return;
+    hsRing.style.animation = 'none'; void hsRing.getBoundingClientRect();
+    hsRing.style.transformBox = 'fill-box'; hsRing.style.transformOrigin = 'center';
+    hsRing.style.animation = 'ring 2.2s cubic-bezier(.16,1,.3,1) .3s 2';
+  }
+
+  // ---------- 03 radar ----------
+  var AXES = [
+    { k: 'Ugovoreni stanovi', s: ['Ugovoreni stanovi'], v: 185 / 20000, f: '185 / 20.000', d: 'ugovoreno od obećanih stanova' },
+    { k: 'Izgrađeni stanovi', s: ['Izgrađeni', 'stanovi'], v: 0, f: '0 / 20.000', d: 'nijedan stan nije izgrađen' },
+    { k: 'Rokovi ispoštovani', s: ['Rokovi', 'ispoštovani'], v: 0, f: '0 / 3', d: 'prvi stanovi sredinom 2026, PUP do 31. 12. 2024, pravilnik do sredine 2026.' },
+    { k: 'Ključni dokumenti objavljeni', s: ['Dokumenti', 'objavljeni'], v: 0, f: '0 / 5', d: 'studija izvodljivosti, finansijska analiza, izvještaji Koordinacionog tijela, finansijski model, pravilnik' },
+    { k: 'Dozvole izdate', s: ['Dozvole izdate'], v: 0, f: '0 / 2', d: 'građevinske dozvole za Blok A1 i bulevar' },
+    { k: 'Preduslovi riješeni', s: ['Preduslovi', 'riješeni'], v: 0, f: '0 / 4', d: 'priključak na vodu, dalekovodi, procjena uticaja za Blok A1, istraživanje Mareze (rok septembar 2027.)' },
+    { k: 'Ugovori za prvu fazu', s: ['Ugovori za', 'prvu fazu'], v: 1, f: '2 / 2', d: 'bulevar (Eurozox) i Blok A1 (Fidija i Ing Invest)' },
+    { k: 'Probijena trasa bulevara', s: ['Trasa', 'bulevara'], v: Math.min(1, routeKm / 5.3), f: nf(routeKm, 1) + ' / 5,3 km', d: 'prema satelitskom snimku od 7. 10. 2026.' }
+  ];
+  var radar = $('radar'), RC = { x: 320, y: 280 }, RR = 165;
+  var ang = function (i) { return -Math.PI / 2 + i * 2 * Math.PI / AXES.length; };
+  var rpt = function (i, r) { return [RC.x + Math.cos(ang(i)) * r, RC.y + Math.sin(ang(i)) * r]; };
+  var rings = [], axesL = [], promisedPoly, actualPoly, actualPts = [];
+  (function buildRadar() {
+    [0.25, 0.5, 0.75, 1].forEach(function (q) {
+      var pts = AXES.map(function (a, i) { return rpt(i, RR * q).join(','); }).join(' ');
+      rings.push(el('polygon', { points: pts, fill: q === 1 ? 'var(--accent-wash)' : 'none', stroke: 'var(--rule-soft)', 'stroke-width': 1.2, style: 'transform-box:view-box;transform-origin:' + RC.x + 'px ' + RC.y + 'px' }, radar));
+      el('text', { x: RC.x + 6, y: RC.y - RR * q + 12, 'class': 'rl' }, radar, Math.round(q * 100) + '%');
+    });
+    AXES.forEach(function (a, i) {
+      var p = rpt(i, RR);
+      axesL.push(el('line', { x1: RC.x, y1: RC.y, x2: p[0], y2: p[1], stroke: 'var(--rule-soft)', 'stroke-width': 1.2 }, radar));
+      // label block: name lines plus a percentage line, stacked away from the chart; offsets in em so phone sizes scale too
+      var lp = rpt(i, RR + 20), c = Math.cos(ang(i)), s = Math.sin(ang(i));
+      var anchor = Math.abs(c) < 0.2 ? 'middle' : (c > 0 ? 'start' : 'end');
+      var lines = a.s.concat(nf(a.v * 100, a.v > 0 && a.v < 0.05 ? 1 : 0) + '%'), n = lines.length;
+      var first = s < -0.5 ? -(n - 1) * 1.2 : s > 0.5 ? 0.9 : 0.35 - (n - 1) * 0.6;
+      var t = el('text', { x: lp[0], y: lp[1], 'text-anchor': anchor, 'data-tip': a.k + ': ' + a.f + ' — ' + a.d }, radar);
+      lines.forEach(function (ln, j) { el('tspan', { x: lp[0], dy: (j ? 1.2 : first) + 'em', 'class': j === n - 1 ? 'rp' : '' }, t, ln); });
+    });
+    promisedPoly = el('polygon', { points: AXES.map(function (a, i) { return rpt(i, RR).join(','); }).join(' '), fill: 'none', stroke: 'var(--ink)', 'stroke-width': 2, 'stroke-dasharray': '7 6' }, radar);
+    actualPoly = el('polygon', { points: AXES.map(function (a, i) { return rpt(i, RR * a.v).join(','); }).join(' '), fill: 'rgba(212,5,17,.22)', stroke: 'var(--accent)', 'stroke-width': 2.5, 'stroke-linejoin': 'round' }, radar);
+    AXES.forEach(function (a, i) { var p = rpt(i, RR * a.v); actualPts.push(el('circle', { cx: p[0], cy: p[1], r: 5, fill: 'var(--accent)', stroke: '#fff', 'stroke-width': 2, 'data-tip': a.k + ': ' + a.f }, radar)); });
+    el('circle', { cx: RC.x, cy: RC.y, r: 3, fill: 'var(--ink)' }, radar);
+    var tb = $('rtab').querySelector('tbody');
+    AXES.forEach(function (a) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + a.k + '<span class="d">' + a.f + ' · ' + a.d + '</span><span class="mb"><i style="transform:scaleX(' + a.v + ')"></i></span></td><td class="p"' + (a.v < 0.05 ? ' style="color:var(--accent)"' : '') + '>' + nf(a.v * 100, a.v > 0 && a.v < 0.05 ? 1 : 0) + '%</td>';
+      tb.appendChild(tr);
+    });
+  })();
+  function playRadar() {
+    rings.forEach(function (rg, i) { rg.style.transition = 'none'; rg.style.transform = reduce ? 'none' : 'scale(0)'; later(function () { rg.style.transition = 'transform .8s cubic-bezier(.16,1,.3,1)'; rg.style.transform = 'scale(1)'; }, 80 + i * 110); });
+    axesL.forEach(function (l) { drawPath(l, 700, 300); });
+    drawPathPoly(promisedPoly, 1400, 700);
+    var tab = $('rtab'); enterPre(tab); later(function () { tab.classList.remove('pre'); }, 900);
+    var vals = AXES.map(function () { return 0; });
+    function render() {
+      actualPoly.setAttribute('points', AXES.map(function (a, i) { return rpt(i, RR * vals[i]).join(','); }).join(' '));
+      actualPts.forEach(function (c, i) { var p = rpt(i, RR * vals[i]); c.setAttribute('cx', p[0]); c.setAttribute('cy', p[1]); });
+    }
+    render();
+    AXES.forEach(function (a, i) {
+      later(function () { tween(1100, function (t) { vals[i] = a.v * t; render(); }, null, E.back, 'rad' + i); }, 1500 + i * 140);
+    });
+  }
+  function drawPathPoly(poly, ms, delay) {
+    var pts = poly.getAttribute('points').split(' ').map(function (s) { return s.split(',').map(Number); });
+    var len = 0; for (var i = 0; i < pts.length; i++) { var a = pts[i], b = pts[(i + 1) % pts.length]; len += Math.hypot(b[0] - a[0], b[1] - a[1]); }
+    poly.style.transition = 'none'; poly.style.strokeDasharray = reduce ? '' : len; poly.style.strokeDashoffset = reduce ? 0 : len; void poly.getBoundingClientRect();
+    if (reduce) return;
+    setTimeout(function () { poly.style.transition = 'stroke-dashoffset ' + ms + 'ms cubic-bezier(.65,0,.35,1)'; poly.style.strokeDashoffset = 0; }, delay);
+    setTimeout(function () { poly.style.strokeDasharray = '7 6'; poly.style.transition = 'none'; poly.style.strokeDashoffset = 0; }, delay + ms + 50);
+  }
+
+  // ---------- 08 calendar heat map ----------
+  var THEMES = ['Odluke, najave i rokovi', 'Plan i zemljište', 'Konkurs', 'Tenderi i ugovori', 'Voda i životna sredina', 'Budžet i novac', 'Kritike, kontrola i istrage', 'Gradnja stanova'];
+  var EVENTS = [
+    ['2024-09', 0, 'Predstavljanje projekta: 1.000 €/m², prvi stanovi sredinom 2026.'], ['2024-09', 5, 'Vijesti: naselje bi koštalo najmanje 3,5 mlrd. € (anonimni izvor)'], ['2024-09', 6, 'URA (Radovanić): „Velja prevara“'], ['2024-09', 6, 'Fidelity Consulting: obećane rate ne odgovaraju cijeni od 1.000 €'],
+    ['2024-10', 0, 'Vlada formira Koordinaciono tijelo'],
+    ['2024-11', 0, 'Vlada usvaja Informaciju o projektu'], ['2024-11', 1, 'Vlada utvrđuje nacrt izmjena PUP-a'], ['2024-11', 5, 'Prijedlog budžeta 2025: 10 mil. €'], ['2024-11', 6, 'Huter (DPS) u Skupštini: „velja prevara“'],
+    ['2024-12', 0, 'Koordinaciono tijelo traži 20.000 stanova'], ['2024-12', 0, 'Otvoren portal za prijave: 3.887 za tri dana'], ['2024-12', 1, 'Javna rasprava o PUP-u odložena, pa prekinuta'], ['2024-12', 4, 'Ministarstvo ekologije: uticaj na Marezu nedovoljno istražen'], ['2024-12', 6, 'Rakčević traži povlačenje PUP-a'], ['2024-12', 6, 'Strukovna komora arhitekata: zaustaviti izmjene PUP-a'],
+    ['2025-01', 1, 'PUP nije usvojen u roku; više od 300 primjedbi'],
+    ['2025-05', 5, 'Plan nabavki MJR: više od 40 mil. € za Velje brdo'], ['2025-05', 6, 'MANS: članovima Koordinacionog tijela 26.836 € naknada'], ['2025-05', 6, 'Đuričković: „Koordinacioni tim pojeo 27.000 eura“'],
+    ['2025-07', 3, 'Projekat bulevara: Optimusproject i Route project, 74.536 €'],
+    ['2025-08', 1, 'Vlada usvaja izmjene PUP-a na telefonskoj sjednici'], ['2025-08', 6, 'KANA/Monitor: jedan planer uzdržan u Savjetu za reviziju'],
+    ['2025-09', 6, 'Udruženje podstanara otvara sopstvenu evidenciju'],
+    ['2025-11', 4, 'Vodovod odbija uslove za priključenje'],
+    ['2025-12', 2, 'Raspisan međunarodni konkurs za Blok A1'], ['2025-12', 5, 'Usvojen budžet 2026; u prijedlogu do 120 mil. € zaduženja'],
+    ['2026-02', 4, 'Ministarstvo: dalekovodi se ne izmještaju'], ['2026-02', 2, 'Izmijenjen sastav žirija konkursa'],
+    ['2026-03', 0, 'Radunović: „radiće i deset vlada poslije nas“'], ['2026-03', 3, 'Otvoreno gradilište bulevara; pripremni radovi 1,47 mil. €'], ['2026-03', 6, 'URA: konkurs „namješten“'], ['2026-03', 6, 'Podstanari traže finansijski model i pravilnik'],
+    ['2026-04', 2, 'Rezultati konkursa: prva nagrada timu iz Srbije'], ['2026-04', 6, 'KANA navodi sukob interesa u žiriju'], ['2026-04', 4, 'Geoprojekt: uticaj na Marezu ne može se isključiti'], ['2026-04', 6, 'Urošević i Huter u Skupštini'],
+    ['2026-05', 6, 'Pejović: „samo u snovima“'],
+    ['2026-06', 3, 'Tender za bulevar, 33 mil. €'], ['2026-06', 3, 'Tender za Blok A1, 40,1 mil. €'], ['2026-06', 4, 'Adžović: zona zaštite „ne znači zabranu gradnje“'], ['2026-06', 6, 'Podstanari najavljuju inicijativu za zaustavljanje'],
+    ['2026-07', 3, 'Četiri ponude za bulevar'], ['2026-07', 6, 'AZLP: ministarstvo prekršilo rok (prema podstanarima)'],
+    ['2026-08', 3, 'Izabrani izvođači: Eurozox i Fidija/Ing Invest'], ['2026-08', 3, 'Potpisan ugovor za Blok A1, 40,05 mil. €'], ['2026-08', 3, 'Potpisan ugovor za bulevar, 30,86 mil. €'], ['2026-08', 5, 'Adžović: kvadrat košta 1.067 €; Investitor: 2.808 €'], ['2026-08', 6, 'Skupština Glavnog grada formira komisiju za praćenje'],
+    ['2026-09', 3, 'Revizija tehničke dokumentacije: Civil Engineer'], ['2026-09', 4, 'Procjena uticaja za Blok A1 obavezna'], ['2026-09', 6, 'URA: „matematika se ne slaže“'],
+    ['2026-10', 4, 'Dabetić: bez procjene uticaja nema gradnje'], ['2026-10', 6, 'SPO saslušao Radunovića i Đurišić (prema Vijestima)'], ['2026-10', 5, 'Predlog preusmjeravanja 4,83 mil. €'], ['2026-10', 0, 'Gradnja stanova ne počinje ni u decembru (Dan, URA)']
+  ];
+  var MONTHS = [];
+  for (var yy = 2024, mm = 9; yy < 2026 || (yy === 2026 && mm <= 10); mm++) { if (mm > 12) { mm = 1; yy++; } MONTHS.push(yy + '-' + (mm < 10 ? '0' : '') + mm); if (yy === 2026 && mm === 10) break; }
+  var MN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
+  var cal = $('cal'), calCells = [], calBars = [];
+  var CAL_COLORS = ['#f1efef', '#f7c4c7', '#ee7d86', '#d40511', '#7d020a'];
+  var CAL_L = 210, CAL_R = 950;
+  (function buildCal() {
+    var lx = CAL_L, cw = (CAL_R - lx) / MONTHS.length, top = 92, rh = 34, cs = Math.min(cw, rh) - 4;
+    var grid = {}; EVENTS.forEach(function (e) { var k = e[0] + '|' + e[1]; (grid[k] = grid[k] || []).push(e[2]); });
+    var mt = MONTHS.map(function (m) { return EVENTS.filter(function (e) { return e[0] === m; }).length; });
+    var maxT = Math.max.apply(null, mt);
+    el('text', { x: lx - 10, y: 30, 'text-anchor': 'end', 'class': 'mlbl' }, cal, 'događaja');
+    el('text', { x: lx - 10, y: 44, 'text-anchor': 'end', 'class': 'mlbl' }, cal, 'po mjesecu');
+    MONTHS.forEach(function (m, j) {
+      var x = lx + j * cw, h = mt[j] / maxT * 50;
+      var b = el('rect', { x: x + 2, y: 80 - h, width: cw - 4, height: h, fill: mt[j] ? 'var(--ink)' : 'none', 'data-h': h, 'data-tip': labelMonth(m) + ': ' + mt[j] + ' događaja' }, cal);
+      calBars.push(b);
+      var mo = +m.slice(5), yr = m.slice(0, 4);
+      if (mo === 1 || j === 0) { el('line', { x1: x, x2: x, y1: 18, y2: top + THEMES.length * rh, stroke: 'var(--rule)', 'stroke-width': 1.2 }, cal); el('text', { x: x + 3, y: 14, 'class': 'mlbl', style: 'font-weight:500;fill:var(--ink)' }, cal, yr + '.'); }
+      el('text', { x: x + cw / 2, y: top + THEMES.length * rh + 16, 'text-anchor': 'middle', 'class': 'mlbl' }, cal, MN[mo - 1]);
+    });
+    THEMES.forEach(function (th, i) {
+      var y = top + i * rh, empty = i === THEMES.length - 1;
+      el('text', { x: lx - 12, y: y + rh / 2 + 4, 'text-anchor': 'end', 'class': 'rowlbl' + (empty ? ' empty' : '') }, cal, th);
+      var rowTotal = 0;
+      MONTHS.forEach(function (m, j) {
+        var list = grid[m + '|' + i] || [], n = list.length; rowTotal += n;
+        var x = lx + j * cw + (cw - cs) / 2;
+        var c = el('rect', { x: x, y: y + (rh - cs) / 2, width: cs, height: cs, fill: CAL_COLORS[Math.min(4, n)], stroke: empty ? 'var(--accent)' : 'none', 'stroke-width': empty ? 1 : 0, 'stroke-dasharray': empty ? '2 2' : '', 'class': 'cell', 'data-tip': labelMonth(m) + ' · ' + th + ': ' + (n ? list.join(' · ') : (empty ? 'nijedan stan nije počeo da se gradi' : 'nema događaja')) }, cal);
+        c.style.transitionDelay = (j * 45 + i * 12) + 'ms';
+        calCells.push(c);
+      });
+      el('text', { x: 992, y: y + rh / 2 + 4, 'text-anchor': 'end', 'class': 'tot', style: empty ? 'fill:var(--accent);font-weight:500' : '' }, cal, rowTotal);
+    });
+    el('text', { x: 992, y: top - 8, 'text-anchor': 'end', 'class': 'mlbl' }, cal, 'ukupno');
+    el('line', { id: 'calScan', x1: lx, x2: lx, y1: 18, y2: top + THEMES.length * rh, stroke: 'var(--accent)', 'stroke-width': 3, opacity: 0 }, cal);
+  })();
+  function labelMonth(m) { var mo = +m.slice(5); return ['januar', 'februar', 'mart', 'april', 'maj', 'jun', 'jul', 'avgust', 'septembar', 'oktobar', 'novembar', 'decembar'][mo - 1] + ' ' + m.slice(0, 4) + '.'; }
+  function playCal() {
+    enterPre(cal);
+    calBars.forEach(function (b) { b.setAttribute('height', 0); b.setAttribute('y', 80); });
+    requestAnimationFrame(function () { cal.classList.remove('pre'); });
+    var scan = $('calScan');
+    if (!reduce) scan.setAttribute('opacity', 1);
+    tween(MONTHS.length * 45 + 600, function (t) {
+      var x = CAL_L + (CAL_R - CAL_L) * t; scan.setAttribute('x1', x); scan.setAttribute('x2', x);
+      calBars.forEach(function (b, j) { var h = +b.getAttribute('data-h'); var local = Math.max(0, Math.min(1, (t * MONTHS.length - j) / 2)); b.setAttribute('height', h * local); b.setAttribute('y', 80 - h * local); });
+    }, function () { scan.setAttribute('opacity', 0); calBars.forEach(function (b) { var h = +b.getAttribute('data-h'); b.setAttribute('height', h); b.setAttribute('y', 80 - h); }); }, function (t) { return t; }, 'cal');
+  }
+
+  // ---------- 10 network ----------
+  var NODES = [
+    { id: 'VB', l: 'Velje brdo', g: 'projekat', i: 'Projekat: do 20.000 stanova, ugovoreno 185' },
+    { id: 'Vlada', l: 'Vlada Crne Gore', g: 'vlast', i: 'Nosilac projekta' },
+    { id: 'Spajic', l: 'Milojko Spajić', g: 'vlast', i: 'Predsjednik Vlade; predstavio projekat 21. 9. 2024.' },
+    { id: 'MPUDI', l: 'Min. prostornog planiranja', g: 'vlast', i: 'Plan (PUP) i međunarodni konkurs' },
+    { id: 'Radunovic', l: 'Slaven Radunović', g: 'vlast', i: 'Ministar; predsjedava Koordinacionim tijelom' },
+    { id: 'MJR', l: 'Min. javnih radova', g: 'vlast', i: 'Investitor; raspisuje tendere i potpisuje ugovore' },
+    { id: 'Adzovic', l: 'Majda Adžović', g: 'vlast', i: 'Ministarka javnih radova' },
+    { id: 'KT', l: 'Koordinaciono tijelo', g: 'vlast', i: 'Formirano u oktobru 2024; 26.836 € naknada za četiri mjeseca' },
+    { id: 'Djurisic', l: 'Mirjana Đurišić', g: 'vlast', i: 'Direktorat glavnog državnog arhitekte; predsjednica žirija' },
+    { id: 'GG', l: 'Glavni grad (Mujović)', g: 'vlast', i: 'Zemljište i komunalna infrastruktura' },
+    { id: 'Konkurs', l: 'Konkurs za Blok A1', g: 'vlast', i: '29 radova; nagradni fond 225.000 €' },
+    { id: 'Fidija', l: 'Fidija i Ing Invest', g: 'izvodjaci', i: 'Prva faza Bloka A1: 40.049.774 € bez PDV-a; jedina ponuda' },
+    { id: 'Eurozox', l: 'Eurozox', g: 'izvodjaci', i: 'Bulevar: 30,86 mil. € bez PDV-a' },
+    { id: 'Konstruktor', l: 'Konstruktor Group', g: 'izvodjaci', i: 'Pripremni radovi: 1.470.471 €' },
+    { id: 'Optimus', l: 'Optimusproject i Route', g: 'izvodjaci', i: 'Projekat bulevara: 74.536 €' },
+    { id: 'Civil', l: 'Civil Engineer', g: 'izvodjaci', i: 'Revizija dokumentacije: oko 198.880 €' },
+    { id: 'Geoprojekt', l: 'Geoprojekt', g: 'izvodjaci', i: 'Prethodna studija: veza sa Marezom ne može se isključiti; detaljno istraživanje do septembra 2027.' },
+    { id: 'Tim', l: 'Milanović i Šišović', g: 'izvodjaci', i: 'Prva nagrada na konkursu: 100.000 €' },
+    { id: 'SPO', l: 'SPO (policija)', g: 'kontrola', i: 'Saslušanje po anonimnoj prijavi, objavljeno 14. 10. 2026.' },
+    { id: 'AZLP', l: 'AZLP', g: 'kontrola', i: 'Rješenje 27. 7. 2026: prekršen rok (prema podstanarima)' },
+    { id: 'EPA', l: 'Agencija za živ. sredinu', g: 'kontrola', i: 'Procjena uticaja za Blok A1 obavezna' },
+    { id: 'Vodovod', l: 'Vodovod Podgorica', g: 'kontrola', i: 'Odbio uslove za priključenje (prema Standardu)' },
+    { id: 'CGES', l: 'CGES', g: 'kontrola', i: 'Dalekovodi 400 kV preko lokacije' },
+    { id: 'MEko', l: 'Min. ekologije (Dabetić)', g: 'kontrola', i: '„Bilo kakve izgradnje neće i ne može biti“ bez procjene uticaja' },
+    { id: 'URA', l: 'URA', g: 'kritika', i: 'Opozicija: rokovi, cijena, konkurs' },
+    { id: 'DPS', l: 'DPS (Huter)', g: 'kritika', i: '„Velje brdo je velja prevara“' },
+    { id: 'KANA', l: 'NVO KANA', g: 'kritika', i: 'Navodi sukob interesa u žiriju; ministarstvo negira' },
+    { id: 'Podstanari', l: 'Udruženje podstanara', g: 'kritika', i: 'Zahtjev za informacije; inicijativa za zaustavljanje' },
+    { id: 'MANS', l: 'MANS', g: 'kritika', i: 'Pribavio podatke o naknadama Koordinacionog tijela' },
+    { id: 'Investitor', l: 'Investitor', g: 'kritika', i: 'Računica 2.808 € po m² iz ugovora' },
+    { id: 'Vijesti', l: 'Vijesti', g: 'kritika', i: 'Objavile saslušanje u SPO-u i procjenu od 3,5 mlrd. €' },
+    { id: 'Fidelity', l: 'Fidelity Consulting', g: 'kritika', i: 'Kritika rata i tendera za pripremne radove' }
+  ];
+  var LINKS = [
+    ['Spajic', 'Vlada', 'nadleznost', 'premijer'], ['Vlada', 'VB', 'nadleznost', 'nosilac projekta'], ['Vlada', 'KT', 'nadleznost', 'formirala, okt. 2024.'],
+    ['Radunovic', 'KT', 'nadleznost', 'predsjedava'], ['Radunovic', 'MPUDI', 'nadleznost', 'ministar'], ['Adzovic', 'MJR', 'nadleznost', 'ministarka'],
+    ['MPUDI', 'VB', 'nadleznost', 'plan i konkurs'], ['MJR', 'VB', 'nadleznost', 'investitor'], ['MPUDI', 'Konkurs', 'nadleznost', 'raspisao'],
+    ['Djurisic', 'Konkurs', 'nadleznost', 'predsjednica žirija'], ['Djurisic', 'MPUDI', 'nadleznost', 'Direktorat glavnog državnog arhitekte'], ['Konkurs', 'VB', 'nadleznost', 'Blok A1'],
+    ['GG', 'VB', 'nadleznost', 'zemljište, infrastruktura'],
+    ['Konkurs', 'Tim', 'ugovor', '1. nagrada', 100000], ['MJR', 'Fidija', 'ugovor', 'Blok A1', 40049774], ['MJR', 'Eurozox', 'ugovor', 'bulevar', 30860000],
+    ['MJR', 'Konstruktor', 'ugovor', 'pripremni radovi', 1470471], ['MJR', 'Optimus', 'ugovor', 'projekat bulevara', 74536], ['MJR', 'Civil', 'ugovor', 'revizija', 198880],
+    ['VB', 'Geoprojekt', 'ugovor', 'istraživanje Mareze, rok septembar 2027.', 0],
+    ['MEko', 'VB', 'kontrola', 'bez procjene uticaja nema gradnje'], ['EPA', 'VB', 'kontrola', 'procjena uticaja obavezna'], ['Vodovod', 'VB', 'kontrola', 'odbio uslove'],
+    ['CGES', 'VB', 'kontrola', 'dalekovodi'], ['SPO', 'Radunovic', 'kontrola', 'saslušanje'], ['SPO', 'Djurisic', 'kontrola', 'saslušanje'], ['AZLP', 'MPUDI', 'kontrola', 'prekršen rok'],
+    ['Podstanari', 'MPUDI', 'kritika', 'zahtjev za informacije'], ['Podstanari', 'VB', 'kritika', 'inicijativa za zaustavljanje'], ['Podstanari', 'AZLP', 'kritika', 'žalba'],
+    ['KANA', 'Konkurs', 'kritika', 'navodi sukob interesa'], ['URA', 'Konkurs', 'kritika', '„namješten“'], ['URA', 'VB', 'kritika', 'rokovi i cijena'],
+    ['DPS', 'VB', 'kritika', '„velja prevara“'], ['MANS', 'KT', 'kritika', 'podaci o naknadama'], ['Investitor', 'MJR', 'kritika', 'računica 2.808 €/m²'],
+    ['Vijesti', 'SPO', 'kritika', 'objavile saslušanje'], ['Fidelity', 'MJR', 'kritika', 'tender za pripremne radove']
+  ];
+  var GCOL = { projekat: 'var(--accent)', vlast: 'var(--ink)', izvodjaci: 'var(--accent)', kontrola: '#2a78d6', kritika: '#c27c00' };
+  var net = $('net'), NW = 1000, NH = 660, byId = {};
+  NODES.forEach(function (n) { byId[n.id] = n; n.deg = 0; });
+  LINKS.forEach(function (l) { byId[l[0]].deg++; byId[l[1]].deg++; });
+  // hand-placed so no two labels collide: [x, y, label side]; dragging still moves any node
+  var POS = {
+    VB: [500, 345, 'b'], Vlada: [380, 240, 't'], Spajic: [200, 232, 'l'], KT: [230, 335, 'l'], MANS: [90, 262, 'l'],
+    Radunovic: [320, 120, 'l'], MPUDI: [500, 190, 't'], Djurisic: [640, 92, 't'], SPO: [450, 42, 't'], Vijesti: [250, 42, 'l'],
+    Konkurs: [680, 205, 'r'], Tim: [850, 120, 'r'], KANA: [800, 42, 'r'], URA: [625, 300, 'r'], MJR: [690, 405, 'b'],
+    Adzovic: [700, 600, 'r'], Fidija: [830, 255, 'r'], Eurozox: [850, 325, 'r'], Konstruktor: [855, 395, 'r'], Optimus: [820, 465, 'r'],
+    Civil: [830, 535, 'r'], Investitor: [905, 612, 'l'], Fidelity: [945, 185, 'l'], Geoprojekt: [600, 515, 'r'], GG: [400, 495, 'l'],
+    AZLP: [340, 420, 'b'], Podstanari: [190, 425, 'b'], DPS: [120, 545, 'l'], CGES: [230, 605, 'l'], MEko: [330, 560, 'l'],
+    EPA: [430, 612, 'b'], Vodovod: [575, 600, 'b']
+  };
+  NODES.forEach(function (n) { var p = POS[n.id]; n.x = p[0]; n.y = p[1]; n.side = p[2]; });
+  var netEdges = [], netNodes = [], netMoney = [], netFlows = [];
+  function edgePath(a, b) {
+    var mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2, dx = b.x - a.x, dy = b.y - a.y, k = .12;
+    return 'M' + a.x.toFixed(1) + ',' + a.y.toFixed(1) + ' Q' + (mx - dy * k).toFixed(1) + ',' + (my + dx * k).toFixed(1) + ' ' + b.x.toFixed(1) + ',' + b.y.toFixed(1);
+  }
+  var gE = el('g', null, net), gF = el('g', null, net), gM = el('g', null, net), gN = el('g', null, net);
+  LINKS.forEach(function (l, k) {
+    var a = byId[l[0]], b = byId[l[1]];
+    var w = l[2] === 'ugovor' ? (l[4] ? Math.max(1.6, 1.2 + 1.6 * Math.log10(l[4] / 50000 + 1) * 1.6) : 1.6) : null;
+    var p = el('path', { d: edgePath(a, b), 'class': 'edge t-' + l[2], 'data-tip': a.l + ' → ' + b.l + ': ' + l[3] + (l[4] ? ' (' + nf(l[4]) + ' €)' : '') }, gE);
+    if (w) p.style.strokeWidth = w;
+    p._l = l; netEdges.push(p);
+    if (l[2] === 'ugovor' && l[4]) {
+      var fl = el('path', { d: edgePath(a, b), 'class': 'flow' }, gF); fl._l = l; netFlows.push(fl);
+      var t = el('text', { 'class': 'money' }, gM, l[4] >= 1e6 ? nf(l[4] / 1e6, 2) + ' mil. €' : nf(l[4]) + ' €'); t._l = l; netMoney.push(t);
+    }
+  });
+  NODES.forEach(function (n) {
+    var g = el('g', { 'class': 'node g-' + n.g, 'data-tip': n.l + ' — ' + n.i, tabindex: 0 }, gN);
+    var r = n.r = n.g === 'projekat' ? 24 : 6 + 2.2 * Math.sqrt(n.deg);
+    if (n.g === 'projekat') el('circle', { r: 24, 'class': 'halo on' }, g);
+    el('circle', { r: r, fill: GCOL[n.g] }, g);
+    var at = { l: [-(r + 6), 4, 'end'], r: [r + 6, 4, 'start'], t: [0, -(r + 8), 'middle'], b: [0, r + (n.g === 'projekat' ? 20 : 15), 'middle'] }[n.side];
+    el('text', { x: at[0], y: at[1], 'text-anchor': at[2] }, g, n.l);
+    g._n = n; n._g = g; netNodes.push(g);
+  });
+  function placeNet(prog) {
+    var p = prog == null ? 1 : prog;
+    NODES.forEach(function (n) {
+      var x = NW / 2 + (n.x - NW / 2) * p, y = NH / 2 + (n.y - NH / 2) * p;
+      n._g.setAttribute('transform', 'translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ')');
+      n.cx = x; n.cy = y;
+    });
+    netEdges.concat(netFlows).forEach(function (e) { var a = byId[e._l[0]], b = byId[e._l[1]]; e.setAttribute('d', edgePath({ x: a.cx, y: a.cy }, { x: b.cx, y: b.cy })); });
+    // the amount sits under the recipient's name, where it can't collide with the fan of edges
+    netMoney.forEach(function (t) { var b = byId[t._l[1]]; t.setAttribute('x', b.cx + b.r + 6); t.setAttribute('y', b.cy + 18); });
+  }
+  placeNet(1);
+  var netList = $('netList');
+  LINKS.forEach(function (l) { var li = document.createElement('li'); li.textContent = byId[l[0]].l + ' → ' + byId[l[1]].l + ': ' + l[3] + (l[4] ? ' (' + nf(l[4]) + ' €)' : ''); netList.appendChild(li); });
+  var hidden = {};
+  function focusNode(n) {
+    if (!n) { net.classList.remove('focus'); each(net.querySelectorAll('.on'), function (x) { if (!x.classList.contains('halo')) x.classList.remove('on'); }); return; }
+    net.classList.add('focus');
+    each(net.querySelectorAll('.node.on,.edge.on,.money.on,.flow.on'), function (x) { x.classList.remove('on'); });
+    n._g.classList.add('on');
+    netEdges.forEach(function (e, k) { var l = e._l; if ((l[0] === n.id || l[1] === n.id) && !hidden[l[2]]) { e.classList.add('on'); byId[l[0]]._g.classList.add('on'); byId[l[1]]._g.classList.add('on'); } });
+    netFlows.concat(netMoney).forEach(function (x) { if (x._l[0] === n.id || x._l[1] === n.id) x.classList.add('on'); });
+  }
+  netNodes.forEach(function (g) {
+    g.addEventListener('pointerenter', function () { if (!dragN) focusNode(g._n); });
+    g.addEventListener('pointerleave', function () { if (!dragN) focusNode(null); });
+    g.addEventListener('focus', function () { focusNode(g._n); });
+    g.addEventListener('blur', function () { focusNode(null); });
+  });
+  var dragN = null;
+  function svgPt(e) { var r = net.getBoundingClientRect(); return { x: (e.clientX - r.left) / r.width * NW, y: (e.clientY - r.top) / r.height * NH }; }
+  net.addEventListener('pointerdown', function (e) { var g = e.target.closest('.node'); if (!g) return; dragN = g._n; net.setPointerCapture(e.pointerId); g.style.cursor = 'grabbing'; });
+  net.addEventListener('pointermove', function (e) { if (!dragN) return; var p = svgPt(e); dragN.x = Math.max(20, Math.min(NW - 20, p.x)); dragN.y = Math.max(20, Math.min(NH - 20, p.y)); placeNet(1); });
+  function dragEnd() { if (dragN) { dragN._g.style.cursor = ''; dragN = null; } }
+  net.addEventListener('pointerup', dragEnd);
+  net.addEventListener('pointercancel', dragEnd);
+  each($('netLegend').querySelectorAll('button'), function (b) {
+    b.addEventListener('click', function () {
+      var t = b.getAttribute('data-type'), on = b.getAttribute('aria-pressed') !== 'true';
+      b.setAttribute('aria-pressed', on ? 'true' : 'false'); hidden[t] = !on;
+      netEdges.concat(netFlows, netMoney).forEach(function (x) { if (x._l[2] === t) x.style.display = on ? '' : 'none'; });
+    });
+  });
+  function playNet() {
+    net.classList.remove('flowing');
+    netEdges.forEach(function (e) { e.style.opacity = reduce ? '' : 0; });
+    netMoney.forEach(function (t) { t.style.opacity = reduce ? '' : 0; });
+    netNodes.forEach(function (g) { g.style.opacity = reduce ? '' : 0; });
+    tween(1600, function (t) { placeNet(t); netNodes.forEach(function (g, i) { g.style.opacity = Math.min(1, t * 3 - i * 0.04); }); }, function () {
+      netNodes.forEach(function (g) { g.style.opacity = ''; });
+      // draw each edge, then drop the inline dash so the type's own dash pattern returns and dragging can't clip it
+      netEdges.forEach(function (e, i) { later(function () { e.style.opacity = ''; drawPath(e, 900, 0); later(function () { e.style.transition = ''; e.style.strokeDasharray = ''; e.style.strokeDashoffset = ''; }, 950); }, i * 35); });
+      later(function () { netMoney.forEach(function (t) { t.style.opacity = ''; }); net.classList.add('flowing'); }, 1500);
+    }, E.out, 'net');
+  }
+
+  // ---------- orchestration ----------
+  var PLAY = {
+    teren: function () { play(true); sweepCompare(); playHeat(); },
+    obecanja: playPromises, profil: playRadar, razmjera: playScale, cijena: playPrice, novac: playMoney,
+    rokovi: playSlip, kalendar: playCal, prepreke: playObstacles, mreza: playNet, glasovi: playVoices, projekat: playFoot
+  };
+  function enter(plate) { headIn(plate); var k = plate.getAttribute('data-anim'); if (PLAY[k]) PLAY[k](); }
+  each(document.querySelectorAll('[data-replay]'), function (b) { b.addEventListener('click', function () { enter(document.getElementById(b.getAttribute('data-replay'))); }); });
+  if (!reduce && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { io.unobserve(e.target); enter(e.target); } });
+    }, { rootMargin: '0px 0px -28% 0px', threshold: 0 });
+    each(document.querySelectorAll('[data-anim]'), function (s) { io.observe(s); });
+    var ioView = new IntersectionObserver(function (es) { es.forEach(function (e) { inView = e.isIntersecting; }); }, { threshold: 0.15 });
+    ioView.observe($('teren'));
+  }
+  playHero();
+
+  // ---------- reading progress + index indicator ----------
+  var prog = $('prog'), ind = $('ind'), idxNav = $('idx');
+  var links = Array.prototype.slice.call(idxNav.querySelectorAll('a'));
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(function () {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, window.scrollY / h) : 0) + ')';
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  function moveInd(a) {
+    if (!a) { ind.style.width = '0px'; return; }
+    ind.style.width = a.offsetWidth + 'px'; ind.style.transform = 'translateX(' + a.offsetLeft + 'px)';
+    var nl = idxNav.scrollLeft, left = a.offsetLeft, right = left + a.offsetWidth;
+    if (left < nl || right > nl + idxNav.clientWidth) idxNav.scrollTo({ left: Math.max(0, left - 24), behavior: reduce ? 'auto' : 'smooth' });
+  }
+  if ('IntersectionObserver' in window) {
+    var io2 = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var hit = null;
+        links.forEach(function (a) { var on = a.getAttribute('href') === '#' + e.target.id; a.classList.toggle('on', on); if (on) hit = a; });
+        moveInd(hit);
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    each(document.querySelectorAll('main > section'), function (s) { io2.observe(s); });
+  }
+  window.addEventListener('resize', function () { moveInd(idxNav.querySelector('a.on')); });
+})();
+</script>
+</body>
+</html>

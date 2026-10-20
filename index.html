@@ -144,12 +144,12 @@
   .vb-halo{fill:none;stroke:#fff;stroke-width:13;stroke-linecap:round;stroke-linejoin:round;opacity:.55}
   .vb-tag{position:absolute;left:12px;top:12px;font-size:12px;font-weight:700;letter-spacing:.04em;color:#fff;background:rgba(20,18,17,.78);padding:6px 9px}
   @media (prefers-reduced-motion:no-preference){
-    [data-rv]:not([data-in]) .vb-route{stroke-dashoffset:1}
-    [data-rv][data-in] .vb-route{stroke-dashoffset:1;animation:draw 2.4s cubic-bezier(.65,0,.35,1) .5s forwards}
+    .vb-sat:not([data-in]) .vb-route{stroke-dashoffset:1}
+    .vb-sat[data-in] .vb-route{stroke-dashoffset:1;animation:draw 2.4s cubic-bezier(.65,0,.35,1) .5s forwards}
   }
   @media (max-width:900px){
     #analize > div,#oblasti > div,#metod > div{padding:56px 20px 64px !important}
-    [data-g="feature"] > *{padding:28px 0 !important;border-left:0 !important}
+    [data-g="feature"] > *{padding:24px 20px !important;border-left:0 !important}
     [data-g="feature"] > *:last-child{border-top:2px solid #201e1d}
   }
 </style>
@@ -260,18 +260,18 @@
             <div style="background:#f3f2f2;padding:14px 12px 0 0"><div style="font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1">20.000</div><div style="font-size:12px;font-weight:600;color:#605d5d;margin-top:4px">obećanih stanova</div></div>
             <div style="background:#f3f2f2;padding:14px 12px 0"><div style="font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1">185</div><div style="font-size:12px;font-weight:600;color:#605d5d;margin-top:4px">ugovoreno</div></div>
             <div style="background:#f3f2f2;padding:14px 12px 0"><div style="font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1;color:#d40511">0</div><div style="font-size:12px;font-weight:600;color:#605d5d;margin-top:4px">izgrađeno</div></div>
-            <div style="background:#f3f2f2;padding:14px 0 0 12px"><div style="font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1">5,2 km</div><div style="font-size:12px;font-weight:600;color:#605d5d;margin-top:4px">probijene trase</div></div>
+            <div style="background:#f3f2f2;padding:14px 0 0 12px"><div style="font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1">5,2&nbsp;km</div><div style="font-size:12px;font-weight:600;color:#605d5d;margin-top:4px">probijene trase</div></div>
           </div>
           <span class="btn-red" style="display:inline-flex;align-items:center;gap:10px;margin-top:30px;padding:14px 20px;font-size:14px;font-weight:700">Otvorite analizu →</span>
         </div>
         <div style="border-left:2px solid #201e1d;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;gap:14px">
           <div style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#201e1d">Teren sa satelita, 7. 10. 2026.</div>
-          <div class="vb-sat">
+          <div class="vb-sat" data-rv>
             <img src="/analize/velje-brdo/img/teren-2026-10-07.jpg" width="1100" height="800" loading="lazy" alt="Crno-bijeli satelitski snimak padine Veljeg brda; crvenom linijom označena je probijena trasa puta.">
             <svg viewBox="0 0 1100 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path class="vb-halo" d="M792.5 411C790.8 413.3 787.1 421.4 782.5 425C777.9 428.6 772.1 430.2 765 432.5C757.9 434.8 748.3 436.7 740 439C731.7 441.3 723.3 443.8 715 446.5C706.7 449.2 698.3 452.1 690 455C681.7 457.9 673.3 461.1 665 464C656.7 466.9 647.5 469.8 640 472.5C632.5 475.2 626.7 478.3 620 480C613.3 481.7 606.7 483.2 600 482.5C593.3 481.8 585.8 478.5 580 476C574.2 473.5 570 470.3 565 467.5C560 464.7 554.6 461.1 550 459C545.4 456.9 542.5 454.4 537.5 455C532.5 455.6 526.2 460 520 462.5C513.8 465 506.7 467.5 500 470C493.3 472.5 486.7 474.8 480 477.5C473.3 480.2 466.7 483.2 460 486C453.3 488.8 446.2 491.2 440 494C433.8 496.8 427.5 500.2 422.5 502.5C417.5 504.8 413.3 506.9 410 507.5C406.7 508.1 404 507.2 402.5 506C401 504.8 400.2 502.2 401 500C401.8 497.8 405.2 494.2 407.5 492.5C409.8 490.8 411.2 492.5 415 490C418.8 487.5 425 482.1 430 477.5C435 472.9 440 468.3 445 462.5C450 456.7 455 449.2 460 442.5C465 435.8 470 428.3 475 422.5C480 416.7 485 412.2 490 407.5C495 402.8 499.2 398.2 505 394C510.8 389.8 518.3 386.5 525 382.5C531.7 378.5 539.2 373.8 545 370C550.8 366.2 556.2 362.7 560 360C563.8 357.3 565.7 356.1 567.5 354C569.3 351.9 571.4 350.2 571 347.5C570.6 344.8 567.7 340.1 565 337.5C562.3 334.9 559.2 333.2 555 332C550.8 330.8 545 330.1 540 330C535 329.9 529.6 330.5 525 331.5C520.4 332.5 516.2 333.8 512.5 336C508.8 338.2 505.8 341 502.5 345C499.2 349 495.8 355 492.5 360C489.2 365 486.2 370.4 482.5 375C478.8 379.6 474.2 383.8 470 387.5C465.8 391.2 462.1 394.4 457.5 397.5C452.9 400.6 447.5 403.2 442.5 406C437.5 408.8 431.7 412.3 427.5 414C423.3 415.7 420 416.5 417.5 416C415 415.5 412.9 413.2 412.5 411C412.1 408.8 412.9 405.6 415 402.5C417.1 399.4 421.2 396.2 425 392.5C428.8 388.8 433.8 384.6 437.5 380C441.2 375.4 444.9 370.4 447.5 365C450.1 359.6 452.8 352.9 453 347.5C453.2 342.1 451.2 336.2 449 332.5C446.8 328.8 443.3 326.2 440 325C436.7 323.8 433.2 323.5 429 325C424.8 326.5 419.8 330.7 415 334C410.2 337.3 405.2 341.1 400 345C394.8 348.9 386.7 355.4 384 357.5"></path><path class="vb-route" pathLength="1" d="M792.5 411C790.8 413.3 787.1 421.4 782.5 425C777.9 428.6 772.1 430.2 765 432.5C757.9 434.8 748.3 436.7 740 439C731.7 441.3 723.3 443.8 715 446.5C706.7 449.2 698.3 452.1 690 455C681.7 457.9 673.3 461.1 665 464C656.7 466.9 647.5 469.8 640 472.5C632.5 475.2 626.7 478.3 620 480C613.3 481.7 606.7 483.2 600 482.5C593.3 481.8 585.8 478.5 580 476C574.2 473.5 570 470.3 565 467.5C560 464.7 554.6 461.1 550 459C545.4 456.9 542.5 454.4 537.5 455C532.5 455.6 526.2 460 520 462.5C513.8 465 506.7 467.5 500 470C493.3 472.5 486.7 474.8 480 477.5C473.3 480.2 466.7 483.2 460 486C453.3 488.8 446.2 491.2 440 494C433.8 496.8 427.5 500.2 422.5 502.5C417.5 504.8 413.3 506.9 410 507.5C406.7 508.1 404 507.2 402.5 506C401 504.8 400.2 502.2 401 500C401.8 497.8 405.2 494.2 407.5 492.5C409.8 490.8 411.2 492.5 415 490C418.8 487.5 425 482.1 430 477.5C435 472.9 440 468.3 445 462.5C450 456.7 455 449.2 460 442.5C465 435.8 470 428.3 475 422.5C480 416.7 485 412.2 490 407.5C495 402.8 499.2 398.2 505 394C510.8 389.8 518.3 386.5 525 382.5C531.7 378.5 539.2 373.8 545 370C550.8 366.2 556.2 362.7 560 360C563.8 357.3 565.7 356.1 567.5 354C569.3 351.9 571.4 350.2 571 347.5C570.6 344.8 567.7 340.1 565 337.5C562.3 334.9 559.2 333.2 555 332C550.8 330.8 545 330.1 540 330C535 329.9 529.6 330.5 525 331.5C520.4 332.5 516.2 333.8 512.5 336C508.8 338.2 505.8 341 502.5 345C499.2 349 495.8 355 492.5 360C489.2 365 486.2 370.4 482.5 375C478.8 379.6 474.2 383.8 470 387.5C465.8 391.2 462.1 394.4 457.5 397.5C452.9 400.6 447.5 403.2 442.5 406C437.5 408.8 431.7 412.3 427.5 414C423.3 415.7 420 416.5 417.5 416C415 415.5 412.9 413.2 412.5 411C412.1 408.8 412.9 405.6 415 402.5C417.1 399.4 421.2 396.2 425 392.5C428.8 388.8 433.8 384.6 437.5 380C441.2 375.4 444.9 370.4 447.5 365C450.1 359.6 452.8 352.9 453 347.5C453.2 342.1 451.2 336.2 449 332.5C446.8 328.8 443.3 326.2 440 325C436.7 323.8 433.2 323.5 429 325C424.8 326.5 419.8 330.7 415 334C410.2 337.3 405.2 341.1 400 345C394.8 348.9 386.7 355.4 384 357.5"></path></svg>
             <span class="vb-tag">Copernicus Sentinel-2</span>
           </div>
-          <p style="margin:0;font-size:13.5px;line-height:1.45;color:#605d5d">Crveno je probijena trasa puta, duga oko 5,2 km. Gradilišta stanova na snimku nema.</p>
+          <p style="margin:0;font-size:13.5px;line-height:1.45;color:#605d5d">Crveno je probijena trasa puta, duga oko 5,2 km. Gradilišta stanova na snimku nema. Sadrži modifikovane podatke Copernicus Sentinel (2026).</p>
         </div>
       </a>
 
@@ -311,10 +311,10 @@
       <div data-g="poster" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:64px;background:rgba(255,255,255,.45)">
         <div style="background:#d40511;padding:28px 28px 0 0">
           <div style="font-size:clamp(52px,7vw,104px);font-weight:800;letter-spacing:-.04em;line-height:1">0,9%</div>
-          <p style="margin:14px 0 0;max-width:26ch;font-size:15px;line-height:1.5;color:#ffd9db">obećanih stanova je ugovoreno: 185 od 20.000, sa rokom 21. 8. 2029.</p>
+          <p style="margin:14px 0 0;max-width:26ch;font-size:15px;line-height:1.5;color:#ffd9db">obećanih stanova je ugovoreno: 185 od 20.000, sa rokom 21.&nbsp;8.&nbsp;2029.</p>
         </div>
         <div style="background:#d40511;padding:28px 28px 0">
-          <div style="font-size:clamp(52px,7vw,104px);font-weight:800;letter-spacing:-.04em;line-height:1">2.808 €</div>
+          <div style="font-size:clamp(52px,7vw,104px);font-weight:800;letter-spacing:-.04em;line-height:1">2.808&nbsp;€</div>
           <p style="margin:14px 0 0;max-width:26ch;font-size:15px;line-height:1.5;color:#ffd9db">po kvadratu, po računici iz ugovora (Investitor). Obećano je 1.000 €; ministarstvo računicu osporava.</p>
         </div>
         <div style="background:#d40511;padding:28px 0 0 28px">

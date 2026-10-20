@@ -95,7 +95,7 @@ button{font-family:inherit}
 .hero .copy{padding:72px 48px 56px 0;min-width:0}
 .eyebrow{display:flex;align-items:center;gap:10px;margin:0 0 26px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .eyebrow i{width:9px;height:9px;background:var(--accent);animation:blink 1.6s infinite;flex:none}
-h1{margin:0;font-size:clamp(40px,6vw,86px);font-weight:800;letter-spacing:-.035em;line-height:.96;text-wrap:balance}
+h1{margin:0;font-size:clamp(40px,6vw,78px);font-weight:800;letter-spacing:-.035em;line-height:.96;text-wrap:balance}
 h1 .ln{display:block}
 h1 .red{color:var(--accent);position:relative;isolation:isolate}
 h1 .num{font-variant-numeric:tabular-nums;display:inline-block;min-width:1ch}
@@ -204,6 +204,8 @@ main{display:flex;flex-direction:column;gap:28px;padding-block:32px 24px}
 .stage [data-tip]{cursor:crosshair}
 .scroll-x{overflow-x:auto}
 @media (max-width:640px){#price,#slip{min-width:640px}#money,#subsidy,#pace{min-width:460px}}
+.swipe{display:none;font-family:var(--f-mono);font-size:11px;color:var(--muted);margin:0 0 6px}
+@media (max-width:640px){.swipe{display:block}}
 
 /* tooltip */
 #tip{position:fixed;z-index:60;pointer-events:none;background:var(--tip-bg);color:var(--tip-ink);padding:8px 11px;font:600 12.5px/1.35 var(--f-ui);max-width:280px;opacity:0;transform:translateY(6px);transition:opacity .15s,transform .2s var(--ease-out)}
@@ -229,6 +231,7 @@ main{display:flex;flex-direction:column;gap:28px;padding-block:32px 24px}
 .story .st .bar i{display:block;height:100%;width:100%;background:var(--ink);transform:scaleX(0);transform-origin:left}
 .story .st.hit .bar i{background:var(--accent)}
 .story .st .lab{font-family:var(--f-mono);font-size:12px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:520px){.story .st .lab{white-space:normal;font-size:11px;line-height:1.25}}
 .story .st[aria-current="true"] .lab{color:var(--ink)}
 .story .st.hit[aria-current="true"] .lab{color:var(--accent)}
 .playbtn{font:700 13px/1 var(--f-ui);color:var(--on-accent);background:var(--accent);border:0;width:40px;height:40px;cursor:pointer;display:inline-grid;place-items:center;margin-top:-14px}
@@ -419,6 +422,7 @@ footer .sitefoot a{color:var(--muted)}
   @media (prefers-reduced-motion: no-preference){
     @keyframes plateIn{from{opacity:.35;transform:translateY(44px) scale(.985)}to{opacity:1;transform:none}}
     main > .plate{animation:plateIn linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+    main > .plate:target{animation:none}
   }
 }
 @media (prefers-reduced-motion: no-preference){
@@ -595,7 +599,7 @@ footer .sitefoot a{color:var(--muted)}
       <button class="replay" type="button" data-replay="profil"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
     </div>
     <div class="radar-wrap">
-      <div class="stage"><svg id="radar" viewBox="0 0 640 560" role="img" aria-label="Paukov dijagram ostvarenja: ugovori za prvu fazu 100%, probijena trasa 98%, a stanovi, rokovi, dokumenti, dozvole i preduslovi blizu nule."></svg></div>
+      <div class="stage"><svg id="radar" viewBox="0 0 640 560" role="img" aria-label="Paukov dijagram ostvarenja: ugovori za prvu fazu 100%, probijena trasa 97%, a stanovi, rokovi, dokumenti, dozvole i preduslovi blizu nule."></svg></div>
       <table class="rtab" id="rtab"><thead><tr><th>Osa</th><th style="text-align:right">Ostvareno</th></tr></thead><tbody></tbody></table>
     </div>
   </section>
@@ -604,7 +608,7 @@ footer .sitefoot a{color:var(--muted)}
     <div class="plate-head">
       <p class="kicker"><span class="no">04</span>Razmjera</p>
       <h2 id="h3r">Ugovoreno je 0,9% obećanog. Tempom prve faze, 20.000 stanova gradilo bi se 324 godine.</h2>
-      <p class="sub">Svaki kvadratić je 100 stanova. Proračun tempa je ilustracija razmjera, ne prognoza: 108 faza po 185 stanova i 36 mjeseci, jedna za drugom.</p>
+      <p class="sub">Svaki kvadratić je 100 stanova. Naš proračun tempa je ilustracija razmjera, ne prognoza: oko 108 faza po 185 stanova i 36 mjeseci, jedna za drugom.</p>
       <button class="replay" type="button" data-replay="razmjera"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
     </div>
     <div class="bigcount">
@@ -623,7 +627,7 @@ footer .sitefoot a{color:var(--muted)}
       <div class="panel">
         <h3>Koliko bi trajalo tempom prve faze</h3>
         <p class="h3sub">Prva faza: 185 stanova za 36 mjeseci. Radunović: „radiće i deset vlada poslije nas“.</p>
-        <div class="stage scroll-x"><svg id="pace" viewBox="0 0 560 250" role="img" aria-label="Tempom prve faze, 20.000 stanova bilo bi završeno oko 2350. godine."></svg></div>
+        <p class="swipe" aria-hidden="true">Grafikon je širi od ekrana, povucite ga ulijevo →</p><div class="stage scroll-x"><svg id="pace" viewBox="0 0 560 250" role="img" aria-label="Tempom prve faze, 20.000 stanova bilo bi završeno oko 2350. godine."></svg></div>
       </div>
     </div>
   </section>
@@ -635,7 +639,7 @@ footer .sitefoot a{color:var(--muted)}
       <p class="sub">Ministarka javnih radova Majda Adžović kaže da trošak iznosi 1.067 € i da razliku pokriva budžet. Računica od 2.808 € dijeli vrijednost ugovora neto površinom stanova (Investitor); <strong>ministarstvo je osporava</strong>.</p>
       <button class="replay" type="button" data-replay="cijena"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
     </div>
-    <div class="stage scroll-x"><svg id="price" viewBox="0 0 960 400" role="img" aria-label="Linijski grafikon: prosječna cijena novogradnje u Podgorici porasla je sa 1.761 € na 2.510 € po kvadratu; obećana cijena 1.000 €, računica iz ugovora 2.808 €."></svg></div>
+    <p class="swipe" aria-hidden="true">Grafikon je širi od ekrana, povucite ga ulijevo →</p><div class="stage scroll-x"><svg id="price" viewBox="0 0 960 400" role="img" aria-label="Linijski grafikon: prosječna cijena novogradnje u Podgorici porasla je sa 1.761 € na 2.510 € po kvadratu; obećana cijena 1.000 €, računica iz ugovora 2.808 €."></svg></div>
     <p class="cap">Linija: prosječna cijena prvih prodaja novih stanova u Podgorici (MONSTAT), €/m². Šuplje tačke: vrijednosti iz medijskih izvještaja o podacima MONSTAT-a. Ugovor: 40.049.774 € bez PDV-a za 14.260 m² neto stambene površine; uključuje glavni projekat, garaže i uređenje terena, a ne zemljište, priključke i PDV. Pređite mišem preko tačaka za vrijednosti.</p>
   </section>
 
@@ -643,22 +647,22 @@ footer .sitefoot a{color:var(--muted)}
     <div class="plate-head">
       <p class="kicker"><span class="no">06</span>Novac</p>
       <h2 id="h5n">Po cijeni iz ugovora, 20.000 stanova koštalo bi oko 4,3 mlrd. €, više od cijelog državnog budžeta za 2026.</h2>
-      <p class="sub">Projekcija množi cijenu jednog stana iz ugovora (216.485 € bez PDV-a) sa 20.000. Ne uključuje zemljište, infrastrukturu ni PDV. Vlada svoju procjenu ukupne vrijednosti nije objavila.</p>
+      <p class="sub">Naša projekcija množi cijenu jednog stana iz ugovora (216.485 € bez PDV-a) sa 20.000. Ne uključuje zemljište, infrastrukturu ni PDV. Vlada svoju procjenu ukupne vrijednosti nije objavila.</p>
       <button class="replay" type="button" data-replay="novac"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
     </div>
     <div class="two">
       <div class="panel">
         <h3>Projekcija naspram budžeta i stvarnog novca</h3>
         <p class="h3sub">Milioni eura, ista skala. Isprekidana linija: cijeli budžet za 2026.</p>
-        <div class="stage scroll-x"><svg id="money" viewBox="0 0 560 280" role="img" aria-label="Projekcija 4.330 miliona eura, državni budžet za 2026. 3.790 miliona, ugovoreno do sada 72,7 miliona, u budžetima 2025. i 2026. po 10 miliona."></svg></div>
+        <p class="swipe" aria-hidden="true">Grafikon je širi od ekrana, povucite ga ulijevo →</p><div class="stage scroll-x"><svg id="money" viewBox="0 0 560 280" role="img" aria-label="Projekcija 4.330 miliona eura, državni budžet za 2026. 3.790 miliona, ugovoreno do sada 72,7 miliona, u prijedlogu budžeta 2025. i u budžetu 2026. po 10 miliona."></svg></div>
       </div>
       <div class="panel">
         <h3>Koliko država dodaje po stanu</h3>
-        <p class="h3sub">Prosječan stan u prvoj fazi ima 77 m² i prodaje se za oko 77.000 €.</p>
-        <div class="stage scroll-x"><svg id="subsidy" viewBox="0 0 560 280" role="img" aria-label="Po ministarki država dodaje oko 5.200 eura po stanu; po računici iz ugovora oko 139.400 eura."></svg></div>
+        <p class="h3sub">Prosječan stan u prvoj fazi ima 77 m²; po obećanih 1.000 €/m² prodavao bi se za oko 77.000 €.</p>
+        <p class="swipe" aria-hidden="true">Grafikon je širi od ekrana, povucite ga ulijevo →</p><div class="stage scroll-x"><svg id="subsidy" viewBox="0 0 560 280" role="img" aria-label="Po ministarki država dodaje oko 5.200 eura po stanu; po računici iz ugovora oko 139.400 eura."></svg></div>
       </div>
     </div>
-    <p class="cap">Izvori: ugovor sa konzorcijumom Fidija i Ing Invest (Investitor, Sjever CG); budžet 2026. od 3,79 mlrd. € (Vlada); 10 mil. € u budžetima 2025. i 2026. (Press, Vodič kroz budžet Skupštine); izjava ministarke Adžović (Analitika). Proračuni po stanu su naši.</p>
+    <p class="cap">Izvori: ugovor sa konzorcijumom Fidija i Ing Invest (Investitor, Sjever CG); budžet 2026. od 3,79 mlrd. € (Vlada); 10 mil. € u prijedlogu budžeta 2025. i u budžetu 2026. (Press, Vodič kroz budžet Skupštine); izjava ministarke Adžović (Analitika). Projekcija i proračuni po stanu su naši.</p>
   </section>
 
   <section class="plate" id="rokovi" data-anim="rokovi" aria-labelledby="h6r">
@@ -668,18 +672,18 @@ footer .sitefoot a{color:var(--muted)}
       <p class="sub">Od obećanog useljenja sredinom 2026. prošlo je <strong id="lateDays">112</strong> dana.</p>
       <button class="replay" type="button" data-replay="rokovi"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
     </div>
-    <div class="stage scroll-x"><svg id="slip" viewBox="0 0 960 380" role="img" aria-label="Obećani rok za prve stanove: sredina 2026, pa kraj 2026, pa kraj 2027; rok iz ugovora za 185 stanova je 21. 8. 2029."></svg></div>
+    <p class="swipe" aria-hidden="true">Grafikon je širi od ekrana, povucite ga ulijevo →</p><div class="stage scroll-x"><svg id="slip" viewBox="0 0 960 380" role="img" aria-label="Obećani rok za prve stanove: sredina 2026, pa kraj 2026, pa kraj 2027; rok iz ugovora za 185 stanova je 21. 8. 2029."></svg></div>
     <p class="cap">Vodoravno: kada je rok izgovoren. Uspravno: koji je rok obećan. Šuplji krug je rok koji je već prošao. Izvori: CdM (21. 9. 2024), Vlada (27. 12. 2024), RTPV (22. 3. 2026), ugovor (21. 8. 2026).</p>
   </section>
 
   <section class="plate" id="kalendar" data-anim="kalendar" aria-labelledby="h8k">
     <div class="plate-head">
       <p class="kicker"><span class="no">08</span>Kalendar projekta</p>
-      <h2 id="h8k">26 mjeseci, 55 događaja: ugovori, kritike i istrage. Red za gradnju stanova je prazan.</h2>
+      <h2 id="h8k">26 mjeseci, 55 događaja: ugovori, kritike i provjere. Red za gradnju stanova je prazan.</h2>
       <p class="sub">Toplotna mapa broji događaje iz naše hronologije po mjesecu i temi. Tamnija ćelija znači više događaja. Pređite mišem preko ćelije za spisak.</p>
       <button class="replay" type="button" data-replay="kalendar"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
     </div>
-    <div class="stage scroll-x"><svg id="cal" viewBox="0 0 1000 400" role="img" aria-label="Toplotna mapa događaja po mjesecima od septembra 2024. do oktobra 2026. i po temama; red Gradnja stanova nema nijedan događaj."></svg></div>
+    <p class="swipe" aria-hidden="true">Grafikon je širi od ekrana, povucite ga ulijevo →</p><div class="stage scroll-x"><svg id="cal" viewBox="0 0 1000 400" role="img" aria-label="Toplotna mapa događaja po mjesecima od septembra 2024. do oktobra 2026. i po temama; red Gradnja stanova nema nijedan događaj."></svg></div>
     <div class="cal-legend"><span><i style="background:#f1efef"></i>0</span><span><i style="background:#f7c4c7"></i>1</span><span><i style="background:#ee7d86"></i>2</span><span><i style="background:#d40511"></i>3</span><span><i style="background:#7d020a"></i>4 i više događaja</span></div>
     <p class="cap">Broj događaja iz hronologije ovog istraživanja, ne mjera ukupne medijske pažnje. Gdje tačan datum nije potvrđen, mjesec je približan.</p>
   </section>
@@ -715,7 +719,7 @@ footer .sitefoot a{color:var(--muted)}
       <button type="button" data-type="kritika" aria-pressed="true"><span class="ln" style="border-color:#c27c00;border-top-style:dotted"></span>Kritika i mediji</button>
       <span style="display:inline-flex;align-items:center;gap:12px;font-size:12.5px;color:var(--ink-2);margin-left:6px"><span><span class="dot" style="background:var(--ink)"></span> vlast</span><span><span class="dot" style="background:var(--accent)"></span> izvođači</span><span><span class="dot" style="background:#2a78d6"></span> institucije</span><span><span class="dot" style="background:#c27c00"></span> kritičari, mediji</span></span>
     </div>
-    <div class="net-wrap"><svg id="net" viewBox="0 0 1000 660" role="img" aria-label="Mreža aktera projekta Velje brdo; spisak veza nalazi se ispod mreže."></svg><span class="net-hint">povucite čvor</span></div>
+    <p class="swipe" aria-hidden="true">Grafikon je širi od ekrana, povucite ga ulijevo →</p><div class="net-wrap"><svg id="net" viewBox="0 0 1000 660" role="img" aria-label="Mreža aktera projekta Velje brdo; spisak veza nalazi se ispod mreže."></svg><span class="net-hint">povucite čvor</span></div>
     <details class="net-list"><summary>Spisak svih veza</summary><ul id="netList"></ul></details>
   </section>
 
@@ -737,7 +741,7 @@ footer .sitefoot a{color:var(--muted)}
       <figure class="qt"><span class="side crit">Struka</span><blockquote>„Velje brdo se može samo u snovima zamisliti.“</blockquote><cite>Radenko Pejović, penzionisani profesor Građevinskog fakulteta, Monitor, 8. 5. 2026.</cite></figure>
       <figure class="qt"><span class="side crit">Opozicija</span><blockquote>„Rokovi za Velje brdo ponovo se pomjeraju.“</blockquote><cite>Ana Novaković Đurović, URA, 19. 10. 2026.</cite></figure>
       <figure class="qt"><span class="side crit">Civilni sektor</span><blockquote>„Nema zakona niti odluke Vlade koji bi formalno garantovali realizaciju prema prvobitnim najavama.“</blockquote><cite>Udruženje podstanara Crne Gore</cite></figure>
-      <figure class="qt"><span class="side crit">Civilni sektor</span><blockquote>„Velje Brdo je obmana – 3,5 milijardi za iluziju bez pokrića.“</blockquote><cite>Sonja Dragović, NVO KANA, april 2026. Ministarstvo kaže da je konkurs sproveden zakonito.</cite></figure>
+      <figure class="qt"><span class="side crit">Civilni sektor</span><blockquote>„Velje Brdo je obmana – 3,5 milijardi za iluziju bez pokrića.“</blockquote><cite>Sonja Dragović, NVO KANA, april 2026. KANA navodi i sukob interesa u žiriju konkursa; ministarstvo kaže da je konkurs sproveden zakonito i bez sukoba interesa.</cite></figure>
     </div>
   </section>
 
@@ -765,8 +769,8 @@ footer .sitefoot a{color:var(--muted)}
     <div class="plate-head">
       <p class="kicker"><span class="no">13</span>Izvori</p>
       <h2 id="h10i">Dokumenti i tekstovi na kojima se stranica zasniva</h2>
-      <p class="sub">Glavni izvori su navedeni ispod. Tvrdnje koje potiču iz samo jednog izvora navedene su uz ime tog izvora. Naše računice, kao projekcija troška i tempo gradnje, označene su kao naše.</p>
-      <p class="sub disclose">Napomena: Podaci.me izdaje Fidelity Consulting, koji je o ovom projektu i ranije javno objavljivao kritike. Te kritike su u analizi prikazane kao i ostali izvori, u kalendaru i u mreži aktera.</p>
+      <p class="sub">Glavni izvori su navedeni ispod. Ključne tvrdnje koje potiču iz samo jednog izvora navedene su uz ime tog izvora. Naše računice, kao projekcija troška i tempo gradnje, označene su kao naše.</p>
+      <p class="sub disclose">Napomena o sukobu interesa: Podaci.me izdaje Fidelity Consulting d.o.o. Fidelity Consulting je od 2024. javno kritikovao ovaj projekat: tvrdio je da obećane rate ne odgovaraju cijeni od 1.000 €, da su premijer Spajić i ministar Radunović obmanuli građane i da je procijenjena vrijednost tendera za pripremne radove na bulevaru previsoka. U kalendaru i u mreži aktera te kritike su označene kao kritike izdavača.</p>
     </div>
     <ul class="srcs">
       <li><a href="https://www.cdm.me/ekonomija/spajic-na-predstavljanju-projekta-velje-brdo-prvi-stanovi-sredinom-2026-godine-kvadrat-ce-biti-1-000-eura-sa-kamatom-12-odsto/">CdM: predstavljanje projekta, 21. 9. 2024.</a></li>
@@ -865,7 +869,7 @@ footer .sitefoot a{color:var(--muted)}
   }
   var ROUTE_D = smooth(ROUTE);
   var FRAMES = [
-    { d: '2. 10. 2024.', note: 'Deset dana poslije predstavljanja projekta. Nema puteva.', route: false },
+    { d: '2. 10. 2024.', note: 'Jedanaest dana poslije predstavljanja projekta. Nema puteva.', route: false },
     { d: '14. 3. 2026.', note: 'Jedanaest dana prije otvaranja gradilišta bulevara. Nema novih radova.', route: false },
     { d: '29. 7. 2026.', note: 'Četiri mjeseca poslije početka pripremnih radova: trasa je probijena.', route: true },
     { d: '7. 10. 2026.', note: 'Posljednji snimak bez oblaka: ista trasa, nema novih iskopa.', route: true }
@@ -873,7 +877,7 @@ footer .sitefoot a{color:var(--muted)}
   var PROMISES = [
     { q: 'Prvi stanovi sredinom 2026.', who: 'Milojko Spajić, 21. 9. 2024.', s: 'no', st: 'Nije ispunjeno', fact: 'Rok je prošao. Ugovor za prvih <b>185 stanova</b> ističe <b>21. 8. 2029.</b>' },
     { q: 'Kvadrat 1.000 €', who: 'Milojko Spajić, 21. 9. 2024.', s: 'dispute', st: 'Sporno', fact: 'Po računici iz ugovora gradnja košta najmanje <b>2.808 €</b> po m²; ministarka Adžović kaže <b>1.067 €</b> i da razliku plaća budžet.' },
-    { q: 'Kamata 1,2%, 30 godina, bez učešća', who: 'Milojko Spajić, 21. 9. 2024.', s: 'wait', st: 'Bez potvrde', fact: 'Banka ili fond koji bi dao takvu kamatu <b>nije imenovan</b>. Obećane rate od 290 i 390 € ne odgovaraju cijeni od 1.000 €.' },
+    { q: 'Kamata 1,2%, 30 godina, bez učešća', who: 'Milojko Spajić, 21. 9. 2024.', s: 'wait', st: 'Bez potvrde', fact: 'Banka ili fond koji bi dao takvu kamatu <b>nije imenovan</b>. Naša računica: uz 1,2% na 30 godina stan od 60 m² po 1.000 €/m² daje ratu od oko <b>199 €</b>, a od 100 m² oko <b>331 €</b>. Obećane rate od 290 i 390 € odgovaraju cijeni od oko 1.460 i 1.180 € po m². Isto je 2024. iznio Fidelity Consulting, izdavač Podaci.me.' },
     { q: '20.000 stanova', who: 'Koordinaciono tijelo Vlade, decembar 2024.', s: 'dispute', st: 'Bez plana', fact: 'Ugovoreno je <b>185</b>, odnosno 0,9%. Plan finansiranja za ostatak nije objavljen.' },
     { q: 'PUP usvojen do 31. 12. 2024.', who: 'Vlada, 14. 12. 2024.', s: 'late', st: 'Kasnilo 227 dana', fact: 'Plan je usvojen <b>15. 8. 2025.</b> na telefonskoj sjednici.' },
     { q: 'Pravilnik o dodjeli u prvoj polovini 2026.', who: 'Ministarstvo, 2026.', s: 'no', st: 'Nije ispunjeno', fact: 'Postoji samo <b>nacrt</b>; usvojen pravilnik nismo našli.' },
@@ -899,7 +903,7 @@ footer .sitefoot a{color:var(--muted)}
     { k: 'Projekcija: 20.000 stanova po cijeni iz ugovora', v: projection / 1e6, red: true },
     { k: 'Cijeli državni budžet za 2026.', v: BUDGET_2026 },
     { k: 'Ugovoreno do sada (bulevar, Blok A1, ostalo)', v: 72.65 },
-    { k: 'U budžetima 2025. i 2026. (po 10 mil. €)', v: 20 }
+    { k: 'U prijedlogu budžeta 2025. i u budžetu 2026. (po 10 mil. €)', v: 20 }
   ];
   var SUBSIDY = [
     { k: 'Po ministarki (1.067 €/m²)', v: (MINISTRY_PRICE - PROMISE_PRICE) * avgArea },
@@ -1238,7 +1242,7 @@ footer .sitefoot a{color:var(--muted)}
       el('text', { x: SX(r.said) + r.dx, y: SY(r.due) + r.dy + 15, 'text-anchor': r.a }, g, r.who);
     });
   })();
-  var late = Math.max(0, Math.floor((Date.now() - tms('2026-06-30')) / 864e5));
+  var late = Math.max(0, Math.floor((tms(TODAY) - tms('2026-06-30')) / 864e5));
   var lateNode = $('lateDays'); lateNode.textContent = nf(late);
   function playSlip() {
     var band = $('pastBand'), h = +band.getAttribute('height');
@@ -1311,7 +1315,7 @@ footer .sitefoot a{color:var(--muted)}
     { k: 'Rokovi ispoštovani', s: ['Rokovi', 'ispoštovani'], v: 0, f: '0 / 3', d: 'prvi stanovi sredinom 2026, PUP do 31. 12. 2024, pravilnik do sredine 2026.' },
     { k: 'Ključni dokumenti objavljeni', s: ['Dokumenti', 'objavljeni'], v: 0, f: '0 / 5', d: 'studija izvodljivosti, finansijska analiza, izvještaji Koordinacionog tijela, finansijski model, pravilnik' },
     { k: 'Dozvole izdate', s: ['Dozvole izdate'], v: 0, f: '0 / 2', d: 'građevinske dozvole za Blok A1 i bulevar' },
-    { k: 'Preduslovi riješeni', s: ['Preduslovi', 'riješeni'], v: 0, f: '0 / 4', d: 'priključak na vodu, dalekovodi, procjena uticaja za Blok A1, istraživanje Mareze (rok septembar 2027.)' },
+    { k: 'Preduslovi riješeni', s: ['Preduslovi', 'riješeni'], v: 0, f: '0 / 4', d: 'priključak na vodu, dalekovodi, procjena uticaja za Blok A1, istraživanje Mareze (rok septembar 2027, prema Vijestima)' },
     { k: 'Ugovori za prvu fazu', s: ['Ugovori za', 'prvu fazu'], v: 1, f: '2 / 2', d: 'bulevar (Eurozox) i Blok A1 (Fidija i Ing Invest)' },
     { k: 'Probijena trasa bulevara', s: ['Trasa', 'bulevara'], v: Math.min(1, routeKm / 5.3), f: nf(routeKm, 1) + ' / 5,3 km', d: 'prema satelitskom snimku od 7. 10. 2026.' }
   ];
@@ -1372,13 +1376,13 @@ footer .sitefoot a{color:var(--muted)}
   }
 
   // ---------- 08 calendar heat map ----------
-  var THEMES = ['Odluke, najave i rokovi', 'Plan i zemljište', 'Konkurs', 'Tenderi i ugovori', 'Voda i životna sredina', 'Budžet i novac', 'Kritike, kontrola i istrage', 'Gradnja stanova'];
+  var THEMES = ['Odluke, najave i rokovi', 'Plan i zemljište', 'Konkurs', 'Tenderi i ugovori', 'Voda i životna sredina', 'Budžet i novac', 'Kritike i kontrola', 'Gradnja stanova'];
   var EVENTS = [
-    ['2024-09', 0, 'Predstavljanje projekta: 1.000 €/m², prvi stanovi sredinom 2026.'], ['2024-09', 5, 'Vijesti: naselje bi koštalo najmanje 3,5 mlrd. € (anonimni izvor)'], ['2024-09', 6, 'URA (Radovanić): „Velja prevara“'], ['2024-09', 6, 'Fidelity Consulting: obećane rate ne odgovaraju cijeni od 1.000 €'],
+    ['2024-09', 0, 'Predstavljanje projekta: 1.000 €/m², prvi stanovi sredinom 2026.'], ['2024-09', 5, 'Vijesti: naselje bi koštalo najmanje 3,5 mlrd. € (anonimni izvor)'], ['2024-09', 6, 'URA (Radovanić): „Velja prevara“'], ['2024-09', 6, 'Fidelity Consulting (izdavač Podaci.me): obećane rate ne odgovaraju cijeni od 1.000 €'],
     ['2024-10', 0, 'Vlada formira Koordinaciono tijelo'],
-    ['2024-11', 0, 'Vlada usvaja Informaciju o projektu'], ['2024-11', 1, 'Vlada utvrđuje nacrt izmjena PUP-a'], ['2024-11', 5, 'Prijedlog budžeta 2025: 10 mil. €'], ['2024-11', 6, 'Huter (DPS) u Skupštini: „velja prevara“'],
-    ['2024-12', 0, 'Koordinaciono tijelo traži 20.000 stanova'], ['2024-12', 0, 'Otvoren portal za prijave: 3.887 za tri dana'], ['2024-12', 1, 'Javna rasprava o PUP-u odložena, pa prekinuta'], ['2024-12', 4, 'Ministarstvo ekologije: uticaj na Marezu nedovoljno istražen'], ['2024-12', 6, 'Rakčević traži povlačenje PUP-a'], ['2024-12', 6, 'Strukovna komora arhitekata: zaustaviti izmjene PUP-a'],
-    ['2025-01', 1, 'PUP nije usvojen u roku; više od 300 primjedbi'],
+    ['2024-11', 0, 'Vlada usvaja Informaciju o projektu'], ['2024-11', 1, 'Vlada utvrđuje nacrt izmjena PUP-a'], ['2024-11', 5, 'Prijedlog budžeta 2025: 10 mil. €'], ['2024-11', 6, 'Huter (DPS) u Skupštini: „velja prevara“ (Dan)'],
+    ['2024-12', 0, 'Koordinaciono tijelo traži 20.000 stanova'], ['2024-12', 0, 'Otvoren portal za prijave: 3.887 za tri dana'], ['2024-12', 1, 'Javna rasprava o PUP-u odložena, pa prekinuta'], ['2024-12', 4, 'Ministarstvo ekologije: uticaj na Marezu nedovoljno istražen'], ['2024-12', 6, 'Rakčević traži povlačenje PUP-a (Dan)'], ['2024-12', 6, 'Strukovna komora arhitekata: zaustaviti izmjene PUP-a'],
+    ['2025-01', 1, 'PUP nije usvojen u roku; više od 300 primjedbi (24kroz7)'],
     ['2025-05', 5, 'Plan nabavki MJR: više od 40 mil. € za Velje brdo'], ['2025-05', 6, 'MANS: članovima Koordinacionog tijela 26.836 € naknada'], ['2025-05', 6, 'Đuričković: „Koordinacioni tim pojeo 27.000 eura“'],
     ['2025-07', 3, 'Projekat bulevara: Optimusproject i Route project, 74.536 €'],
     ['2025-08', 1, 'Vlada usvaja izmjene PUP-a na telefonskoj sjednici'], ['2025-08', 6, 'KANA/Monitor: jedan planer uzdržan u Savjetu za reviziju'],
@@ -1386,14 +1390,14 @@ footer .sitefoot a{color:var(--muted)}
     ['2025-11', 4, 'Vodovod odbija uslove za priključenje'],
     ['2025-12', 2, 'Raspisan međunarodni konkurs za Blok A1'], ['2025-12', 5, 'Usvojen budžet 2026; u prijedlogu do 120 mil. € zaduženja'],
     ['2026-02', 4, 'Ministarstvo: dalekovodi se ne izmještaju'], ['2026-02', 2, 'Izmijenjen sastav žirija konkursa'],
-    ['2026-03', 0, 'Radunović: „radiće i deset vlada poslije nas“'], ['2026-03', 3, 'Otvoreno gradilište bulevara; pripremni radovi 1,47 mil. €'], ['2026-03', 6, 'URA: konkurs „namješten“'], ['2026-03', 6, 'Podstanari traže finansijski model i pravilnik'],
-    ['2026-04', 2, 'Rezultati konkursa: prva nagrada timu iz Srbije'], ['2026-04', 6, 'KANA navodi sukob interesa u žiriju'], ['2026-04', 4, 'Geoprojekt: uticaj na Marezu ne može se isključiti'], ['2026-04', 6, 'Urošević i Huter u Skupštini'],
+    ['2026-03', 0, 'Radunović: „radiće i deset vlada poslije nas“'], ['2026-03', 3, 'Otvoreno gradilište bulevara; pripremni radovi 1,47 mil. €'], ['2026-03', 6, 'URA: konkurs „namješten“; ministarstvo negira'], ['2026-03', 6, 'Podstanari traže finansijski model i pravilnik'],
+    ['2026-04', 2, 'Rezultati konkursa: prva nagrada timu iz Srbije'], ['2026-04', 6, 'KANA navodi sukob interesa u žiriju; ministarstvo negira'], ['2026-04', 4, 'Geoprojekt: uticaj na Marezu ne može se isključiti'], ['2026-04', 6, 'Urošević i Huter u Skupštini (Antena M)'],
     ['2026-05', 6, 'Pejović: „samo u snovima“'],
-    ['2026-06', 3, 'Tender za bulevar, 33 mil. €'], ['2026-06', 3, 'Tender za Blok A1, 40,1 mil. €'], ['2026-06', 4, 'Adžović: zona zaštite „ne znači zabranu gradnje“'], ['2026-06', 6, 'Podstanari najavljuju inicijativu za zaustavljanje'],
+    ['2026-06', 3, 'Tender za bulevar, 33 mil. €'], ['2026-06', 3, 'Tender za Blok A1, 40,1 mil. €'], ['2026-06', 4, 'Adžović: zona zaštite „ne znači zabranu gradnje“'], ['2026-06', 6, 'Podstanari najavljuju inicijativu za zaustavljanje (Standard)'],
     ['2026-07', 3, 'Četiri ponude za bulevar'], ['2026-07', 6, 'AZLP: ministarstvo prekršilo rok (prema podstanarima)'],
     ['2026-08', 3, 'Izabrani izvođači: Eurozox i Fidija/Ing Invest'], ['2026-08', 3, 'Potpisan ugovor za Blok A1, 40,05 mil. €'], ['2026-08', 3, 'Potpisan ugovor za bulevar, 30,86 mil. €'], ['2026-08', 5, 'Adžović: kvadrat košta 1.067 €; Investitor: 2.808 €'], ['2026-08', 6, 'Skupština Glavnog grada formira komisiju za praćenje'],
-    ['2026-09', 3, 'Revizija tehničke dokumentacije: Civil Engineer'], ['2026-09', 4, 'Procjena uticaja za Blok A1 obavezna'], ['2026-09', 6, 'URA: „matematika se ne slaže“'],
-    ['2026-10', 4, 'Dabetić: bez procjene uticaja nema gradnje'], ['2026-10', 6, 'SPO saslušao Radunovića i Đurišić (prema Vijestima)'], ['2026-10', 5, 'Predlog preusmjeravanja 4,83 mil. €'], ['2026-10', 0, 'Gradnja stanova ne počinje ni u decembru (Dan, URA)']
+    ['2026-09', 3, 'Revizija tehničke dokumentacije: Civil Engineer (Gradnja.me)'], ['2026-09', 4, 'Procjena uticaja za Blok A1 obavezna'], ['2026-09', 6, 'URA: „matematika se ne slaže“'],
+    ['2026-10', 4, 'Dabetić: bez procjene uticaja nema gradnje'], ['2026-10', 6, 'SPO saslušao Radunovića i Đurišić (prema Vijestima)'], ['2026-10', 5, 'Prijedlog preusmjeravanja 4,83 mil. €'], ['2026-10', 0, 'Gradnja stanova ne počinje ni u decembru (Dan, URA)']
   ];
   var MONTHS = [];
   for (var yy = 2024, mm = 9; yy < 2026 || (yy === 2026 && mm <= 10); mm++) { if (mm > 12) { mm = 1; yy++; } MONTHS.push(yy + '-' + (mm < 10 ? '0' : '') + mm); if (yy === 2026 && mm === 10) break; }
@@ -1462,8 +1466,8 @@ footer .sitefoot a{color:var(--muted)}
     { id: 'Eurozox', l: 'Eurozox', g: 'izvodjaci', i: 'Bulevar: 30,86 mil. € bez PDV-a' },
     { id: 'Konstruktor', l: 'Konstruktor Group', g: 'izvodjaci', i: 'Pripremni radovi: 1.470.471 €' },
     { id: 'Optimus', l: 'Optimusproject i Route', g: 'izvodjaci', i: 'Projekat bulevara: 74.536 €' },
-    { id: 'Civil', l: 'Civil Engineer', g: 'izvodjaci', i: 'Revizija dokumentacije: oko 198.880 €' },
-    { id: 'Geoprojekt', l: 'Geoprojekt', g: 'izvodjaci', i: 'Prethodna studija: veza sa Marezom ne može se isključiti; detaljno istraživanje do septembra 2027.' },
+    { id: 'Civil', l: 'Civil Engineer', g: 'izvodjaci', i: 'Revizija dokumentacije: oko 198.880 € (Gradnja.me)' },
+    { id: 'Geoprojekt', l: 'Geoprojekt', g: 'izvodjaci', i: 'Prethodna studija: veza sa Marezom ne može se isključiti; detaljno istraživanje do septembra 2027. (prema Vijestima)' },
     { id: 'Tim', l: 'Milanović i Šišović', g: 'izvodjaci', i: 'Prva nagrada na konkursu: 100.000 €' },
     { id: 'SPO', l: 'SPO (policija)', g: 'kontrola', i: 'Saslušanje po anonimnoj prijavi, objavljeno 14. 10. 2026.' },
     { id: 'AZLP', l: 'AZLP', g: 'kontrola', i: 'Rješenje 27. 7. 2026: prekršen rok (prema podstanarima)' },
@@ -1472,13 +1476,13 @@ footer .sitefoot a{color:var(--muted)}
     { id: 'CGES', l: 'CGES', g: 'kontrola', i: 'Dalekovodi 400 kV preko lokacije' },
     { id: 'MEko', l: 'Min. ekologije (Dabetić)', g: 'kontrola', i: '„Bilo kakve izgradnje neće i ne može biti“ bez procjene uticaja' },
     { id: 'URA', l: 'URA', g: 'kritika', i: 'Opozicija: rokovi, cijena, konkurs' },
-    { id: 'DPS', l: 'DPS (Huter)', g: 'kritika', i: '„Velje brdo je velja prevara“' },
+    { id: 'DPS', l: 'DPS (Huter)', g: 'kritika', i: '„Velje brdo je velja prevara“ (Skupština, novembar 2024; Dan)' },
     { id: 'KANA', l: 'NVO KANA', g: 'kritika', i: 'Navodi sukob interesa u žiriju; ministarstvo negira' },
     { id: 'Podstanari', l: 'Udruženje podstanara', g: 'kritika', i: 'Zahtjev za informacije; inicijativa za zaustavljanje' },
     { id: 'MANS', l: 'MANS', g: 'kritika', i: 'Pribavio podatke o naknadama Koordinacionog tijela' },
     { id: 'Investitor', l: 'Investitor', g: 'kritika', i: 'Računica 2.808 € po m² iz ugovora' },
     { id: 'Vijesti', l: 'Vijesti', g: 'kritika', i: 'Objavile saslušanje u SPO-u i procjenu od 3,5 mlrd. €' },
-    { id: 'Fidelity', l: 'Fidelity Consulting', g: 'kritika', i: 'Kritika rata i tendera za pripremne radove' }
+    { id: 'Fidelity', l: 'Fidelity Consulting', g: 'kritika', i: 'Izdavač Podaci.me; kritikovao rate i tender za pripremne radove' }
   ];
   var LINKS = [
     ['Spajic', 'Vlada', 'nadleznost', 'premijer'], ['Vlada', 'VB', 'nadleznost', 'nosilac projekta'], ['Vlada', 'KT', 'nadleznost', 'formirala, okt. 2024.'],
@@ -1492,7 +1496,7 @@ footer .sitefoot a{color:var(--muted)}
     ['MEko', 'VB', 'kontrola', 'bez procjene uticaja nema gradnje'], ['EPA', 'VB', 'kontrola', 'procjena uticaja obavezna'], ['Vodovod', 'VB', 'kontrola', 'odbio uslove'],
     ['CGES', 'VB', 'kontrola', 'dalekovodi'], ['SPO', 'Radunovic', 'kontrola', 'saslušanje'], ['SPO', 'Djurisic', 'kontrola', 'saslušanje'], ['AZLP', 'MPUDI', 'kontrola', 'prekršen rok'],
     ['Podstanari', 'MPUDI', 'kritika', 'zahtjev za informacije'], ['Podstanari', 'VB', 'kritika', 'inicijativa za zaustavljanje'], ['Podstanari', 'AZLP', 'kritika', 'žalba'],
-    ['KANA', 'Konkurs', 'kritika', 'navodi sukob interesa'], ['URA', 'Konkurs', 'kritika', '„namješten“'], ['URA', 'VB', 'kritika', 'rokovi i cijena'],
+    ['KANA', 'Konkurs', 'kritika', 'navodi sukob interesa'], ['URA', 'Konkurs', 'kritika', '„namješten“ (ministarstvo negira)'], ['URA', 'VB', 'kritika', 'rokovi i cijena'],
     ['DPS', 'VB', 'kritika', '„velja prevara“'], ['MANS', 'KT', 'kritika', 'podaci o naknadama'], ['Investitor', 'MJR', 'kritika', 'računica 2.808 €/m²'],
     ['Vijesti', 'SPO', 'kritika', 'objavile saslušanje'], ['Fidelity', 'MJR', 'kritika', 'tender za pripremne radove']
   ];

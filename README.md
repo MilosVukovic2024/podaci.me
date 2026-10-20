@@ -11,7 +11,8 @@ Vercel ne pokreće build — commituje se gotov HTML.
 ```
 index.html                                 početna
 analize/velje-brdo/index.html              Velje brdo: obećano 20.000 stanova (prva analiza; snimci u img/)
-analize/skupstina-2023-2026/index.html     Skupštinski monitor 2023–2026 (podaci ugrađeni u stranicu)
+arhiva/skupstina-vmidmiko5c/index.html     Skupštinski monitor 2023–2026, sakriven: bez linkova, noindex, van sitemapa;
+                                           stara adresa /analize/skupstina-2023-2026/ vodi na početnu (vercel.json)
 og-image.png, og-velje-brdo.png, og-skupstina.png, favicon.svg
 vercel.json, robots.txt, sitemap.xml
 ```

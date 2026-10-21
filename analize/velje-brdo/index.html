@@ -67,7 +67,7 @@ button{font-family:inherit}
 @keyframes flash{0%{background:var(--accent-soft)}100%{background:transparent}}
 @keyframes comet{from{stroke-dashoffset:0}to{stroke-dashoffset:calc(-1px * var(--L, 2000))}}
 @keyframes zero{0%{transform:scale(1.9);opacity:.35}60%{transform:scale(.94);opacity:1}100%{transform:none;opacity:1}}
-.zero{display:inline-block;animation:zero .7s var(--ease-out) both}
+.zero{display:inline-block;animation:zero .7s var(--ease-out) backwards}
 
 /* Podaci.me traka (ista kao na Skupštinskom monitoru) + traka napretka čitanja */
 .sitebar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--page);border-bottom:2px solid #201e1d}
@@ -87,7 +87,7 @@ button{font-family:inherit}
 .sitebar nav a.cta:hover{background:#b00410;color:#fff}
 @media (max-width:900px){.sitebar .in{padding:0 20px}.sitebar nav a:not(.cta){display:none}}
 .prog{position:absolute;left:0;right:0;bottom:-2px;height:3px;pointer-events:none}
-.prog i{display:block;height:100%;background:var(--accent);transform:scaleX(0);transform-origin:left}
+.prog i{display:block;height:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;will-change:transform}
 
 /* hero */
 .hero{border-bottom:2px solid var(--rule)}
@@ -166,7 +166,7 @@ h1 .hl{position:absolute;left:-.08em;right:-.08em;bottom:.06em;height:.16em;back
 .idx a{flex:none;font-size:13px;font-weight:600;color:var(--ink-2);padding:11px 14px;border-right:2px solid var(--rule-soft);background:none}
 .idx a:first-child{padding-left:0}
 .idx a:hover,.idx a.on{color:var(--accent);background:none}
-.idx .ind{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--accent);transition:transform .55s var(--ease-out),width .55s var(--ease-out)}
+.idx .ind{position:absolute;left:0;bottom:0;height:3px;width:1px;background:var(--accent);transform:translateX(0) scaleX(0);transform-origin:left;transition:transform .55s var(--ease-out)}
 
 /* plates */
 main{display:flex;flex-direction:column;gap:28px;padding-block:32px 24px}
@@ -266,15 +266,14 @@ main{display:flex;flex-direction:column;gap:28px;padding-block:32px 24px}
 .stampx.late{color:var(--accent-ink)}
 .stampx.dispute{color:var(--ink)}
 .stampx.wait{color:var(--muted)}
-.play-stamps .stampx{animation:stamp .6s var(--ease-out) both}
+.play-stamps .stampx{animation:stamp .6s var(--ease-out) backwards}
 
 /* units + pace */
 .units{display:grid;grid-template-columns:repeat(25,minmax(0,1fr));gap:4px}
 .units i{aspect-ratio:1;border:1.5px solid var(--accent);position:relative;overflow:hidden;display:block;transition:opacity .9s var(--ease-out)}
 .units i.a1{background:var(--accent-wash)}
 .units i .f{position:absolute;inset:0;background:var(--accent);transform-origin:left;transition:transform 1s var(--ease-out)}
-.units.play i{animation:pop .45s var(--ease-out) both}
-.units.ghost i:not(.a1){opacity:.32}
+.units.play i{animation:pop .45s var(--ease-out) backwards}
 .units.nofill i .f{transform:scaleX(0) !important;transition:none}
 .legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin:12px 0 0;font-size:13px;color:var(--ink-2);padding:0;list-style:none}
 .legend li{display:inline-flex;align-items:center;gap:7px}
@@ -416,6 +415,18 @@ footer .sitefoot a{color:var(--muted)}
 .net-list ul{columns:2 340px;column-gap:28px;margin:10px 0 0;padding-left:18px}
 .net-list li{break-inside:avoid;margin-bottom:4px;color:var(--ink-2)}
 @media (max-width:640px){#cal{min-width:760px}.net-wrap{overflow-x:auto}#net{min-width:760px;touch-action:pan-x pan-y}.net-hint{display:none}}
+
+/* looping animations pause off screen; on phones the non-composited loops run a few times and stop */
+.offscreen,.offscreen *{animation-play-state:paused !important}
+@media (max-width:900px){
+  .comet.on{animation-iteration-count:3;animation-fill-mode:forwards}
+  .ring.on,#net .halo.on{animation-iteration-count:3}
+  #net.flowing .flow{animation-iteration-count:4}
+}
+@media (max-width:640px){
+  .frames img{clip-path:none;opacity:0;transition:opacity .9s var(--ease-io),transform 1.8s var(--ease-out)}
+  .frames img.on,.frames img.prev{clip-path:none;opacity:1}
+}
 
 /* scroll-linked entrance for plates, where the browser supports it; never hides content at rest */
 @supports (animation-timeline: view()){
@@ -819,7 +830,8 @@ footer .sitefoot a{color:var(--muted)}
     if (parent) parent.appendChild(n);
     return n;
   }
-  function nf(v, d) { return Number(v).toLocaleString('de-DE', { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 }); }
+  var NFC = {};
+  function nf(v, d) { d = d || 0; return (NFC[d] || (NFC[d] = new Intl.NumberFormat('de-DE', { minimumFractionDigits: d, maximumFractionDigits: d }))).format(Number(v)); }
   var E = {
     out: function (t) { return 1 - Math.pow(1 - t, 3); },
     io: function (t) { return t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; },
@@ -1051,11 +1063,15 @@ footer .sitefoot a{color:var(--muted)}
     tagL.style.opacity = Math.min(1, v / 25); tagR.style.opacity = Math.min(1, (100 - v) / 25);
   }
   cut.addEventListener('input', function () { runs.sweep = (runs.sweep || 0) + 1; setCut(+cut.value); });
-  var drag = false;
+  var drag = false, armed = false, sx = 0, sy = 0;
   function fromPointer(e) { var rc = cmp.getBoundingClientRect(); setCut(Math.max(0, Math.min(100, (e.clientX - rc.left) / rc.width * 100))); }
-  cmp.addEventListener('pointerdown', function (e) { drag = true; runs.sweep = (runs.sweep || 0) + 1; cmp.classList.add('drag'); fromPointer(e); });
-  window.addEventListener('pointermove', function (e) { if (drag) fromPointer(e); });
-  window.addEventListener('pointerup', function () { drag = false; cmp.classList.remove('drag'); });
+  // a touch only starts dragging once it moves sideways, so a vertical swipe over the image just scrolls
+  function startDrag(e) { drag = true; armed = false; runs.sweep = (runs.sweep || 0) + 1; cmp.classList.add('drag'); fromPointer(e); }
+  function endDrag(e) { if (armed && e.type === 'pointerup') startDrag(e); drag = armed = false; cmp.classList.remove('drag'); }
+  cmp.addEventListener('pointerdown', function (e) { if (e.pointerType === 'touch') { armed = true; sx = e.clientX; sy = e.clientY; } else startDrag(e); });
+  window.addEventListener('pointermove', function (e) { if (armed && Math.abs(e.clientX - sx) > Math.abs(e.clientY - sy)) startDrag(e); else if (drag) fromPointer(e); });
+  window.addEventListener('pointerup', endDrag);
+  window.addEventListener('pointercancel', endDrag);
   function sweepCompare() { tween(3000, function (t) { setCut(50 + 44 * Math.sin(t * Math.PI * 2)); }, function () { setCut(50); }, function (t) { return t; }, 'sweep'); }
 
   // ---------- 02 promises ----------
@@ -1111,9 +1127,8 @@ footer .sitefoot a{color:var(--muted)}
     el('text', { x: x0, y: 230, 'class': 'ax' }, pace, nf(phases, 0) + ' faza × ' + CONTRACT.months + ' mjeseci = ' + nf(years, 0) + ' godine');
   })();
   function playScale() {
-    units.classList.remove('ghost'); units.classList.add('nofill'); restart(units, 'play');
+    units.classList.add('nofill'); restart(units, 'play');
     later(function () { units.classList.remove('nofill'); }, 1500);
-    later(function () { units.classList.add('ghost'); }, 2300);
     runCounters($('razmjera').querySelector('.bigcount'), 0);
     var all = $('paceAll'), head = $('paceHead'), endT = $('paceEnd'), x0 = 20, W = paceX(endYear) - x0;
     tween(3200, function (t) {
@@ -1159,7 +1174,8 @@ footer .sitefoot a{color:var(--muted)}
     var ml = $('marketLine'), lead = $('leadDot'), L = ml.getTotalLength();
     drawPath(ml, 2000, 100);
     later(function () {
-      tween(2000, function (t) { var p = ml.getPointAtLength(L * t); lead.setAttribute('cx', p.x); lead.setAttribute('cy', p.y); }, function () { lead.setAttribute('cx', -20); }, E.io, 'lead');
+      var LP = []; for (var k = 0; k <= 200; k++) { var q = ml.getPointAtLength(L * k / 200); LP.push([q.x, q.y]); }
+      tween(2000, function (t) { var p = LP[Math.round(t * 200)]; lead.setAttribute('cx', p[0]); lead.setAttribute('cy', p[1]); }, function () { lead.setAttribute('cx', -20); }, E.io, 'lead');
     }, 100);
     each(price.querySelectorAll('.mpt'), function (c, i) {
       c.style.transition = 'none'; c.style.transformBox = 'fill-box'; c.style.transformOrigin = 'center'; c.style.transform = reduce ? 'none' : 'scale(0)';
@@ -1612,7 +1628,11 @@ footer .sitefoot a{color:var(--muted)}
     }, { rootMargin: '0px 0px -28% 0px', threshold: 0 });
     each(document.querySelectorAll('[data-anim]'), function (s) { io.observe(s); });
     var ioView = new IntersectionObserver(function (es) { es.forEach(function (e) { inView = e.isIntersecting; }); }, { threshold: 0.15 });
-    ioView.observe($('teren'));
+    ioView.observe($('frames'));
+  }
+  if ('IntersectionObserver' in window) {
+    var loops = new IntersectionObserver(function (es) { es.forEach(function (e) { e.target.classList.toggle('offscreen', !e.isIntersecting); }); });
+    [$('heroTerrain'), document.querySelector('.marquee'), document.querySelector('.hero .eyebrow'), net].forEach(function (n) { if (n) loops.observe(n); });
   }
   playHero();
 
@@ -1630,8 +1650,8 @@ footer .sitefoot a{color:var(--muted)}
   }
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
   function moveInd(a) {
-    if (!a) { ind.style.width = '0px'; return; }
-    ind.style.width = a.offsetWidth + 'px'; ind.style.transform = 'translateX(' + a.offsetLeft + 'px)';
+    if (!a) { ind.style.transform = 'translateX(0) scaleX(0)'; return; }
+    ind.style.transform = 'translateX(' + a.offsetLeft + 'px) scaleX(' + a.offsetWidth + ')';
     var nl = idxNav.scrollLeft, left = a.offsetLeft, right = left + a.offsetWidth;
     if (left < nl || right > nl + idxNav.clientWidth) idxNav.scrollTo({ left: Math.max(0, left - 24), behavior: reduce ? 'auto' : 'smooth' });
   }

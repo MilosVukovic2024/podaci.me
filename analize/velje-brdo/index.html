@@ -635,12 +635,12 @@ footer .sitefoot a{color:var(--muted)}
   <section class="plate" id="cijena" data-anim="cijena" aria-labelledby="h4c">
     <div class="plate-head">
       <p class="kicker"><span class="no">05</span>Cijena kvadrata</p>
-      <h2 id="h4c">Obećano 1.000 € po kvadratu. Po računici iz ugovora, gradnja košta najmanje 2.808 €.</h2>
-      <p class="sub">Ministarka javnih radova Majda Adžović kaže da trošak iznosi 1.067 € i da razliku pokriva budžet. Računica od 2.808 € dijeli vrijednost ugovora neto površinom stanova (Investitor); <strong>ministarstvo je osporava</strong>.</p>
+      <h2 id="h4c">Obećano 1.000 € po kvadratu. Po računici iz ugovora, kvadrat košta oko 3.400 € sa PDV-om.</h2>
+      <p class="sub">Vrijednost ugovora sa PDV-om (48,46 mil. €) podijeljena je neto površinom stanova. Bez PDV-a to je 2.808 € po kvadratu, kako je izračunao Investitor. Ministarka javnih radova Majda Adžović kaže da trošak iznosi 1.067 € bez PDV-a i da razliku pokriva budžet; <strong>ministarstvo ovu računicu osporava</strong>.</p>
       <button class="replay" type="button" data-replay="cijena"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2.5v2.8h2.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Ponovi</span></button>
     </div>
-    <p class="swipe" aria-hidden="true">Grafikon je širi od ekrana, povucite ga ulijevo →</p><div class="stage scroll-x"><svg id="price" viewBox="0 0 960 400" role="img" aria-label="Linijski grafikon: prosječna cijena novogradnje u Podgorici porasla je sa 1.761 € na 2.510 € po kvadratu; obećana cijena 1.000 €, računica iz ugovora 2.808 €."></svg></div>
-    <p class="cap">Linija: prosječna cijena prvih prodaja novih stanova u Podgorici (MONSTAT), €/m². Šuplje tačke: vrijednosti iz medijskih izvještaja o podacima MONSTAT-a. Ugovor: 40.049.774 € bez PDV-a za 14.260 m² neto stambene površine; uključuje glavni projekat, garaže i uređenje terena, a ne zemljište, priključke i PDV. Pređite mišem preko tačaka za vrijednosti.</p>
+    <p class="swipe" aria-hidden="true">Grafikon je širi od ekrana, povucite ga ulijevo →</p><div class="stage scroll-x"><svg id="price" viewBox="0 0 960 400" role="img" aria-label="Linijski grafikon: prosječna cijena novogradnje u Podgorici porasla je sa 1.761 € na 2.510 € po kvadratu; obećana cijena 1.000 €, računica iz ugovora oko 3.400 € sa PDV-om."></svg></div>
+    <p class="cap">Linija: prosječna cijena prvih prodaja novih stanova u Podgorici (MONSTAT), €/m². Šuplje tačke: vrijednosti iz medijskih izvještaja o podacima MONSTAT-a. Ugovor: 48.460.227 € sa PDV-om (40.049.774 € bez PDV-a) za 14.260 m² neto stambene površine; uključuje glavni projekat, garaže i uređenje terena, a ne zemljište i priključke. Pređite mišem preko tačaka za vrijednosti.</p>
   </section>
 
   <section class="plate" id="novac" data-anim="novac" aria-labelledby="h5n">
@@ -876,7 +876,7 @@ footer .sitefoot a{color:var(--muted)}
   ];
   var PROMISES = [
     { q: 'Prvi stanovi sredinom 2026.', who: 'Milojko Spajić, 21. 9. 2024.', s: 'no', st: 'Nije ispunjeno', fact: 'Rok je prošao. Ugovor za prvih <b>185 stanova</b> ističe <b>21. 8. 2029.</b>' },
-    { q: 'Kvadrat 1.000 €', who: 'Milojko Spajić, 21. 9. 2024.', s: 'dispute', st: 'Sporno', fact: 'Po računici iz ugovora gradnja košta najmanje <b>2.808 €</b> po m²; ministarka Adžović kaže <b>1.067 €</b> i da razliku plaća budžet.' },
+    { q: 'Kvadrat 1.000 €', who: 'Milojko Spajić, 21. 9. 2024.', s: 'dispute', st: 'Sporno', fact: 'Po računici iz ugovora kvadrat košta oko <b>3.400 €</b> sa PDV-om (2.808 € bez PDV-a); ministarka Adžović kaže <b>1.067 €</b> bez PDV-a i da razliku plaća budžet.' },
     { q: 'Kamata 1,2%, 30 godina, bez učešća', who: 'Milojko Spajić, 21. 9. 2024.', s: 'wait', st: 'Bez potvrde', fact: 'Banka ili fond koji bi dao takvu kamatu <b>nije imenovan</b>. Naša računica: uz 1,2% na 30 godina stan od 60 m² po 1.000 €/m² daje ratu od oko <b>199 €</b>, a od 100 m² oko <b>331 €</b>. Obećane rate od 290 i 390 € odgovaraju cijeni od oko 1.460 i 1.180 € po m². Isto je 2024. iznio Fidelity Consulting, izdavač Podaci.me.' },
     { q: '20.000 stanova', who: 'Koordinaciono tijelo Vlade, decembar 2024.', s: 'dispute', st: 'Bez plana', fact: 'Ugovoreno je <b>185</b>, odnosno 0,9%. Plan finansiranja za ostatak nije objavljen.' },
     { q: 'PUP usvojen do 31. 12. 2024.', who: 'Vlada, 14. 12. 2024.', s: 'late', st: 'Kasnilo 227 dana', fact: 'Plan je usvojen <b>15. 8. 2025.</b> na telefonskoj sjednici.' },
@@ -892,9 +892,10 @@ footer .sitefoot a{color:var(--muted)}
     { q: 'III/25', v: 2153, src: 'MONSTAT' }, { q: 'IV/25', v: 2140, src: 'mediji' }, { q: 'I/26', v: 2395, src: 'MONSTAT' },
     { q: 'II/26', v: 2510, src: 'MONSTAT' }
   ];
-  var CONTRACT = { value: 40049774, area: 14260, flats: 185, months: 36 };
+  var CONTRACT = { value: 40049774, vat: 8410452.54, area: 14260, flats: 185, months: 36 };
   var PROMISE_PRICE = 1000, MINISTRY_PRICE = 1067;
-  var contractPerM2 = CONTRACT.value / CONTRACT.area;
+  var contractPerM2 = (CONTRACT.value + CONTRACT.vat) / CONTRACT.area;
+  var PRICE_VAT = Math.round(contractPerM2 / 100) * 100;
   var perFlat = CONTRACT.value / CONTRACT.flats;
   var avgArea = CONTRACT.area / CONTRACT.flats;
   var projection = perFlat * 20000;
@@ -907,7 +908,7 @@ footer .sitefoot a{color:var(--muted)}
   ];
   var SUBSIDY = [
     { k: 'Po ministarki (1.067 €/m²)', v: (MINISTRY_PRICE - PROMISE_PRICE) * avgArea },
-    { k: 'Po računici iz ugovora (2.808 €/m²)', v: perFlat - PROMISE_PRICE * avgArea, red: true }
+    { k: 'Po računici iz ugovora (2.808 €/m² bez PDV-a)', v: perFlat - PROMISE_PRICE * avgArea, red: true }
   ];
   var SLIPS = [
     { said: '2024-09-21', due: '2026-06-30', label: 'sredina 2026.', who: 'Spajić', dx: 12, dy: 18, a: 'start' },
@@ -1128,7 +1129,7 @@ footer .sitefoot a{color:var(--muted)}
   var price = $('price');
   var PY;
   (function buildPrice() {
-    var x0 = 70, x1 = 820, yb = 340, yt = 40, vmax = 3000;
+    var x0 = 70, x1 = 820, yb = 340, yt = 40, vmax = 3600;
     var X = function (i) { return x0 + i * (x1 - x0) / (MARKET.length - 1); };
     PY = function (v) { return yb - v / vmax * (yb - yt); };
     [0, 1000, 2000, 3000].forEach(function (v) { el('line', { x1: x0, x2: x1, y1: PY(v), y2: PY(v), 'class': 'gl' }, price); el('text', { x: x0 - 10, y: PY(v) + 4, 'text-anchor': 'end', 'class': 'ax' }, price, nf(v) + ' €'); });
@@ -1136,14 +1137,14 @@ footer .sitefoot a{color:var(--muted)}
     el('line', { x1: x0, x2: x1, y1: PY(PROMISE_PRICE), y2: PY(PROMISE_PRICE), stroke: 'var(--ink)', 'stroke-width': 2, 'stroke-dasharray': '7 5' }, price);
     el('text', { x: x0 + 8, y: PY(PROMISE_PRICE) + 20, 'class': 'lbl' }, price, nf(PROMISE_PRICE) + ' € · obećana prodajna cijena');
     el('line', { x1: x0, x2: x1, y1: PY(MINISTRY_PRICE), y2: PY(MINISTRY_PRICE), stroke: 'var(--g2)', 'stroke-width': 1.5, 'stroke-dasharray': '2 3' }, price);
-    el('text', { x: x1, y: PY(MINISTRY_PRICE) - 8, 'text-anchor': 'end' }, price, nf(MINISTRY_PRICE) + ' € · po ministarki Adžović');
-    el('line', { x1: x0, x2: x1, y1: PY(contractPerM2), y2: PY(contractPerM2), stroke: 'var(--accent)', 'stroke-width': 3.5, id: 'contractLine', 'data-tip': 'Računica iz ugovora: ' + nf(contractPerM2, 2) + ' €/m² (40.049.774 € / 14.260 m²)' }, price);
-    el('text', { x: x0 + 8, y: PY(contractPerM2) - 10, 'class': 'lbl-acc', id: 'contractLbl' }, price, nf(Math.floor(contractPerM2)) + ' € · po računici iz ugovora');
+    el('text', { x: x1, y: PY(MINISTRY_PRICE) - 8, 'text-anchor': 'end' }, price, nf(MINISTRY_PRICE) + ' € bez PDV-a · po ministarki Adžović');
+    el('line', { x1: x0, x2: x1, y1: PY(contractPerM2), y2: PY(contractPerM2), stroke: 'var(--accent)', 'stroke-width': 3.5, id: 'contractLine', 'data-tip': 'Računica iz ugovora: ' + nf(contractPerM2, 2) + ' €/m² sa PDV-om (48.460.227 € / 14.260 m²); bez PDV-a 2.808 €/m²' }, price);
+    el('text', { x: x0 + 8, y: PY(contractPerM2) - 10, 'class': 'lbl-acc', id: 'contractLbl' }, price, nf(PRICE_VAT) + ' € sa PDV-om · po računici iz ugovora');
     // bracket showing the gap
     var bx = x1 + 14;
     el('path', { d: 'M' + bx + ',' + PY(contractPerM2) + ' h8 V' + PY(PROMISE_PRICE) + ' h-8', fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2, id: 'bracket' }, price);
     el('text', { x: bx + 16, y: (PY(contractPerM2) + PY(PROMISE_PRICE)) / 2 - 6, 'class': 'lbl-acc' }, price, 'razlika');
-    el('text', { x: bx + 16, y: (PY(contractPerM2) + PY(PROMISE_PRICE)) / 2 + 12, 'class': 'lbl-acc', id: 'gapTxt' }, price, nf(Math.floor(contractPerM2 - PROMISE_PRICE)) + ' €');
+    el('text', { x: bx + 16, y: (PY(contractPerM2) + PY(PROMISE_PRICE)) / 2 + 12, 'class': 'lbl-acc', id: 'gapTxt' }, price, nf(PRICE_VAT - PROMISE_PRICE) + ' €');
     var d = MARKET.map(function (r, i) { return (i ? 'L' : 'M') + X(i) + ',' + PY(r.v); }).join(' ');
     el('path', { d: d, fill: 'none', stroke: 'var(--ink)', 'stroke-width': 2.5, id: 'marketLine' }, price);
     MARKET.forEach(function (r, i) {
@@ -1174,10 +1175,10 @@ footer .sitefoot a{color:var(--muted)}
         var y = yStart + (yEnd - yStart) * t;
         cl.setAttribute('y1', y); cl.setAttribute('y2', y); lbl.setAttribute('y', y - 10);
         band.setAttribute('y', Math.min(y, yStart)); band.setAttribute('height', Math.abs(yStart - y));
-        lbl.textContent = nf(Math.max(PROMISE_PRICE, Math.floor(PROMISE_PRICE + (contractPerM2 - PROMISE_PRICE) * t))) + ' € · po računici iz ugovora';
+        lbl.textContent = nf(Math.max(PROMISE_PRICE, Math.round((PROMISE_PRICE + (PRICE_VAT - PROMISE_PRICE) * t) / 10) * 10)) + ' € sa PDV-om · po računici iz ugovora';
       }, function () {
         br.style.transition = 'opacity .4s'; br.style.opacity = 1;
-        tween(900, function (t) { gapTxt.textContent = nf(Math.floor((contractPerM2 - PROMISE_PRICE) * t)) + ' €'; });
+        tween(900, function (t) { gapTxt.textContent = nf(Math.round((PRICE_VAT - PROMISE_PRICE) * t / 10) * 10) + ' €'; });
       }, E.back, 'contract');
     }, 2300);
   }
@@ -1395,7 +1396,7 @@ footer .sitefoot a{color:var(--muted)}
     ['2026-05', 6, 'Pejović: „samo u snovima“'],
     ['2026-06', 3, 'Tender za bulevar, 33 mil. €'], ['2026-06', 3, 'Tender za Blok A1, 40,1 mil. €'], ['2026-06', 4, 'Adžović: zona zaštite „ne znači zabranu gradnje“'], ['2026-06', 6, 'Podstanari najavljuju inicijativu za zaustavljanje (Standard)'],
     ['2026-07', 3, 'Četiri ponude za bulevar'], ['2026-07', 6, 'AZLP: ministarstvo prekršilo rok (prema podstanarima)'],
-    ['2026-08', 3, 'Izabrani izvođači: Eurozox i Fidija/Ing Invest'], ['2026-08', 3, 'Potpisan ugovor za Blok A1, 40,05 mil. €'], ['2026-08', 3, 'Potpisan ugovor za bulevar, 30,86 mil. €'], ['2026-08', 5, 'Adžović: kvadrat košta 1.067 €; Investitor: 2.808 €'], ['2026-08', 6, 'Skupština Glavnog grada formira komisiju za praćenje'],
+    ['2026-08', 3, 'Izabrani izvođači: Eurozox i Fidija/Ing Invest'], ['2026-08', 3, 'Potpisan ugovor za Blok A1, 40,05 mil. €'], ['2026-08', 3, 'Potpisan ugovor za bulevar, 30,86 mil. €'], ['2026-08', 5, 'Adžović: kvadrat 1.067 € bez PDV-a; Investitor: 2.808 € bez PDV-a, oko 3.400 € sa PDV-om'], ['2026-08', 6, 'Skupština Glavnog grada formira komisiju za praćenje'],
     ['2026-09', 3, 'Revizija tehničke dokumentacije: Civil Engineer (Gradnja.me)'], ['2026-09', 4, 'Procjena uticaja za Blok A1 obavezna'], ['2026-09', 6, 'URA: „matematika se ne slaže“'],
     ['2026-10', 4, 'Dabetić: bez procjene uticaja nema gradnje'], ['2026-10', 6, 'SPO saslušao Radunovića i Đurišić (prema Vijestima)'], ['2026-10', 5, 'Prijedlog preusmjeravanja 4,83 mil. €'], ['2026-10', 0, 'Gradnja stanova ne počinje ni u decembru (Dan, URA)']
   ];
@@ -1480,7 +1481,7 @@ footer .sitefoot a{color:var(--muted)}
     { id: 'KANA', l: 'NVO KANA', g: 'kritika', i: 'Navodi sukob interesa u žiriju; ministarstvo negira' },
     { id: 'Podstanari', l: 'Udruženje podstanara', g: 'kritika', i: 'Zahtjev za informacije; inicijativa za zaustavljanje' },
     { id: 'MANS', l: 'MANS', g: 'kritika', i: 'Pribavio podatke o naknadama Koordinacionog tijela' },
-    { id: 'Investitor', l: 'Investitor', g: 'kritika', i: 'Računica 2.808 € po m² iz ugovora' },
+    { id: 'Investitor', l: 'Investitor', g: 'kritika', i: 'Računica iz ugovora: 2.808 € po m² bez PDV-a (oko 3.400 € sa PDV-om)' },
     { id: 'Vijesti', l: 'Vijesti', g: 'kritika', i: 'Objavile saslušanje u SPO-u i procjenu od 3,5 mlrd. €' },
     { id: 'Fidelity', l: 'Fidelity Consulting', g: 'kritika', i: 'Izdavač Podaci.me; kritikovao rate i tender za pripremne radove' }
   ];

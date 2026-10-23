@@ -201,3 +201,52 @@
 .chap-grid span{font-size:13.5px;line-height:1.45;color:var(--muted)}
 @media (max-width:1100px){.chap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.chap-grid li+li a{padding-left:0;border-left:0}.chap-grid li:nth-child(even) a{padding-left:16px;border-left:1px solid var(--hair)}}
 @media (max-width:520px){.chap-grid{grid-template-columns:minmax(0,1fr)}.chap-grid li:nth-child(even) a{padding-left:0;border-left:0}.chap-grid a{flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:4px 12px;padding:15px 0}.chap-grid span{flex-basis:100%}}
+
+/* ---------- E2 stopa doprinosa: složena traka ---------- */
+.pio__track{overflow:visible}
+.pio__seg{position:absolute;top:0;bottom:0;left:0;transition:width 1.1s var(--ease),left 1.1s var(--ease)}
+.pio__seg.emp{background:var(--ink)}
+.pio__seg.er{background:var(--n3)}
+.pio__track.is-zero{outline:1px dashed var(--accent);outline-offset:-1px}
+.pio__tick{position:absolute;top:-6px;bottom:-6px;border-left:1px dashed var(--muted);margin-left:-1px}
+.pio__tick i{position:absolute;top:100%;right:0;margin-top:6px;font:500 11px/1 var(--f-mono);font-style:normal;color:var(--muted);white-space:nowrap}
+.pio__keys{display:flex;flex-wrap:wrap;gap:8px 22px;list-style:none;margin:10px 0 0;padding:0;font-size:14px;color:var(--ink-2)}
+.pio__keys li{display:flex;align-items:center;gap:8px}
+.pio__keys i{width:10px;height:10px;display:inline-block}
+.pio__keys i.emp{background:var(--ink)}.pio__keys i.er{background:var(--n3)}
+.pio__keys b{font:500 13px/1 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+
+/* ---------- E3 finansiranje Fonda PIO ---------- */
+.fund{margin:0;display:grid;gap:14px;border-top:1px solid var(--ink);padding-top:24px}
+.fund__row{display:grid;grid-template-columns:150px minmax(0,1fr) 64px;gap:16px;align-items:center}
+.fund__y{font:500 12.5px/1.3 var(--f-mono);color:var(--ink-2)}
+.fund__y small{display:block;color:var(--accent-text);text-transform:uppercase;letter-spacing:.06em;font-size:10.5px;margin-top:3px}
+.fund__t{display:flex;height:clamp(36px,5vw,52px);background:var(--n1)}
+.fund__c,.fund__b{display:block;height:100%;transform-origin:left;transition:transform 1.1s var(--ease)}
+.fund__c{background:var(--ink)}
+.fund__b{background:var(--accent)}
+.hatch{background:repeating-linear-gradient(135deg,var(--accent) 0 6px,var(--accent-soft) 6px 12px) !important}
+.fund__row b{font:500 14px/1 var(--f-mono);font-variant-numeric:tabular-nums;text-align:right}
+.js .fund:not(.is-in) .fund__c,.js .fund:not(.is-in) .fund__b{transform:scaleX(0)}
+.fund__legend{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:6px;font-size:13.5px;color:var(--ink-2)}
+.fund__legend span{display:flex;align-items:center;gap:8px}
+.fund__legend i{width:12px;height:12px;display:inline-block}
+.fund__legend i.c{background:var(--ink)}.fund__legend i.b{background:var(--accent)}
+.fund__legend .u{margin-left:auto;font:500 12px/1 var(--f-mono);color:var(--muted)}
+@media (max-width:640px){.fund__row{grid-template-columns:minmax(0,1fr) 56px}.fund__y{grid-column:1 / -1}.fund__t{grid-column:1}.fund__legend .u{margin-left:0}}
+.pen__big{font-size:clamp(40px,4.6vw,64px);font-weight:800;letter-spacing:-.05em;line-height:.95;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ---------- E5 argumenti ---------- */
+.args{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--ink)}
+.args>div{padding:26px 32px 10px 0;min-width:0}
+.args>div+div{padding-left:32px;border-left:1px solid var(--hair-2)}
+.args__h{font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:16px}
+.args ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.args li{position:relative;padding-left:18px;font-size:16.5px;line-height:1.55;color:var(--ink-2)}
+.args li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;background:var(--n3)}
+.args>div+div li::before{background:var(--accent)}
+@media (max-width:860px){.args{grid-template-columns:minmax(0,1fr)}.args>div+div{padding-left:0;border-left:0;border-top:1px solid var(--hair-2)}.args>div{padding-right:0}}
+
+/* kartice koraka u sticky scenama poravnate sa mrežom stranice */
+.gap .step{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gx)}
+@media (min-width:861px){.gap .step{justify-content:flex-end}}

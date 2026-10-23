@@ -10,14 +10,14 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.podaci.me/">
 <meta property="og:title" content="Podaci.me — Biznis analitika iz Crne Gore i svijeta">
-<meta property="og:description" content="Analize javnih podataka iz Crne Gore i svijeta. Prva analiza: Velje brdo, obećano 20.000 stanova, izgrađeno 0.">
+<meta property="og:description" content="Analize javnih podataka iz Crne Gore i svijeta: Velje brdo, Crna Gora i Singapur. Interaktivni grafikoni i provjerljivi izvori.">
 <meta property="og:image" content="https://www.podaci.me/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="sr_ME">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Podaci.me — Biznis analitika iz Crne Gore i svijeta">
-<meta name="twitter:description" content="Analize javnih podataka iz Crne Gore i svijeta. Prva analiza: Velje brdo, obećano 20.000 stanova, izgrađeno 0.">
+<meta name="twitter:description" content="Analize javnih podataka iz Crne Gore i svijeta: Velje brdo, Crna Gora i Singapur. Interaktivni grafikoni i provjerljivi izvori.">
 <meta name="twitter:image" content="https://www.podaci.me/og-image.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.podaci.me/#organization","name":"Podaci.me","legalName":"Fidelity Consulting d.o.o.","url":"https://www.podaci.me/","logo":"https://www.podaci.me/og-image.png","email":"office@fidelityconsulting.me","telephone":"+382 67 525 774","address":{"@type":"PostalAddress","streetAddress":"Moskovska 63","addressLocality":"Podgorica","addressCountry":"ME"}},{"@type":"WebSite","@id":"https://www.podaci.me/#website","url":"https://www.podaci.me/","name":"Podaci.me","inLanguage":"sr-Latn-ME","publisher":{"@id":"https://www.podaci.me/#organization"}}]}</script>
@@ -55,116 +55,33 @@
 @keyframes cue{to{top:100%}}
 @media (max-width:860px){.hero{min-height:0}.hero__foot{grid-template-columns:minmax(0,1fr)}.cue{display:none}.hero__foot{padding-bottom:56px}}
 
-/* ---------- nova analiza ---------- */
-.nova{padding-top:var(--sec);border-top:1px solid var(--hair)}
-.nova__head{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px clamp(32px,6vw,96px);align-items:end}
-.nova__head .eyebrow{grid-column:1 / -1}
-.nova__head h2 a{text-decoration:none;color:inherit;background:linear-gradient(var(--accent),var(--accent)) 0 96%/0 3px no-repeat;transition:background-size .7s var(--ease)}
-.nova__head h2 a:hover{background-size:100% 3px}
-.nova__head .dek{margin-bottom:22px}
-.nova__nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--ink)}
-.nova__nums>a{display:grid;gap:12px;align-content:start;padding:26px 28px 6px 0;text-decoration:none;color:var(--ink)}
-.nova__nums>a+a{padding-left:28px;border-left:1px solid var(--hair-2)}
-.nova__v{font-size:clamp(60px,7.6vw,104px);font-weight:800;letter-spacing:-.055em;line-height:.88;font-variant-numeric:tabular-nums;white-space:nowrap}
-.nova__nums p:not(.nova__v){font-size:16px;line-height:1.55;color:var(--ink-2);max-width:32ch}
-.nova__nums>a:hover .nova__v{color:var(--accent-text)}
-@media (max-width:860px){.nova__head{grid-template-columns:minmax(0,1fr)}.nova__nums{grid-template-columns:minmax(0,1fr)}.nova__nums>a+a{padding-left:0;border-left:0;border-top:1px solid var(--hair-2)}.nova__nums>a{padding:24px 0}}
-
-/* ---------- latest analysis ---------- */
-.feat{padding-top:var(--sec);border-top:1px solid var(--hair)}
-.feat__head{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px clamp(32px,6vw,96px);align-items:end}
-.feat__head .eyebrow{grid-column:1 / -1}
-.feat__head h2 a{text-decoration:none;color:inherit;background:linear-gradient(var(--accent),var(--accent)) 0 96%/0 3px no-repeat;transition:background-size .7s var(--ease)}
-.feat__head h2 a:hover{background-size:100% 3px}
-.feat__head .dek{margin-bottom:22px}
-@media (max-width:860px){.feat__head{grid-template-columns:minmax(0,1fr)}}
-
-.nums{margin-top:clamp(24px,4vw,56px)}
-.nums .scrolly__stage{top:var(--nav-h);height:calc(100svh - var(--nav-h));display:flex;align-items:center}
-.nums .scrolly__steps{margin-top:calc(-1 * max(420px, 100svh - var(--nav-h)))}
-.nums .step{min-height:88svh}
-.nums__grid{width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px,6vw,104px);align-items:center}
-.nums__slides{display:grid}
-.nums__slide{grid-area:1/1;align-self:center;transition:opacity .55s var(--ease),transform .8s var(--ease)}
-.js .nums__slide{opacity:0;transform:translate3d(0,22px,0);pointer-events:none}
-.js .nums__slide.is-on{opacity:1;transform:none;pointer-events:auto}
-.nums__k{font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;align-items:center}
-.nums__k b{font-weight:500;color:var(--accent-text)}
-.nums__v{font-size:clamp(84px,10.4vw,168px);font-weight:800;letter-spacing:-.062em;line-height:.84;margin-top:18px;font-variant-numeric:tabular-nums;white-space:nowrap}
-.nums__v.red{color:var(--accent)}
-.nums__l{font-size:clamp(20px,2vw,28px);font-weight:750;letter-spacing:-.02em;line-height:1.15;text-wrap:balance;max-width:24ch;margin-top:14px}
-.nums__ctx{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:40ch;margin-top:14px}
-.nums__slide .src{margin-top:14px;max-width:46ch}
-.nums__vis{display:grid;gap:14px}
-.nums__legend{display:flex;justify-content:space-between;gap:16px;font:500 11.5px/1.4 var(--f-mono);color:var(--muted)}
-.nums__dots{display:flex;gap:6px}
-.nums__dots i{width:22px;height:2px;background:var(--hair-2);transition:background .4s}
-.nums__dots i.on{background:var(--ink)}
-.units.s0 i{border-color:var(--n4)}
-.units.s1 i,.units.s2 i{border-color:var(--n2)}
-.units.s1 i.c,.units.s2 i.c{border-color:var(--accent)}
-.units.s1 i.c .f{transform:scaleX(var(--fill,1))}
-.units.s2 i.c{border-style:dashed}
-.units.s2 i:not(.c){opacity:.5}
-.no-js .nums__vis{display:none}
-.no-js .nums__slides{gap:56px}
-.no-js .nums__slide{grid-area:auto}
-.no-js .nums .scrolly__stage{position:relative;top:auto;height:auto;min-height:0;padding-block:24px}
-.no-js .nums .scrolly__steps{display:none}
-@media (max-width:860px){
-  .nums__grid{grid-template-columns:minmax(0,1fr);align-content:center;gap:22px}
-  .nums__v{font-size:clamp(76px,24vw,140px);margin-top:12px}
-  .nums__l{font-size:20px;margin-top:8px}
-  .nums__ctx{font-size:15.5px;margin-top:8px}
-  .nums__slide .src{margin-top:8px}
-  .units{--cols:20}
-}
-@media (max-width:860px) and (max-height:700px){.nums__ctx{display:none}}
-
-/* sections below the fold skip layout and paint until the reader gets close */
-.nova__nums,.sat-teaser,.three,#oblasti,#metod,#kontakt{content-visibility:auto;contain-intrinsic-size:auto 900px}
-
-/* ---------- satellite teaser + chapters ---------- */
-.sat-teaser{padding-block:var(--sec)}
-.sat-teaser__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:clamp(28px,5vw,80px);align-items:end}
-.sat-teaser__txt{display:grid;gap:20px;align-content:end}
-.sat-teaser__txt .h-sub{font-size:clamp(24px,2.4vw,34px);line-height:1.15;max-width:18ch}
-.vb-sat{position:relative;margin:0;aspect-ratio:1100/800;overflow:hidden;background:#1c1c1e}
-.vb-sat img,.vb-sat svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.vb-sat img{transform:scale(1.04);transition:transform 2.6s var(--ease)}
-.vb-sat.is-in img{transform:none}
-.vb-sat .halo{fill:none;stroke:rgba(255,255,255,.5);stroke-width:13;stroke-linecap:round;stroke-linejoin:round}
-.vb-sat .route{fill:none;stroke:#ff1e2d;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0}
-.js .vb-sat:not(.is-in) .route,.js .vb-sat:not(.is-in) .halo{stroke-dashoffset:1;stroke-dasharray:1}
-.js .vb-sat .halo{stroke-dasharray:1}
-.vb-sat.is-in .route,.vb-sat.is-in .halo{animation:draw 2.6s var(--ease-io) .35s both}
-@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
-.vb-sat .tag{position:absolute;left:12px;top:12px;font:500 11.5px/1 var(--f-mono);color:#fff;background:rgba(0,0,0,.6);padding:7px 9px}
-.vb-sat .km{position:absolute;right:14px;bottom:12px;font:800 clamp(22px,2.6vw,34px)/1 var(--f-sans);letter-spacing:-.03em;color:#fff;background:rgba(0,0,0,.62);padding:7px 10px}
-.vb-sat .km small{display:block;font:500 11px/1.4 var(--f-mono);letter-spacing:.04em;text-align:right}
-@media (max-width:860px){.sat-teaser__grid{grid-template-columns:minmax(0,1fr)}.sat-teaser__txt{order:2}}
-
-.chapters{margin-top:clamp(72px,10vw,128px)}
-.chapters__head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px 24px;padding-bottom:18px;border-bottom:1px solid var(--hair-2)}
-.chapters__head h3{font-size:clamp(22px,2vw,28px);font-weight:750;letter-spacing:-.02em}
-.chapters ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
-.chapters li a{display:flex;flex-direction:column;gap:10px;height:100%;padding:22px 18px 26px 0;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--hair);transition:color .25s}
-.chapters li+li a{padding-left:18px;border-left:1px solid var(--hair)}
-.chapters li a b{font:500 12px/1 var(--f-mono);color:var(--accent-text)}
-.chapters li a strong{font-size:19px;font-weight:750;letter-spacing:-.02em}
-.chapters li a span{font-size:13.5px;line-height:1.45;color:var(--muted)}
-.chapters li a:hover strong{color:var(--accent-text)}
-@media (max-width:1100px){.chapters ol{grid-template-columns:repeat(2,minmax(0,1fr))}.chapters li+li a{padding-left:0;border-left:0}.chapters li:nth-child(even) a{padding-left:18px;border-left:1px solid var(--hair)}}
-@media (max-width:520px){.chapters ol{grid-template-columns:minmax(0,1fr)}.chapters li:nth-child(even) a{padding-left:0;border-left:0}.chapters li a{flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:4px 12px;padding:16px 0}.chapters li a span{flex-basis:100%}}
-
-/* ---------- three numbers ---------- */
-.three__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(40px,6vw,80px);border-top:1px solid var(--ink)}
-.three__grid>div{padding:28px 32px 4px 0;display:grid;gap:14px;align-content:start}
-.three__grid>div+div{padding-left:32px;border-left:1px solid var(--hair-2)}
-.three__v{font-size:clamp(64px,8.4vw,112px);font-weight:800;letter-spacing:-.055em;line-height:.88;font-variant-numeric:tabular-nums;white-space:nowrap}
-.three__v small{font-size:.5em;letter-spacing:-.03em;margin-left:.06em}
-.three__grid p:not(.three__v){font-size:16px;line-height:1.55;color:var(--ink-2);max-width:32ch}
-@media (max-width:860px){.three__grid{grid-template-columns:minmax(0,1fr)}.three__grid>div+div{padding-left:0;border-left:0;border-top:1px solid var(--hair-2)}.three__grid>div{padding:26px 0 26px}}
+/* ---------- analize: pregled ---------- */
+.list{padding-block:var(--sec);border-top:1px solid var(--hair)}
+.list__head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px clamp(32px,6vw,96px);align-items:end}
+.list__head .eyebrow{margin-bottom:18px}
+@media (max-width:860px){.list__head{grid-template-columns:minmax(0,1fr)}}
+.alist{list-style:none;margin:clamp(40px,6vw,72px) 0 0;padding:0;border-top:1px solid var(--ink)}
+.alist>li{border-bottom:1px solid var(--hair-2)}
+.an{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1.6fr) minmax(0,1fr);gap:20px clamp(28px,4vw,64px);align-items:start;padding:clamp(32px,4vw,52px) 0;text-decoration:none;color:var(--ink);position:relative}
+.an::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.an:hover::after{transform:scaleX(1)}
+.an__meta{display:grid;gap:8px;font:500 12px/1.4 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.an__meta time{color:var(--ink)}
+.an__meta b{font-weight:500;color:var(--accent-text)}
+.an__body{display:grid;gap:14px;min-width:0}
+.an h3{font-size:clamp(28px,3.3vw,46px);font-weight:800;letter-spacing:-.035em;line-height:1.04;text-wrap:balance;transition:color .25s}
+.an:hover h3{color:var(--accent-text)}
+.an p.dek{max-width:56ch}
+.an__go{display:inline-flex;align-items:center;gap:10px;font:600 15px/1 var(--f-sans);margin-top:6px}
+.an__go .arr{transition:transform .45s var(--ease)}
+.an:hover .an__go .arr{transform:translateX(5px)}
+.an__nums{display:grid;gap:18px;min-width:0}
+.an__nums div{display:grid;gap:6px;padding-top:14px;border-top:1px solid var(--hair)}
+.an__nums div:first-child{border-top:0;padding-top:0}
+.an__v{font-size:clamp(40px,4.4vw,64px);font-weight:800;letter-spacing:-.05em;line-height:.9;font-variant-numeric:tabular-nums;white-space:nowrap}
+.an__nums span{font-size:14.5px;line-height:1.45;color:var(--ink-2)}
+@media (max-width:960px){.an{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.an__meta{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:6px 16px}.an__body{grid-column:1 / -1}.an__nums{grid-column:1 / -1;grid-template-columns:repeat(3,minmax(0,1fr))}.an__nums div{border-top:1px solid var(--hair);padding-top:14px}.an__nums div:first-child{border-top:1px solid var(--hair);padding-top:14px}}
+@media (max-width:560px){.an__nums{grid-template-columns:minmax(0,1fr)}}
 
 /* ---------- areas ---------- */
 .split-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px clamp(32px,6vw,96px);align-items:end}
@@ -235,137 +152,53 @@ a.area:hover h3{color:var(--accent-text)}
         <div>
           <p class="hero__note">Za kompanije radimo <strong>tailor made analize</strong> — tržište, konkurencija, sektor i javni podaci, po mjeri vaše odluke.</p>
           <div class="btns">
-            <a class="btn btn--red" href="/analize/velje-brdo/">Otvorite prvu analizu <span class="arr" aria-hidden="true">→</span></a>
+            <a class="btn btn--red" href="#analize">Pogledajte analize <span class="arr" aria-hidden="true">→</span></a>
             <a class="btn" href="mailto:office@fidelityconsulting.me?subject=Tailor%20made%20analiza%20%E2%80%94%20Podaci.me">Naručite analizu</a>
           </div>
         </div>
       </div>
     </div>
-    <a class="cue" href="#nova"><span>Najnovija analiza</span><i aria-hidden="true"></i></a>
+    <a class="cue" href="#analize"><span>Analize</span><i aria-hidden="true"></i></a>
   </section>
 
-  <section class="nova" id="nova" aria-labelledby="nova-h">
+  <section class="list" id="analize" aria-labelledby="list-h">
     <div class="wrap">
-      <div class="nova__head">
-        <p class="eyebrow" data-reveal>Nova analiza · Crna Gora · Svijet · Oktobar 2026.</p>
-        <h2 class="h-sec" id="nova-h" data-reveal><a href="/analize/crna-gora-singapur/">Crna Gora i Singapur: dvije male države, jedan jaz</a></h2>
-        <div data-reveal style="--d:120ms">
-          <p class="dek">Istorija, ekonomija, javne finansije, demografija, politika i šest međunarodnih indeksa, u sedam poglavlja. Singapur vodi po sposobnosti države, Crna Gora po indeksu demokratije i slobodi medija.</p>
-          <a class="btn btn--red" href="/analize/crna-gora-singapur/">Otvorite analizu <span class="arr" aria-hidden="true">→</span></a>
-        </div>
+      <div class="list__head" data-reveal>
+        <div><p class="eyebrow">Analize</p><h2 class="h-sec" id="list-h">Objavljene analize.</h2></div>
+        <p class="dek">Svaka analiza je samostalna priča u poglavljima, sa interaktivnim grafikonima, tabelama podataka i izvorima. Najnovija je prva.</p>
       </div>
-      <div class="nova__nums">
-        <a href="/analize/crna-gora-singapur/#jaz" data-reveal><p class="nova__v red"><span data-count="6.7" data-dec="1">6,7</span>×</p><p>veći BDP po stanovniku u Singapuru: 98.878 naspram 14.817 USD (2025).</p></a>
-        <a href="/analize/crna-gora-singapur/#dug" data-reveal style="--d:100ms"><p class="nova__v">−4,3%</p><p>BDP-a deficit Crne Gore 2025, prema procjeni Evropske komisije. Singapur: suficit 1,9%.</p></a>
-        <a href="/analize/crna-gora-singapur/#indeksi" data-reveal style="--d:200ms"><p class="nova__v"><span data-count="46">46</span>/<span data-count="84">84</span></p><p>poena na indeksu percepcije korupcije 2025: 65. naspram 3. mjesta u svijetu.</p></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="feat" id="analize" aria-labelledby="feat-h">
-    <div class="wrap">
-      <div class="feat__head">
-        <p class="eyebrow" data-reveal>Analiza · Crna Gora · Javne finansije · Oktobar 2026.</p>
-        <h2 class="h-sec" id="feat-h" data-reveal><a href="/analize/velje-brdo/">Velje brdo: obećano 20.000 stanova, izgrađeno 0</a></h2>
-        <div data-reveal style="--d:120ms">
-          <p class="dek">Državni projekat od 20.000 stanova, dvije godine poslije najave. Obećanja Vlade stavljena su pored ugovora, budžeta, rokova i satelitskih snimaka terena.</p>
-          <a class="btn" href="/analize/velje-brdo/">Otvorite analizu <span class="arr" aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="scrolly nums" id="nums">
-      <div class="scrolly__stage">
-        <div class="wrap nums__grid">
-          <div class="nums__slides">
-            <div class="nums__slide is-on">
-              <p class="nums__k"><b>01</b>Obećano</p>
-              <p class="nums__v tnum"><span class="nv" data-v="20000">20.000</span></p>
-              <p class="nums__l">obećanih stanova</p>
-              <p class="nums__ctx">Toliko stanova na Veljem brdu traži Koordinaciono tijelo Vlade.</p>
-              <p class="src">Izvor: Koordinaciono tijelo Vlade, decembar 2024.</p>
+      <ol class="alist">
+        <li data-reveal>
+          <a class="an" href="/analize/crna-gora-singapur/">
+            <p class="an__meta"><time datetime="2026-10-23">23. 10. 2026.</time><b>Makroekonomija i svijet</b><span>7 poglavlja</span></p>
+            <div class="an__body">
+              <h3>Crna Gora i Singapur: dvije male države, jedan jaz</h3>
+              <p class="dek">Istorija, ekonomija, javne finansije, demografija, politika i šest međunarodnih indeksa. Singapur vodi po sposobnosti države, Crna Gora po indeksu demokratije i slobodi medija.</p>
+              <span class="an__go">Otvorite analizu <span class="arr" aria-hidden="true">→</span></span>
             </div>
-            <div class="nums__slide">
-              <p class="nums__k"><b>02</b>Ugovoreno</p>
-              <p class="nums__v tnum"><span class="nv" data-v="185">185</span></p>
-              <p class="nums__l">ugovoreno u prvoj fazi</p>
-              <p class="nums__ctx">Ugovor za prvu fazu Bloka A1 potpisan je u avgustu 2026, sa rokom 21. 8. 2029. To je 0,9% obećanog.</p>
-              <p class="src">Izvor: Portal javnih nabavki (ugovor za Blok A1), Investitor, Sjever CG</p>
+            <div class="an__nums">
+              <div><p class="an__v red">6,7×</p><span>veći BDP po stanovniku u Singapuru (2025)</span></div>
+              <div><p class="an__v">−4,3%</p><span>BDP-a deficit Crne Gore 2025; Singapur +1,9%</span></div>
+              <div><p class="an__v">46/84</p><span>indeks percepcije korupcije 2025</span></div>
             </div>
-            <div class="nums__slide">
-              <p class="nums__k"><b>03</b>Izgrađeno</p>
-              <p class="nums__v red tnum"><span class="nv" data-v="0">0</span></p>
-              <p class="nums__l">izgrađeno prema stanju istraživanja od 20. oktobra 2026.</p>
-              <p class="nums__ctx">Sa satelita se vidi samo probijena trasa puta, duga oko 5,2 km. Građevinske dozvole nema ni za Blok A1 ni za bulevar.</p>
-              <p class="src">Izvor: Copernicus Sentinel-2 (7. 10. 2026), Dan, Investitor, Antena M</p>
+          </a>
+        </li>
+        <li data-reveal>
+          <a class="an" href="/analize/velje-brdo/">
+            <p class="an__meta"><time datetime="2026-10-20">20. 10. 2026.</time><b>Javne finansije</b><span>7 poglavlja</span></p>
+            <div class="an__body">
+              <h3>Velje brdo: obećano 20.000 stanova, izgrađeno 0</h3>
+              <p class="dek">Državni stambeni projekat dvije godine poslije najave. Obećanja Vlade stavljena su pored ugovora, budžeta, rokova i satelitskih snimaka terena.</p>
+              <span class="an__go">Otvorite analizu <span class="arr" aria-hidden="true">→</span></span>
             </div>
-          </div>
-          <div class="nums__vis">
-            <div class="units s0" id="homeUnits" role="img" aria-label="200 kvadratića, svaki je 100 stanova: 20.000 obećano, manje od dva kvadratića ugovoreno, nijedan izgrađen."></div>
-            <div class="nums__legend"><span>1 kvadratić = 100 stanova</span><span class="nums__dots" aria-hidden="true"><i class="on"></i><i></i><i></i></span></div>
-          </div>
-        </div>
-      </div>
-      <div class="scrolly__steps" aria-hidden="true"><div class="step"></div><div class="step"></div><div class="step"></div></div>
-    </div>
-  </section>
-
-  <section class="tone-night sat-teaser" aria-labelledby="sat-h">
-    <div class="wrap">
-      <div class="sat-teaser__grid">
-        <div class="sat-teaser__txt" data-reveal>
-          <p class="eyebrow">Teren sa satelita, 7. 10. 2026.</p>
-          <h2 class="h-sub" id="sat-h">Crveno je probijena trasa puta, duga oko 5,2&nbsp;km. Gradilišta stanova na snimku nema.</h2>
-          <p class="src">Copernicus Sentinel-2. Sadrži modifikovane podatke Copernicus Sentinel (2026).</p>
-          <div class="btns"><a class="btn btn--red" href="/analize/velje-brdo/#teren">Pogledajte teren <span class="arr" aria-hidden="true">→</span></a></div>
-        </div>
-        <figure class="vb-sat" data-reveal="fade">
-          <picture>
-            <source type="image/webp" srcset="/analize/velje-brdo/img/teren-2026-10-07-bw-720.webp 720w, /analize/velje-brdo/img/teren-2026-10-07-bw.webp 1100w" sizes="(max-width:860px) 100vw, 60vw">
-            <img src="/analize/velje-brdo/img/teren-2026-10-07-bw.jpg" width="1100" height="800" loading="lazy" decoding="async" alt="Crno-bijeli satelitski snimak padine Veljeg brda; crvenom linijom označena je probijena trasa puta.">
-          </picture>
-          <svg viewBox="0 0 1100 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path class="halo" pathLength="1" d="M792.5 411C790.8 413.3 787.1 421.4 782.5 425C777.9 428.6 772.1 430.2 765 432.5C757.9 434.8 748.3 436.7 740 439C731.7 441.3 723.3 443.8 715 446.5C706.7 449.2 698.3 452.1 690 455C681.7 457.9 673.3 461.1 665 464C656.7 466.9 647.5 469.8 640 472.5C632.5 475.2 626.7 478.3 620 480C613.3 481.7 606.7 483.2 600 482.5C593.3 481.8 585.8 478.5 580 476C574.2 473.5 570 470.3 565 467.5C560 464.7 554.6 461.1 550 459C545.4 456.9 542.5 454.4 537.5 455C532.5 455.6 526.2 460 520 462.5C513.8 465 506.7 467.5 500 470C493.3 472.5 486.7 474.8 480 477.5C473.3 480.2 466.7 483.2 460 486C453.3 488.8 446.2 491.2 440 494C433.8 496.8 427.5 500.2 422.5 502.5C417.5 504.8 413.3 506.9 410 507.5C406.7 508.1 404 507.2 402.5 506C401 504.8 400.2 502.2 401 500C401.8 497.8 405.2 494.2 407.5 492.5C409.8 490.8 411.2 492.5 415 490C418.8 487.5 425 482.1 430 477.5C435 472.9 440 468.3 445 462.5C450 456.7 455 449.2 460 442.5C465 435.8 470 428.3 475 422.5C480 416.7 485 412.2 490 407.5C495 402.8 499.2 398.2 505 394C510.8 389.8 518.3 386.5 525 382.5C531.7 378.5 539.2 373.8 545 370C550.8 366.2 556.2 362.7 560 360C563.8 357.3 565.7 356.1 567.5 354C569.3 351.9 571.4 350.2 571 347.5C570.6 344.8 567.7 340.1 565 337.5C562.3 334.9 559.2 333.2 555 332C550.8 330.8 545 330.1 540 330C535 329.9 529.6 330.5 525 331.5C520.4 332.5 516.2 333.8 512.5 336C508.8 338.2 505.8 341 502.5 345C499.2 349 495.8 355 492.5 360C489.2 365 486.2 370.4 482.5 375C478.8 379.6 474.2 383.8 470 387.5C465.8 391.2 462.1 394.4 457.5 397.5C452.9 400.6 447.5 403.2 442.5 406C437.5 408.8 431.7 412.3 427.5 414C423.3 415.7 420 416.5 417.5 416C415 415.5 412.9 413.2 412.5 411C412.1 408.8 412.9 405.6 415 402.5C417.1 399.4 421.2 396.2 425 392.5C428.8 388.8 433.8 384.6 437.5 380C441.2 375.4 444.9 370.4 447.5 365C450.1 359.6 452.8 352.9 453 347.5C453.2 342.1 451.2 336.2 449 332.5C446.8 328.8 443.3 326.2 440 325C436.7 323.8 433.2 323.5 429 325C424.8 326.5 419.8 330.7 415 334C410.2 337.3 405.2 341.1 400 345C394.8 348.9 386.7 355.4 384 357.5"/><path class="route" pathLength="1" d="M792.5 411C790.8 413.3 787.1 421.4 782.5 425C777.9 428.6 772.1 430.2 765 432.5C757.9 434.8 748.3 436.7 740 439C731.7 441.3 723.3 443.8 715 446.5C706.7 449.2 698.3 452.1 690 455C681.7 457.9 673.3 461.1 665 464C656.7 466.9 647.5 469.8 640 472.5C632.5 475.2 626.7 478.3 620 480C613.3 481.7 606.7 483.2 600 482.5C593.3 481.8 585.8 478.5 580 476C574.2 473.5 570 470.3 565 467.5C560 464.7 554.6 461.1 550 459C545.4 456.9 542.5 454.4 537.5 455C532.5 455.6 526.2 460 520 462.5C513.8 465 506.7 467.5 500 470C493.3 472.5 486.7 474.8 480 477.5C473.3 480.2 466.7 483.2 460 486C453.3 488.8 446.2 491.2 440 494C433.8 496.8 427.5 500.2 422.5 502.5C417.5 504.8 413.3 506.9 410 507.5C406.7 508.1 404 507.2 402.5 506C401 504.8 400.2 502.2 401 500C401.8 497.8 405.2 494.2 407.5 492.5C409.8 490.8 411.2 492.5 415 490C418.8 487.5 425 482.1 430 477.5C435 472.9 440 468.3 445 462.5C450 456.7 455 449.2 460 442.5C465 435.8 470 428.3 475 422.5C480 416.7 485 412.2 490 407.5C495 402.8 499.2 398.2 505 394C510.8 389.8 518.3 386.5 525 382.5C531.7 378.5 539.2 373.8 545 370C550.8 366.2 556.2 362.7 560 360C563.8 357.3 565.7 356.1 567.5 354C569.3 351.9 571.4 350.2 571 347.5C570.6 344.8 567.7 340.1 565 337.5C562.3 334.9 559.2 333.2 555 332C550.8 330.8 545 330.1 540 330C535 329.9 529.6 330.5 525 331.5C520.4 332.5 516.2 333.8 512.5 336C508.8 338.2 505.8 341 502.5 345C499.2 349 495.8 355 492.5 360C489.2 365 486.2 370.4 482.5 375C478.8 379.6 474.2 383.8 470 387.5C465.8 391.2 462.1 394.4 457.5 397.5C452.9 400.6 447.5 403.2 442.5 406C437.5 408.8 431.7 412.3 427.5 414C423.3 415.7 420 416.5 417.5 416C415 415.5 412.9 413.2 412.5 411C412.1 408.8 412.9 405.6 415 402.5C417.1 399.4 421.2 396.2 425 392.5C428.8 388.8 433.8 384.6 437.5 380C441.2 375.4 444.9 370.4 447.5 365C450.1 359.6 452.8 352.9 453 347.5C453.2 342.1 451.2 336.2 449 332.5C446.8 328.8 443.3 326.2 440 325C436.7 323.8 433.2 323.5 429 325C424.8 326.5 419.8 330.7 415 334C410.2 337.3 405.2 341.1 400 345C394.8 348.9 386.7 355.4 384 357.5"/></svg>
-          <span class="tag">Copernicus Sentinel-2</span>
-          <span class="km" aria-hidden="true">5,2 km<small>probijene trase</small></span>
-        </figure>
-      </div>
-
-      <div class="chapters">
-        <div class="chapters__head" data-reveal>
-          <h3>Analiza u sedam poglavlja</h3>
-          <a class="lnk" href="/analize/velje-brdo/">Od početka →</a>
-        </div>
-        <ol>
-          <li data-reveal><a href="/analize/velje-brdo/#a-obecanje"><b>A</b><strong>Obećanje</strong><span>Devet obećanja sa rokom ili brojkom, na provjeri.</span></a></li>
-          <li data-reveal style="--d:60ms"><a href="/analize/velje-brdo/#b-stvarnost"><b>B</b><strong>Stvarnost</strong><span>Satelitski snimci, profil ostvarenja, prepreke.</span></a></li>
-          <li data-reveal style="--d:120ms"><a href="/analize/velje-brdo/#c-razmjera"><b>C</b><strong>Razmjera</strong><span>Obećano, ugovoreno, izgrađeno.</span></a></li>
-          <li data-reveal style="--d:180ms"><a href="/analize/velje-brdo/#d-novac"><b>D</b><strong>Novac</strong><span>Cijena kvadrata, projekcija troška, subvencija.</span></a></li>
-          <li data-reveal style="--d:240ms"><a href="/analize/velje-brdo/#e-vrijeme"><b>E</b><strong>Vrijeme</strong><span>Kako su se rokovi pomjerali.</span></a></li>
-          <li data-reveal style="--d:300ms"><a href="/analize/velje-brdo/#f-odgovornost"><b>F</b><strong>Odgovornost</strong><span>Akteri, saslušanje, javne izjave.</span></a></li>
-          <li data-reveal style="--d:360ms"><a href="/analize/velje-brdo/#g-dokazi"><b>G</b><strong>Dokazi</strong><span>Izvori, metodologija, ograničenja.</span></a></li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <section class="tone-paper sec three" aria-labelledby="three-h">
-    <div class="wrap">
-      <h2 class="h-sec" id="three-h" data-reveal>Iz prve analize, u tri broja.</h2>
-      <div class="three__grid">
-        <div data-reveal>
-          <p class="three__v"><span data-count="0.9" data-dec="1">0,9</span><small>%</small></p>
-          <p>obećanih stanova je ugovoreno: 185 od 20.000, sa rokom 21.&nbsp;8.&nbsp;2029.</p>
-        </div>
-        <div data-reveal style="--d:100ms">
-          <p class="three__v red"><span data-count="3400">3.400</span><small> €</small></p>
-          <p>po kvadratu sa PDV-om, po računici iz ugovora (bez PDV-a 2.808 €, Investitor). Obećano je 1.000 €; ministarstvo računicu osporava.</p>
-        </div>
-        <div data-reveal style="--d:200ms">
-          <p class="three__v"><span data-count="324">324</span></p>
-          <p>godine bi trajala gradnja 20.000 stanova tempom prve faze. Naša ilustracija razmjera, ne prognoza.</p>
-          <p><span class="badge badge--proj">Naša računica</span></p>
-        </div>
-      </div>
+            <div class="an__nums">
+              <div><p class="an__v">20.000</p><span>obećanih stanova</span></div>
+              <div><p class="an__v">185</p><span>ugovoreno u prvoj fazi, rok 2029.</span></div>
+              <div><p class="an__v red">0</p><span>izgrađeno do 20. 10. 2026.</span></div>
+            </div>
+          </a>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -419,27 +252,5 @@ a.area:hover h3{color:var(--accent-text)}
   </div>
 </footer>
 
-<script>
-document.addEventListener('p:ready', function () {
-  'use strict';
-  var P = window.P, box = document.getElementById('homeUnits'), sq = [];
-  // 200 squares of 100 flats; the first two carry the 185 contracted flats
-  for (var i = 0; i < 200; i++) {
-    var s = document.createElement('i'), share = Math.max(0, Math.min(1, (185 - i * 100) / 100));
-    if (share > 0) { s.className = 'c'; s.style.setProperty('--fill', share); s.appendChild(document.createElement('span')).className = 'f'; }
-    s.style.setProperty('--dl', ((i % 25) + Math.floor(i / 25)) * 14 + 'ms');
-    box.appendChild(s); sq.push(s);
-  }
-  var slides = P.$$('.nums__slide'), dots = P.$$('.nums__dots i');
-  if (!P.reduce) { box.classList.add('is-pre'); P.onEnter(box, function () { box.classList.remove('is-pre'); P.restartClass(box, 'is-pop'); }, '0px 0px -10% 0px'); }
-  P.scrolly(document.getElementById('nums'), function (i, prev) {
-    slides.forEach(function (s, j) { s.classList.toggle('is-on', j === i); });
-    dots.forEach(function (d, j) { d.classList.toggle('on', j <= i); });
-    box.classList.remove('s0', 's1', 's2'); box.classList.add('s' + i);
-    var n = slides[i].querySelector('.nv'), from = prev >= 0 ? +slides[prev].querySelector('.nv').getAttribute('data-v') : +n.getAttribute('data-v');
-    if (prev >= 0) P.countTo(n, +n.getAttribute('data-v'), 1100, from);
-  });
-});
-</script>
 </body>
 </html>

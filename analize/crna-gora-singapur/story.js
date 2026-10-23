@@ -1,5 +1,8 @@
+/* Pokreće scenu kad je zajednički runtime spreman, i kad je signal stigao prije ove skripte. */
+function onReady(fn) { if (window.P && window.P.ready) fn(); else document.addEventListener('p:ready', fn); }
+
 /* Crna Gora i Singapur — sticky scena „Četiri omjera“: traka i broj se mijenjaju po koraku. */
-document.addEventListener('p:ready', function () {
+onReady(function () {
   'use strict';
   var P = window.P, $ = function (id) { return document.getElementById(id); };
   var el = $('gapScrolly'); if (!el) return;
@@ -21,5 +24,35 @@ document.addEventListener('p:ready', function () {
     V.setAttribute('data-dec', s.dec);
     if (prev < 0 || P.reduce) { V._v = s.v; V.textContent = P.nf(s.v, s.dec) + '×'; }
     else P.countTo(V, s.v, 1000, S[prev].v);
+  });
+});
+
+/* Penzije — sticky scena „Stopa doprinosa“: složena traka zaposleni + poslodavac, skala do 37%. */
+onReady(function () {
+  'use strict';
+  var P = window.P, $ = function (id) { return document.getElementById(id); };
+  var el = $('pioScrolly'); if (!el) return;
+  var MAX = 37;
+  var S = [
+    { k: 'Crna Gora do oktobra 2024.', emp: 15, er: 5.5, l: 'bruto zarade odlazilo je u Fond PIO', src: 'Izvor: Zakon o PIO prije izmjena iz 2024.', sg: false },
+    { k: 'Crna Gora od 1. 10. 2024.', emp: 10, er: 0, l: 'poslije programa „Evropa sad 2“; poslodavac ne plaća', src: 'Izvor: Dan; Zakon o PIO, izmjene 2024.', sg: false },
+    { k: 'Crna Gora od 2027, predlog', emp: 0, er: 0, l: 'doprinosa po Euro modelu; penzije iz budžeta', src: 'Izvor: predlozi zakona utvrđeni 17. 9. 2026; Skupština ih nije usvojila.', sg: false },
+    { k: 'Singapur, do 55 godina', emp: 20, er: 17, l: 'zarade na lični račun u CPF-u', src: 'Izvor: CPF Board, stope od 1. 1. 2026.', sg: true }
+  ];
+  var V = $('pioV'), emp = $('pioEmp'), er = $('pioEr'), track = emp.parentNode, dots = P.$$('.gap__dots i', el);
+  function pct(v) { return P.nf(v, v % 1 ? 1 : 0) + '%'; }
+  P.scrolly(el, function (i, prev) {
+    var s = S[i], tot = s.emp + s.er;
+    $('pioN').textContent = '0' + (i + 1); $('pioK').textContent = s.k; $('pioL').textContent = s.l; $('pioSrc').textContent = s.src;
+    $('pioTot').textContent = pct(tot); $('pioEmpV').textContent = pct(s.emp); $('pioErV').textContent = pct(s.er);
+    emp.style.width = (s.emp / MAX * 100).toFixed(2) + '%';
+    er.style.left = (s.emp / MAX * 100).toFixed(2) + '%';
+    er.style.width = (s.er / MAX * 100).toFixed(2) + '%';
+    track.classList.toggle('is-sg', s.sg);
+    track.classList.toggle('is-zero', tot === 0);
+    dots.forEach(function (d, j) { d.classList.toggle('on', j <= i); });
+    var dec = tot % 1 ? 1 : 0; V.setAttribute('data-dec', dec);
+    if (prev < 0 || P.reduce) { V._v = tot; V.textContent = pct(tot); }
+    else P.countTo(V, tot, 1000, S[prev].emp + S[prev].er);
   });
 });

@@ -1,0 +1,203 @@
+/* Crna Gora i Singapur — scene analize. Crna Gora je crvena (--cg), Singapur je boja teksta (--sg), u svakom tonu poglavlja. */
+.cmp{--cg:var(--ink);--sg:var(--n3)}
+.tone-night.cmp,.tone-night .cmp{--sg:var(--n3)}
+
+/* ---------- naslovna ---------- */
+.cover{padding-top:clamp(56px,11vh,128px)}
+.cover__h{font-size:clamp(52px,10vw,160px)}
+.cover__h .x{color:var(--muted);font-weight:500}
+.cover__h .c{color:var(--accent)}
+.cover__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px clamp(32px,6vw,96px);align-items:end;margin-top:clamp(28px,5vh,56px)}
+.cover__grid .lede{max-width:40ch}
+.legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:20px;font:500 12px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:12px;height:12px;display:inline-block;flex:none}
+.sw.cg{background:var(--cg)}.sw.sg{background:var(--sg)}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:clamp(48px,7vh,80px) 0 0;border-top:1px solid var(--ink)}
+.kpis>div{padding:22px 24px 6px 0;display:grid;gap:8px;align-content:start;min-width:0}
+.kpis>div+div{padding-left:24px;border-left:1px solid var(--hair)}
+.kpis dt{font:500 11.5px/1.4 var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.kpis dd{margin:0;font-size:clamp(44px,5.4vw,76px);font-weight:800;letter-spacing:-.05em;line-height:.9;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kpis p{font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+@media (max-width:960px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpis>div:nth-child(3){padding-left:0;border-left:0}.kpis>div:nth-child(n+3){border-top:1px solid var(--hair);padding-top:22px}}
+@media (max-width:520px){.kpis{grid-template-columns:minmax(0,1fr)}.kpis>div+div{padding-left:0;border-left:0;border-top:1px solid var(--hair);padding-top:22px}}
+@media (max-width:860px){.cover__grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- poglavlja (kao na ostalim analizama) ---------- */
+.act{position:relative;scroll-margin-top:var(--local-h)}
+.act-open{min-height:min(80svh,860px);display:flex;flex-direction:column;justify-content:center;padding-block:clamp(88px,13vh,152px) clamp(56px,9vh,104px)}
+.act-open__k{display:flex;align-items:center;gap:14px;font:500 12px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.act-open__k b{display:inline-grid;place-items:center;width:30px;height:30px;font-weight:500;font-size:13px;color:#fff;background:var(--accent)}
+.act-open__t{margin-top:20px;font-size:clamp(48px,8vw,128px);font-weight:800;letter-spacing:-.05em;line-height:.9}
+.act-open__fig{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:end;gap:20px clamp(28px,4vw,64px);margin-top:clamp(36px,6vh,80px);padding-top:clamp(24px,3vw,36px);border-top:1px solid var(--hair-2)}
+.act-open__num{font-size:clamp(84px,14vw,200px);font-weight:800;letter-spacing:-.06em;line-height:.8;font-variant-numeric:tabular-nums;white-space:nowrap}
+.act-open__num small{font-size:.32em;letter-spacing:-.03em;margin-left:.12em;font-weight:750}
+.act-open__num.red{color:var(--accent-text)}
+.act-open__side{display:grid;gap:12px;padding-bottom:.4em;max-width:34ch}
+.act-open__txt{font-size:clamp(19px,1.7vw,25px);line-height:1.32;font-weight:600;letter-spacing:-.012em}
+@media (max-width:760px){.act-open__fig{grid-template-columns:minmax(0,1fr)}.act-open{min-height:0}}
+.scene{padding-block:clamp(56px,8vw,112px);scroll-margin-top:var(--local-h)}
+.act-open+.scene{padding-top:0}
+.scene+.scene{border-top:1px solid var(--hair)}
+.kick{display:flex;align-items:center;gap:12px;font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.kick b{font-weight:500;color:var(--accent-text)}
+.kick::after{content:"";width:40px;height:1px;background:var(--accent)}
+.scene-head .dek{margin-top:4px}
+.scene-foot{margin-top:18px}
+
+/* ---------- uporedna tabela ---------- */
+.ctab{width:100%;min-width:680px;border-collapse:collapse;font-size:15.5px;line-height:1.45}
+.ctab th{font:500 11px/1.3 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 18px 10px 0;border-bottom:1px solid var(--ink);vertical-align:bottom}
+.ctab th.cg{color:var(--ink)}
+.ctab td{padding:14px 18px 14px 0;border-bottom:1px solid var(--hair);vertical-align:top}
+.ctab td:first-child{font-weight:600;width:22%}
+.ctab td.v{font-variant-numeric:tabular-nums;font-weight:700;letter-spacing:-.01em}
+.ctab td.v small,.ctab td small{display:block;font:400 12px/1.5 var(--f-mono);letter-spacing:0;color:var(--muted);margin-top:3px}
+.ctab td.r{font:500 13px/1.45 var(--f-mono);color:var(--ink-2)}
+.ctab tr.grp td{padding:26px 0 8px;font:500 11.5px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text);border-bottom:1px solid var(--hair-2);width:auto}
+.ctab .neg{color:var(--accent-text)}
+.ctab tbody tr:hover td{background:var(--accent-wash)}
+.ctab tbody tr.grp:hover td{background:none}
+
+/* ---------- uporedne trake ---------- */
+.duo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
+.duo>figure{margin:0;padding:24px 28px 26px 0;border-bottom:1px solid var(--hair);min-width:0;display:grid;gap:12px;align-content:start}
+.duo>figure:not(:nth-child(3n+1)){padding-left:28px;border-left:1px solid var(--hair)}
+.duo h4{font-size:18px;font-weight:750;letter-spacing:-.015em}
+.duo .u{font:400 12px/1.4 var(--f-mono);color:var(--muted);margin-top:-6px}
+.bar{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:10px;align-items:center}
+.bar>span:first-child{font:500 12px/1 var(--f-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2)}
+.bar .t{position:relative;height:22px;background:var(--n1)}
+.bar .f{position:absolute;inset:0 auto 0 0;transform-origin:left;transition:transform 1.1s var(--ease)}
+.bar.cg .f{background:var(--cg)}.bar.sg .f{background:var(--sg)}
+.bar b{font:500 13.5px/1 var(--f-mono);font-variant-numeric:tabular-nums;min-width:92px;text-align:right}
+
+.js .duo figure:not(.is-in) .f{transform:scaleX(0)}
+.duo .verdict{font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.duo .verdict strong{color:var(--ink)}
+@media (max-width:1100px){.duo{grid-template-columns:repeat(2,minmax(0,1fr))}.duo>figure:not(:nth-child(3n+1)){padding-left:0;border-left:0}.duo>figure:nth-child(even){padding-left:24px;border-left:1px solid var(--hair)}}
+@media (max-width:640px){.duo{grid-template-columns:minmax(0,1fr)}.duo>figure:nth-child(even){padding-left:0;border-left:0}.duo>figure{padding-right:0}}
+
+/* ---------- istorija ---------- */
+.tls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(32px,5vw,80px)}
+.tl h4{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:800;letter-spacing:-.02em;padding-bottom:16px;border-bottom:1px solid var(--ink)}
+.tl ol{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:118px minmax(0,1fr);gap:4px 20px;padding:16px 0;border-bottom:1px solid var(--hair)}
+.tl time{font:500 13px/1.5 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--muted)}
+.tl li.key time{color:var(--accent-text)}
+
+.tl p{font-size:16px;line-height:1.5;color:var(--ink-2)}
+.tl li.key p{color:var(--ink);font-weight:600}
+@media (max-width:860px){.tls{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:440px){.tl li{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- sastav stanovništva ---------- */
+.mix{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(32px,5vw,80px)}
+.mix figure{margin:0;display:grid;gap:14px;align-content:start;min-width:0}
+.mix h4{font-size:18px;font-weight:750;letter-spacing:-.015em}
+.stack{display:flex;height:44px;gap:2px}
+.stack i{display:block;height:100%;min-width:3px}
+.keys{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px;list-style:none;margin:0;padding:0}
+.keys li{display:flex;align-items:center;gap:10px;font-size:14.5px;padding-bottom:8px;border-bottom:1px solid var(--hair)}
+.keys li i{width:10px;height:10px;flex:none}
+.keys li b{margin-left:auto;font:500 13px/1 var(--f-mono);font-variant-numeric:tabular-nums}
+.mix .note{font-size:15px;line-height:1.55;color:var(--ink-2)}
+@media (max-width:860px){.mix{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:420px){.keys{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- indeksi ---------- */
+.idx{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
+.idx>div{padding:24px 28px 26px 0;border-bottom:1px solid var(--hair);display:grid;gap:14px;align-content:start;min-width:0}
+.idx>div:not(:nth-child(3n+1)){padding-left:28px;border-left:1px solid var(--hair)}
+.idx h4{font-size:18px;font-weight:750;letter-spacing:-.015em}
+.idx .u{font:400 12px/1.4 var(--f-mono);color:var(--muted);margin-top:-8px}
+.idx dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0}
+.idx dl div{display:grid;gap:4px}
+.idx dt{font:500 11px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.idx dt.cg{color:var(--ink)}
+.idx dd{margin:0;font-size:38px;font-weight:800;letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
+.idx dd small{display:block;font:400 12px/1.5 var(--f-mono);letter-spacing:0;color:var(--ink-2);margin-top:4px}
+.idx .win{justify-self:start;font:500 10.5px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:6px 8px;border:1px solid var(--ink)}
+.idx .win{border-color:var(--accent);color:var(--accent-text)}
+@media (max-width:1100px){.idx{grid-template-columns:repeat(2,minmax(0,1fr))}.idx>div:not(:nth-child(3n+1)){padding-left:0;border-left:0}.idx>div:nth-child(even){padding-left:24px;border-left:1px solid var(--hair)}}
+@media (max-width:640px){.idx{grid-template-columns:minmax(0,1fr)}.idx>div:nth-child(even){padding-left:0;border-left:0}.idx>div{padding-right:0}}
+
+/* ---------- pouke ---------- */
+.lessons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--ink);list-style:none;margin:0;padding:0}
+.lessons li{padding:26px 32px 28px 0;border-bottom:1px solid var(--hair);display:grid;gap:10px;align-content:start;min-width:0}
+.lessons li:nth-child(even){padding-left:32px;border-left:1px solid var(--hair)}
+.lessons b.n{font:500 13px/1 var(--f-mono);color:var(--accent-text)}
+.lessons h4{font-size:22px;font-weight:750;letter-spacing:-.02em;line-height:1.15}
+.lessons p{font-size:16px;line-height:1.55;color:var(--ink-2)}
+.lessons p.sg{color:var(--ink);font-size:15px}
+.lessons p.sg span{font:500 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+@media (max-width:860px){.lessons{grid-template-columns:minmax(0,1fr)}.lessons li:nth-child(even){padding-left:0;border-left:0}.lessons li{padding-right:0}}
+.limit{margin-top:clamp(32px,4vw,48px);padding-left:20px;border-left:2px solid var(--accent);max-width:72ch;font-size:17px;line-height:1.6;color:var(--ink-2)}
+.limit strong{color:var(--ink)}
+
+/* ---------- izvori ---------- */
+.srcs{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink);columns:2;column-gap:clamp(32px,5vw,72px)}
+.srcs li{break-inside:avoid;padding:14px 0;border-bottom:1px solid var(--hair);font-size:15px;line-height:1.5}
+.srcs li span{display:block;font:400 12px/1.5 var(--f-mono);color:var(--muted);margin-top:2px}
+@media (max-width:760px){.srcs{columns:1}}
+.method-list{display:grid;gap:14px;max-width:72ch;font-size:16.5px;line-height:1.6;color:var(--ink-2);padding-left:20px;margin:0}
+.method-list strong{color:var(--ink)}
+.coi{margin-top:clamp(40px,5vw,64px);padding:24px 26px;background:var(--paper);display:grid;gap:10px;max-width:80ch}
+.coi p:not(.kick){font-size:16px;line-height:1.6;color:var(--ink-2)}
+
+.tscroll{border-top:1px solid var(--ink)}
+.tscroll .ctab th{border-top:0}
+
+/* ---------- A2 jaz: sticky scena ---------- */
+.gap .scrolly__stage{display:flex;align-items:center}
+.gap .scrolly__steps{margin-top:calc(-1 * max(420px, 100svh - var(--local-h)))}
+.gap .step{min-height:90svh}
+.gap__grid{width:100%;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,6vw,104px);align-items:center}
+.gap__k{font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px}
+.gap__k b{font-weight:500;color:var(--accent-text)}
+.gap__v{font-size:clamp(96px,13vw,200px);font-weight:800;letter-spacing:-.065em;line-height:.84;margin-top:16px;color:var(--accent-text);font-variant-numeric:tabular-nums;white-space:nowrap}
+.gap__l{font-size:clamp(20px,2vw,28px);font-weight:750;letter-spacing:-.02em;line-height:1.15;max-width:22ch;margin-top:14px;text-wrap:balance}
+.gap__vis{display:grid;gap:22px}
+.gap__row{display:grid;gap:8px}
+.gap__row .lab{display:flex;justify-content:space-between;gap:12px;font:500 12px/1 var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2)}
+.gap__row .lab b{font-weight:500;color:var(--ink);text-transform:none;letter-spacing:0;font-size:14px;font-variant-numeric:tabular-nums}
+.gap__track{height:clamp(44px,7vh,72px);background:var(--n1);position:relative}
+.gap__fill{position:absolute;inset:0 auto 0 0;width:100%;transform-origin:left;transform:scaleX(var(--s,1));transition:transform 1.1s var(--ease)}
+.gap__row.cg .gap__fill{background:var(--cg)}.gap__row.sg .gap__fill{background:var(--sg)}
+.gap__src{min-height:3em}
+.gap__dots{display:flex;gap:6px}
+.gap__dots i{width:22px;height:2px;background:var(--hair-2);transition:background .4s}
+.gap__dots i.on{background:var(--ink)}
+.gap__step-n{display:none}
+@media (max-width:860px){.gap__grid{grid-template-columns:minmax(0,1fr);gap:22px}.gap__v{font-size:clamp(84px,26vw,140px);margin-top:10px}.gap__l{font-size:20px}.gap__vis{gap:14px}.gap__track{height:40px}}
+.no-js .gap .scrolly__stage{position:relative;top:auto;height:auto;min-height:0;padding-block:24px}
+
+/* ---------- B1 os vremena ---------- */
+.axis{position:relative;margin-top:8px;padding-block:8px 4px}
+.axis__lane{position:relative;height:56px;border-bottom:1px solid var(--hair-2)}
+.axis__lane>span.n{position:absolute;left:0;top:6px;font:500 11.5px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.axis__ev{position:absolute;bottom:-6px;width:11px;height:11px;margin-left:-5.5px;background:var(--bg);border:1.5px solid var(--n3);cursor:default;transition:transform .3s var(--ease)}
+.axis__ev:hover,.axis__ev:focus-visible{transform:scale(1.35)}
+.axis__ev.key{background:var(--cg);border-color:var(--cg)}
+.axis__lane.sg .axis__ev.key{background:var(--sg);border-color:var(--sg)}
+.axis__ev.ind{background:var(--accent);border-color:var(--accent)}
+.axis__ticks{position:relative;height:28px}
+.axis__ticks span{position:absolute;top:8px;transform:translateX(-50%);font:500 11px/1 var(--f-mono);color:var(--muted)}
+.axis__gap{position:absolute;top:0;bottom:30px;border-left:1px dashed var(--accent);border-right:1px dashed var(--accent);background:var(--accent-wash)}
+.axis__gap b{position:absolute;top:-24px;left:50%;transform:translateX(-50%);white-space:nowrap;font:500 12px/1 var(--f-mono);color:var(--accent-text)}
+@media (max-width:640px){.axis__ticks span:nth-child(even){display:none}}
+
+/* ---------- mreža poglavlja (kao na Veljem brdu) ---------- */
+.cover__chap{padding-block:clamp(56px,8vw,96px) clamp(72px,10vw,128px)}
+.cover__chaphead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 24px;padding-bottom:16px;border-bottom:1px solid var(--ink)}
+.cover__chaphead h2{font-size:clamp(22px,2vw,28px);font-weight:750;letter-spacing:-.02em}
+.chap-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.chap-grid a{display:flex;flex-direction:column;gap:10px;height:100%;padding:20px 16px 24px 0;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--hair);position:relative;transition:color .25s}
+.chap-grid li+li a{padding-left:16px;border-left:1px solid var(--hair)}
+.chap-grid a::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.chap-grid a:hover::after{transform:scaleX(1)}
+.chap-grid b{font:500 12px/1 var(--f-mono);color:var(--accent-text)}
+.chap-grid strong{font-size:19px;font-weight:750;letter-spacing:-.02em}
+.chap-grid span{font-size:13.5px;line-height:1.45;color:var(--muted)}
+@media (max-width:1100px){.chap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.chap-grid li+li a{padding-left:0;border-left:0}.chap-grid li:nth-child(even) a{padding-left:16px;border-left:1px solid var(--hair)}}
+@media (max-width:520px){.chap-grid{grid-template-columns:minmax(0,1fr)}.chap-grid li:nth-child(even) a{padding-left:0;border-left:0}.chap-grid a{flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:4px 12px;padding:15px 0}.chap-grid span{flex-basis:100%}}

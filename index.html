@@ -55,6 +55,21 @@
 @keyframes cue{to{top:100%}}
 @media (max-width:860px){.hero{min-height:0}.hero__foot{grid-template-columns:minmax(0,1fr)}.cue{display:none}.hero__foot{padding-bottom:56px}}
 
+/* ---------- nova analiza ---------- */
+.nova{padding-top:var(--sec);border-top:1px solid var(--hair)}
+.nova__head{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px clamp(32px,6vw,96px);align-items:end}
+.nova__head .eyebrow{grid-column:1 / -1}
+.nova__head h2 a{text-decoration:none;color:inherit;background:linear-gradient(var(--accent),var(--accent)) 0 96%/0 3px no-repeat;transition:background-size .7s var(--ease)}
+.nova__head h2 a:hover{background-size:100% 3px}
+.nova__head .dek{margin-bottom:22px}
+.nova__nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--ink)}
+.nova__nums>a{display:grid;gap:12px;align-content:start;padding:26px 28px 6px 0;text-decoration:none;color:var(--ink)}
+.nova__nums>a+a{padding-left:28px;border-left:1px solid var(--hair-2)}
+.nova__v{font-size:clamp(60px,7.6vw,104px);font-weight:800;letter-spacing:-.055em;line-height:.88;font-variant-numeric:tabular-nums;white-space:nowrap}
+.nova__nums p:not(.nova__v){font-size:16px;line-height:1.55;color:var(--ink-2);max-width:32ch}
+.nova__nums>a:hover .nova__v{color:var(--accent-text)}
+@media (max-width:860px){.nova__head{grid-template-columns:minmax(0,1fr)}.nova__nums{grid-template-columns:minmax(0,1fr)}.nova__nums>a+a{padding-left:0;border-left:0;border-top:1px solid var(--hair-2)}.nova__nums>a{padding:24px 0}}
+
 /* ---------- latest analysis ---------- */
 .feat{padding-top:var(--sec);border-top:1px solid var(--hair)}
 .feat__head{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px clamp(32px,6vw,96px);align-items:end}
@@ -107,7 +122,7 @@
 @media (max-width:860px) and (max-height:700px){.nums__ctx{display:none}}
 
 /* sections below the fold skip layout and paint until the reader gets close */
-.sat-teaser,.three,#oblasti,#metod,#kontakt{content-visibility:auto;contain-intrinsic-size:auto 900px}
+.nova__nums,.sat-teaser,.three,#oblasti,#metod,#kontakt{content-visibility:auto;contain-intrinsic-size:auto 900px}
 
 /* ---------- satellite teaser + chapters ---------- */
 .sat-teaser{padding-block:var(--sec)}
@@ -226,13 +241,31 @@ a.area:hover h3{color:var(--accent-text)}
         </div>
       </div>
     </div>
-    <a class="cue" href="#analize"><span>Najnovija analiza</span><i aria-hidden="true"></i></a>
+    <a class="cue" href="#nova"><span>Najnovija analiza</span><i aria-hidden="true"></i></a>
+  </section>
+
+  <section class="nova" id="nova" aria-labelledby="nova-h">
+    <div class="wrap">
+      <div class="nova__head">
+        <p class="eyebrow" data-reveal>Nova analiza · Crna Gora · Svijet · Oktobar 2026.</p>
+        <h2 class="h-sec" id="nova-h" data-reveal><a href="/analize/crna-gora-singapur/">Crna Gora i Singapur: dvije male države, jedan jaz</a></h2>
+        <div data-reveal style="--d:120ms">
+          <p class="dek">Istorija, ekonomija, javne finansije, demografija, politika i šest međunarodnih indeksa, u sedam poglavlja. Singapur vodi po sposobnosti države, Crna Gora po indeksu demokratije i slobodi medija.</p>
+          <a class="btn btn--red" href="/analize/crna-gora-singapur/">Otvorite analizu <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="nova__nums">
+        <a href="/analize/crna-gora-singapur/#jaz" data-reveal><p class="nova__v red"><span data-count="6.7" data-dec="1">6,7</span>×</p><p>veći BDP po stanovniku u Singapuru: 98.878 naspram 14.817 USD (2025).</p></a>
+        <a href="/analize/crna-gora-singapur/#dug" data-reveal style="--d:100ms"><p class="nova__v">−4,3%</p><p>BDP-a deficit Crne Gore 2025, prema procjeni Evropske komisije. Singapur: suficit 1,9%.</p></a>
+        <a href="/analize/crna-gora-singapur/#indeksi" data-reveal style="--d:200ms"><p class="nova__v"><span data-count="46">46</span>/<span data-count="84">84</span></p><p>poena na indeksu percepcije korupcije 2025: 65. naspram 3. mjesta u svijetu.</p></a>
+      </div>
+    </div>
   </section>
 
   <section class="feat" id="analize" aria-labelledby="feat-h">
     <div class="wrap">
       <div class="feat__head">
-        <p class="eyebrow" data-reveal>Najnovija analiza · Crna Gora · Javne finansije · Oktobar 2026.</p>
+        <p class="eyebrow" data-reveal>Analiza · Crna Gora · Javne finansije · Oktobar 2026.</p>
         <h2 class="h-sec" id="feat-h" data-reveal><a href="/analize/velje-brdo/">Velje brdo: obećano 20.000 stanova, izgrađeno 0</a></h2>
         <div data-reveal style="--d:120ms">
           <p class="dek">Državni projekat od 20.000 stanova, dvije godine poslije najave. Obećanja Vlade stavljena su pored ugovora, budžeta, rokova i satelitskih snimaka terena.</p>
@@ -348,7 +381,7 @@ a.area:hover h3{color:var(--accent-text)}
         <li data-reveal style="--d:120ms"><a class="area" href="https://www.tendering.me/"><span class="area__n">03</span><h3>Javne nabavke</h3><p>Naručioci, ponuđači, vrijednosti i ishodi postupaka od 2020.</p><span class="area__s">Tendering.me <span class="arr" aria-hidden="true">→</span></span></a></li>
         <li data-reveal><div class="area is-soon"><span class="area__n">04</span><h3>Turizam i privreda</h3><p>Sezona, dolasci, prihodi, sektori koji nose rast.</p><span class="area__s">U pripremi</span></div></li>
         <li data-reveal style="--d:60ms"><div class="area is-soon"><span class="area__n">05</span><h3>Tržišta i kompanije</h3><p>Rezultati, vrednovanje i sektori na svjetskim berzama.</p><span class="area__s">U pripremi</span></div></li>
-        <li data-reveal style="--d:120ms"><div class="area is-soon"><span class="area__n">06</span><h3>Makroekonomija i EU</h3><p>Rast, inflacija, zaposlenost i put ka EU u poređenju sa regionom.</p><span class="area__s">U pripremi</span></div></li>
+        <li data-reveal style="--d:120ms"><a class="area" href="/analize/crna-gora-singapur/"><span class="area__n">06</span><h3>Makroekonomija i svijet</h3><p>Rast, inflacija, zaposlenost i javne finansije Crne Gore u poređenju sa drugim državama.</p><span class="area__s">Objavljeno · Crna Gora i Singapur <span class="arr" aria-hidden="true">→</span></span></a></li>
       </ol>
     </div>
   </section>
@@ -381,7 +414,7 @@ a.area:hover h3{color:var(--accent-text)}
 <footer class="gf">
   <div class="wrap">
     <span>© 2026 Podaci.me · Fidelity Consulting d.o.o. Podgorica</span>
-    <span><a href="/analize/velje-brdo/">Velje brdo</a> · <a href="https://www.tendering.me/">Tendering.me</a></span>
+    <span><a href="/analize/velje-brdo/">Velje brdo</a> · <a href="/analize/crna-gora-singapur/">Crna Gora i Singapur</a> · <a href="https://www.tendering.me/">Tendering.me</a></span>
     <span>Biznis analitika iz Crne Gore i svijeta.</span>
   </div>
 </footer>

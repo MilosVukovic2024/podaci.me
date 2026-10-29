@@ -22,9 +22,10 @@ analize/velje-brdo/story.css               scene analize
 analize/velje-brdo/story.js                grafikoni i scene analize (grade se kad se čitalac približi)
 analize/velje-brdo/img/                    Sentinel-2 snimci: original .jpg/.png + .webp (1100 i 720 px) + crno-bijela verzija (-bw)
 analize/crna-gora-singapur/                Crna Gora i Singapur: 7 poglavlja (A Država … G Dokazi); story.css i story.js (sticky scena „Četiri omjera“)
+analize/monstat-u-brojkama/index.html     Monstat u brojkama: samostalna stranica (34 oblasti, 465 grafikona, d3 sa CDN-a); vlastiti CSS, zaglavlje i podnožje kao na sajtu
 arhiva/skupstina-vmidmiko5c/index.html     Skupštinski monitor 2023–2026, sakriven: bez linkova, noindex, van sitemapa;
                                            stara adresa /analize/skupstina-2023-2026/ vodi na početnu (vercel.json)
-og-image.png, og-velje-brdo.png, og-crna-gora-singapur.png, og-skupstina.png, favicon.svg, fidelity-logo.svg
+og-image.png, og-velje-brdo.png, og-crna-gora-singapur.png, og-monstat-u-brojkama.png, og-skupstina.png, favicon.svg, fidelity-logo.svg
 vercel.json, robots.txt, sitemap.xml
 tools/build.js                             upisuje statičke dijelove Velje brda iz #vb-data (vidi dolje); sajt ga ne učitava
 ```

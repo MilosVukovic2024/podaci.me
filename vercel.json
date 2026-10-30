@@ -13,6 +13,16 @@
       "permanent": false
     },
     {
+      "source": "/analize/monstat-u-brojkama/",
+      "destination": "/analize/crna-gora-u-brojkama-monstata/",
+      "permanent": true
+    },
+    {
+      "source": "/analize/monstat-u-brojkama/:path*/",
+      "destination": "/analize/crna-gora-u-brojkama-monstata/",
+      "permanent": true
+    },
+    {
       "source": "/analize/monstat-u-brojkama/:path*",
       "destination": "/analize/crna-gora-u-brojkama-monstata/",
       "permanent": true

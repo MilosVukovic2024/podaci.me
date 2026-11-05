@@ -24,9 +24,10 @@ analize/velje-brdo/img/                    Sentinel-2 snimci: original .jpg/.png
 analize/crna-gora-singapur/                Crna Gora i Singapur: 7 poglavlja (A Država … G Dokazi); story.css i story.js (sticky scena „Četiri omjera“)
 analize/crna-gora-u-brojkama-monstata/index.html     Crna Gora u brojkama Monstata: samostalna stranica (34 oblasti, 465 grafikona, d3 sa CDN-a); vlastiti CSS, zaglavlje i podnožje kao na sajtu
 analize/mtel-sponzorstva/index.html       MTEL Crna Gora: sponzorstva i donacije 2020–2026: samostalna stranica (CSS dizajn sistema i JS ugrađeni), 8 poglavlja A–H
+analize/rebalans-budzeta-2026/index.html  Rebalans budžeta 2026: samostalna stranica (CSS i JS ugrađeni, podaci u <script id="d">), 8 poglavlja A–H + rezime za građane (dijalog, #rezime)
 arhiva/skupstina-vmidmiko5c/index.html     Skupštinski monitor 2023–2026, sakriven: bez linkova, noindex, van sitemapa;
                                            stara adresa /analize/skupstina-2023-2026/ vodi na početnu (vercel.json)
-og-image.png, og-velje-brdo.png, og-crna-gora-singapur.png, og-monstat-u-brojkama.png, og-mtel-sponzorstva.png, og-skupstina.png, favicon.svg, fidelity-logo.svg
+og-image.png, og-velje-brdo.png, og-rebalans-2026.png, og-crna-gora-singapur.png, og-monstat-u-brojkama.png, og-mtel-sponzorstva.png, og-skupstina.png, favicon.svg, fidelity-logo.svg
 vercel.json, robots.txt, sitemap.xml
 tools/build.js                             upisuje statičke dijelove Velje brda iz #vb-data (vidi dolje); sajt ga ne učitava
 ```

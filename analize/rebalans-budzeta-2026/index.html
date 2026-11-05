@@ -114,6 +114,18 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .cover__h{margin-top:clamp(20px,3vh,32px);font-size:clamp(44px,7.6vw,120px);font-weight:800;letter-spacing:-.05em;line-height:.92;text-wrap:balance}
 .cover__h>span{display:block}
 .cover__h .l2{color:var(--accent)}
+.punch{margin-top:clamp(32px,5vh,56px);border-top:2px solid var(--ink);display:grid}
+.punch__row{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr) auto;gap:10px 28px;align-items:center;padding:16px 0;border-bottom:1px solid var(--hair)}
+.punch__k{font-size:clamp(20px,2vw,28px);font-weight:750;letter-spacing:-.025em;line-height:1.1}
+.punch__k em{font-style:normal;color:var(--accent)}
+.punch__bar{height:clamp(18px,2.2vw,30px);background:var(--n1);position:relative}
+.punch__bar i{position:absolute;inset:0 auto 0 0;background:var(--ink)}
+.punch__row.r .punch__bar i{background:var(--accent)}
+.punch__v{font-size:clamp(40px,5.6vw,84px);font-weight:800;letter-spacing:-.05em;line-height:.9;font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;min-width:4.6ch}
+.punch__v small{font-size:.32em;letter-spacing:-.01em;margin-left:.15em}
+.punch__row.r .punch__v{color:var(--accent)}
+.punch__note{grid-column:1/-1;margin-top:-4px;font:500 13px/1.5 var(--f-mono);color:var(--muted)}
+@media (max-width:700px){.punch__row{grid-template-columns:minmax(0,1fr) auto}.punch__k{grid-column:1/-1}}
 .cover__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:28px clamp(32px,6vw,96px);align-items:end;margin-top:clamp(32px,5vh,56px)}
 .cover__copy .lede{max-width:44ch}
 .cover__flag{margin-top:18px;padding-left:16px;border-left:2px solid var(--accent);font-size:17px;font-weight:600;line-height:1.45;max-width:48ch}
@@ -299,6 +311,11 @@ dialog.rez::backdrop{background:rgba(11,11,12,.62)}
   <div class="wrap">
     <p class="eyebrow">Javne finansije · Rebalans budžeta Crne Gore · 5.&nbsp;11.&nbsp;2026.</p>
     <h1 class="cover__h"><span>Rashodi skaču brže od prihoda,</span> <span class="l2">a razliku pokriva novi kredit</span></h1>
+    <div class="punch" role="group" aria-label="Rebalans u tri broja">
+      <div class="punch__row"><p class="punch__k">Prihodi veći <em>samo</em></p><span class="punch__bar" aria-hidden="true"><i style="width:22.9%"></i></span><p class="punch__v">+20,8<small>mil. €</small></p></div>
+      <div class="punch__row r"><p class="punch__k">Rashodi veći za</p><span class="punch__bar" aria-hidden="true"><i style="width:100%"></i></span><p class="punch__v">+90,8<small>mil. €</small></p></div>
+      <div class="punch__row r"><p class="punch__k">Deficit veći za</p><span class="punch__bar" aria-hidden="true"><i style="width:77.1%"></i></span><p class="punch__v">+70,0<small>mil. €</small></p><p class="punch__note">Deficit: 278,3 → 348,4 mil. € (+25&nbsp;%). Na svaki euro novih prihoda dolaze 4,4 eura novih rashoda.</p></div>
+    </div>
     <div class="cover__grid">
       <div class="cover__copy">
         <p class="lede">Vlada predlaže da budžet za 2026. poraste za <b class="tnum">100,65 mil. €</b>, dva mjeseca prije kraja godine. Porezi donose 40,79 mil. € više, donacije 20 mil. € manje, a izdaci rastu 90,80 mil. €. Razliku pokriva novi inostrani kredit.</p>

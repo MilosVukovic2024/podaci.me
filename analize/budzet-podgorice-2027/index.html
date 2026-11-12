@@ -286,6 +286,28 @@ dialog.rez::backdrop{background:rgba(11,11,12,.62)}
 .stk-l em{font:400 12px var(--f-mono);color:var(--muted);font-style:normal;text-align:right}
 .stk-l .sw{width:14px;height:14px;border:1px solid var(--hair-2)}
 @media(max-width:560px){.stk-l li{grid-template-columns:14px minmax(0,1fr) auto}.stk-l em{display:none}}
+
+.kp{background:var(--night);color:#f5f5f7;--ink:#f5f5f7;--ink-2:#c7c7cc;--muted:#8e8e93;--hair:#2c2c2e;padding-block:clamp(56px,8vw,112px)}
+.kp__head{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;max-width:900px}
+.kp__h{margin:0;font-weight:800;font-size:clamp(34px,5vw,64px);line-height:1.02;letter-spacing:-.035em;text-wrap:balance}
+.kp__h span{color:#ff3b45}
+.kp__lead{margin:0;font-size:clamp(17px,1.5vw,20px);line-height:1.55;color:var(--ink-2);max-width:62ch}
+.kp__list{list-style:none;margin:clamp(36px,5vw,56px) 0 0;padding:0;border-top:1px solid var(--ink);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));column-gap:48px}
+.kp__list li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 16px;padding:24px 0;border-bottom:1px solid var(--hair)}
+.kp__list b{font:500 13px/1.6 var(--f-mono);color:#ff3b45;padding-top:4px}
+.kp__list h3{margin:0 0 8px;font-size:21px;line-height:1.25;letter-spacing:-.015em;font-weight:700;text-wrap:balance}
+.kp__list p{margin:0;font-size:16px;line-height:1.58;color:var(--ink-2)}
+.kp__list p strong{color:var(--ink)}
+.kp__list li:last-child:nth-child(3n+1){grid-column:1/-1}
+.kp__list li:last-child:nth-child(3n+1) p{max-width:80ch}
+.kp__list a{display:inline-block;margin-top:10px;font:500 12px var(--f-mono);letter-spacing:.04em;color:var(--ink);border-bottom:1px solid #ff3b45;text-decoration:none}
+.kp__foot{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:32px 48px;margin-top:clamp(40px,5vw,64px)}
+.kp__ask{border-top:2px solid #ff3b45;padding-top:18px}
+.kp__ask ol{margin:12px 0 0;padding-left:22px;display:grid;gap:8px;font-size:16px;line-height:1.5;color:var(--ink-2)}
+.kp__ask ol li::marker{font-family:var(--f-mono);color:#ff3b45}
+.kp__ok{border-top:1px solid var(--ink);padding-top:18px}
+.kp__ok p:not(.eyebrow){margin:12px 0 0;font-size:16px;line-height:1.58;color:var(--ink-2)}
+.kp .eyebrow{color:var(--muted)}
 </style>
 </head>
 <body>
@@ -320,7 +342,7 @@ dialog.rez::backdrop{background:rgba(11,11,12,.62)}
       <div class="cover__copy">
         <p class="lede">Glavni grad planira da u 2027. potroši <b class="tnum">183,3 mil. €</b>. Više od polovine, <b class="tnum">94,3 mil. €</b>, ide na kapitalne izdatke, od čega 22,9 mil. € na postrojenje za prečišćavanje otpadnih voda. Deficit od 35,4 mil. € pokriva se novcem koji je ostao neutrošen iz ranijih godina.</p>
         <p class="cover__flag">Sekretarijat za finansije raspolaže sa 134,2 mil. € ili 73&nbsp;% budžeta. Cijeli kapitalni budžet Skupština odobrava kao pet zbirnih konta, a spisak projekata postoji samo u obrazloženju, koje nije dio odluke.</p>
-        <p style="margin-top:24px"><button class="btn" type="button" data-rez>Rezime za građane <span class="arr" aria-hidden="true">→</span></button></p>
+        <p style="margin-top:24px;display:flex;flex-wrap:wrap;gap:12px"><a class="btn" href="#kriticki">Ključne poruke kritike <span class="arr" aria-hidden="true">→</span></a><button class="btn" type="button" data-rez style="background:transparent;color:var(--accent-text)">Rezime za građane <span class="arr" aria-hidden="true">→</span></button></p>
       </div>
       <dl class="stats">
         <div><dt>deficit po članu 2 (prihodi bez depozita minus izdaci)</dt><dd class="red">35,4<small>mil. €</small></dd></div>
@@ -334,6 +356,41 @@ dialog.rez::backdrop{background:rgba(11,11,12,.62)}
     <ol class="chap-grid" id="chapGrid"></ol>
   </div>
 </header>
+
+<section class="kp" id="kriticki" aria-labelledby="kp-h"><div class="wrap">
+  <div class="kp__head">
+    <p class="eyebrow">Ocjena Podaci.me · Ključne poruke</p>
+    <h2 class="kp__h" id="kp-h">Budžet rasta <span>bez obrazloženja rasta.</span></h2>
+    <p class="kp__lead">Prihodi su optimistični i oslonjeni na jedan porez. Tekuća potrošnja raste brže od investicija, a investicije su van kontrole Skupštine. Problem nije koliko Grad troši, već što Skupština i javnost ne vide kako troši.</p>
+  </div>
+  <ol class="kp__list">
+    <li><b>01</b><div><h3>Rast duguje jednom porezu koji Grad ne kontroliše.</h3><p>Porez na dohodak donosi <strong>+19,8 mil. €</strong>, više od cijelog rasta budžeta (+19,1). Plan od 60,5 mil. € (+48,65&nbsp;%) obrazložen je jednom rečenicom, bez ostvarenja do septembra i bez osnova za novi udio. Porez i prirez čine 43&nbsp;% primitaka.</p><a href="#B">Poglavlje B →</a></div></li>
+    <li><b>02</b><div><h3>Novac ide u tekuću potrošnju, investicije su izlog.</h3><p>Tekuća potrošnja raste <strong>19&nbsp;%</strong>, kapitalni izdaci 5,6&nbsp;%. Zarade +4,36 mil. € bez broja novih radnih mjesta, transferi preduzećima +6,1 mil. € bez programa rada. Fiksni troškovi rastu na prihodu čija održivost nije provjerena.</p><a href="#C">Poglavlje C →</a></div></li>
+    <li><b>03</b><div><h3>Odbornici ne odlučuju o investicijama.</h3><p>Svih <strong>94,3 mil. €</strong> kapitalnog budžeta stoji kao pet zbirnih konta Sekretarijata za finansije, koji vodi 73&nbsp;% budžeta. Spisak projekata je samo u obrazloženju. Neutrošena kapitalna sredstva gradonačelnik preusmjerava bez ograničenja, dok za sve ostalo važi granica od 10&nbsp;%.</p><a href="#D">Poglavlja D i E →</a></div></li>
+    <li><b>04</b><div><h3>Plan je veći od mogućnosti izvršenja.</h3><p>Neutrošeni novac raste sa 31,3 na <strong>36,0 mil. €</strong>, a njime se pokriva deficit od 35,4 mil. €. Grad svake godine planira više nego što realizuje, a za 2027. planira još više.</p><a href="#D">Poglavlje D →</a></div></li>
+    <li><b>05</b><div><h3>Stavke bez obrazloženja.</h3><p>10 mil. € za puteve „i drugih opština”, 1,34 mil. € za vidikovac sa ugostiteljskim objektima, 6 mil. € za imovinsko-pravne odnose bez spiska predmeta. Lokalni javni emiter dobija 13 puta više od svih nevladinih organizacija, partije 4,3 puta više.</p><a href="#C">Poglavlja C i D →</a></div></li>
+    <li><b>06</b><div><h3>Sporovi koštaju tri puta više od duga, a dug je možda donacija.</h3><p>Sudski troškovi, presude i imovinski odnosi: <strong>10 mil. €</strong>, prema 3,3 mil. € otplate kredita i kamata. Kapitalne donacije od 16,6 mil. € dolaze po ugovoru o „kreditnim i grant” sredstvima; ako je dio kredit, zaduženje je prikazano kao poklon.</p><a href="#F">Poglavlje F →</a></div></li>
+    <li><b>07</b><div><h3>Dokument se ne slaže sam sa sobom.</h3><p>Član 1 bez iznosa, tekuća potrošnja 65,99 umjesto 83,65 mil. €, nedovršena rečenica o dugu, 0,3 mil. € otplate bez kredita, deficit 35,37 umjesto 33,36 mil. € po GFS-u. <strong>Dvanaest</strong> nekonzistentnosti onemogućava ozbiljnu skupštinsku kontrolu.</p><a href="#G">Poglavlje G →</a></div></li>
+  </ol>
+  <div class="kp__foot">
+    <div class="kp__ask">
+      <p class="eyebrow">Šta treba promijeniti prije utvrđivanja Predloga</p>
+      <ol>
+        <li>Obrazložiti plan poreza na dohodak: ostvarenje do septembra i osnov za novi udio.</li>
+        <li>Raspodijeliti kapitalni budžet po projektima u posebnom dijelu odluke.</li>
+        <li>Ograničiti preusmjeravanje kapitalnih sredstava na 10&nbsp;%, kao i ostala preusmjeravanja.</li>
+        <li>Navesti broj novih zaposlenih po potrošačkim jedinicama.</li>
+        <li>Razdvojiti grant i kredit u donacijama za otpadne vode.</li>
+        <li>Ispraviti dvanaest nekonzistentnosti iz poglavlja G.</li>
+      </ol>
+    </div>
+    <div class="kp__ok">
+      <p class="eyebrow">Šta je u redu</p>
+      <p>Zbirovi člana 3 i svih 34 potrošačke jedinice su tačni. Fiskalno pravilo je formalno ispunjeno: tekući prihodi pokrivaju tekuću potrošnju i otplatu duga. Najveća investicija, postrojenje za prečišćavanje otpadnih voda (22,9 mil. €), opravdana je i dugo odlagana.</p>
+      <p>Javna rasprava traje do 25. 11. 2026. Primjedbe: finansije@podgorica.me ili Njegoševa 13.</p>
+    </div>
+  </div>
+</div></section>
 
 <!-- A -->
 <section class="act tone-paper" id="A" data-t="Okvir" data-d="Odakle dolazi 19,1 mil. € više i gdje odlazi.">

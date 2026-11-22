@@ -165,6 +165,7 @@ footer{padding-block:32px;display:grid;gap:10px}
 .ht tbody tr.sym td.pn{font-weight:500}
 .symtag{font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--line);padding:1px 5px;margin-left:6px;white-space:nowrap;color:var(--muted)}
 .cta{display:inline-block;background:var(--red);color:#fff;font-weight:600;font-size:15px;padding:11px 18px;text-decoration:none}
+.tbtn{border:0;cursor:pointer;font-family:inherit}
 .cta:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
 .stat .l b{color:var(--fg);font-weight:700}
 .row.hl{background:var(--red-soft);padding-inline:10px;margin-inline:-10px}
@@ -291,6 +292,8 @@ footer{padding-block:32px;display:grid;gap:10px}
             <h4>Svih 38 zdravstvenih projekata sa 0 € izvršenja</h4>
             <div class="hl-sum" id="hsum"></div>
           </div>
+          <p><button class="cta tbtn" type="button" data-t="hTables" data-l="Prikaži tabelu svih 38 projekata" aria-expanded="false" aria-controls="hTables">Prikaži tabelu svih 38 projekata ↓</button></p>
+          <div id="hTables" hidden>
           <div class="tbl2"><table class="ht">
             <thead><tr><th>#</th><th>Projekat</th><th>Ustanova / grad</th><th class="num">Plan 2026</th><th class="num">Sa izmjenama</th><th class="num">Izvršeno</th></tr></thead>
             <tbody id="hzero"></tbody>
@@ -301,6 +304,7 @@ footer{padding-block:32px;display:grid;gap:10px}
             <tbody id="hpaid"></tbody>
           </table></div>
           <p class="note">Spisak obuhvata sve projekte programa 21 011 iz izvještaja. Posljednjih 9 imaju plan od 0 do 5.000 € i označeni su kao simbolične pozicije: to su otvorene budžetske linije bez stvarnog novca za 2026. Kolonu „Ustanova / grad“ sam izveo iz naziva projekta.</p>
+          </div>
         </div>
       </article>
     </div>
@@ -371,7 +375,10 @@ footer{padding-block:32px;display:grid;gap:10px}
     <div class="split">
       <div class="meta"><span class="tag">05 · Svi projekti</span><span class="date">353 stavke</span></div>
       <div class="body">
-        <h2>Pretraga projekata</h2>
+        <h2>Svi projekti MJR</h2>
+        <p class="note">Tabela sa svih 353 projekta kapitalnog budžeta: pretraga po nazivu, opštini ili šifri, filteri i sortiranje po kolonama.</p>
+        <p><button class="cta tbtn" type="button" data-t="allT" data-l="Prikaži tabelu svih 353 projekta" aria-expanded="false" aria-controls="allT">Prikaži tabelu svih 353 projekta ↓</button></p>
+        <div id="allT" hidden style="display:grid;gap:22px">
         <div class="tools">
           <input type="search" id="q" placeholder="Projekat, opština ili šifra…" aria-label="Pretraga projekata">
           <button class="chip" id="fZero" aria-pressed="false">Samo bez izvršenja</button>
@@ -390,6 +397,7 @@ footer{padding-block:32px;display:grid;gap:10px}
             </tr></thead>
             <tbody id="tb"></tbody>
           </table>
+        </div>
         </div>
       </div>
     </div>
@@ -492,6 +500,13 @@ document.getElementById('q').addEventListener('input',e=>{st.q=e.target.value;dr
 [['fZero','zero'],['fBig','big']].forEach(([id,k])=>document.getElementById(id).addEventListener('click',e=>{st[k]=!st[k];e.currentTarget.setAttribute('aria-pressed',st[k]);draw()}));
 document.querySelectorAll('th button').forEach(b=>b.addEventListener('click',()=>{const k=+b.dataset.k;dir=(k===sortK)?-dir:(k<2?1:-1);sortK=k;draw()}));
 draw();
+// tabele su sakrivene; dugme ih otvara i zatvara
+document.querySelectorAll('.tbtn').forEach(b=>b.addEventListener('click',()=>{
+  const el=document.getElementById(b.dataset.t), open=el.hidden;
+  el.hidden=!open; b.setAttribute('aria-expanded',open);
+  b.textContent=open?'Sakrij tabelu ↑':b.dataset.l+' ↓';
+  if(open) el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+}));
 </script>
 </body>
 </html>

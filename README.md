@@ -27,9 +27,10 @@ analize/mtel-sponzorstva/index.html       MTEL Crna Gora: sponzorstva i donacije
 analize/rebalans-budzeta-2026/index.html  Rebalans budžeta 2026: samostalna stranica (CSS i JS ugrađeni, podaci u <script id="d">), 8 poglavlja A–H + rezime za građane (dijalog, #rezime)
 analize/budzet-podgorice-2027/index.html  Budžet Glavnog grada Podgorica 2027 (nacrt): samostalna stranica (CSS i JS ugrađeni), 8 poglavlja A–H + rezime za građane (dijalog, #rezime)
 analize/pravedna-tranzicija-pljevlja/index.html  Pljevlja poslije uglja (Plan pravedne tranzicije, v2): samostalna stranica (CSS i JS ugrađeni), 8 poglavlja A–H + rezime za građane (dijalog, #rezime)
+analize/mmf-euromodel-2026/index.html      MMF o Euromodelu (završna izjava misije po članu IV, 24. 11. 2026): samostalna stranica (CSS ugrađen, bez JS), poruke + 8 poglavlja A–H
 arhiva/skupstina-vmidmiko5c/index.html     Skupštinski monitor 2023–2026, sakriven: bez linkova, noindex, van sitemapa;
                                            stara adresa /analize/skupstina-2023-2026/ vodi na početnu (vercel.json)
-og-image.png, og-velje-brdo.png, og-rebalans-2026.png, og-budzet-podgorice-2027.png, og-pravedna-tranzicija-pljevlja.png, og-crna-gora-singapur.png, og-monstat-u-brojkama.png, og-mtel-sponzorstva.png, og-skupstina.png, favicon.svg, fidelity-logo.svg
+og-image.png, og-mmf-euromodel-2026.png, og-velje-brdo.png, og-rebalans-2026.png, og-budzet-podgorice-2027.png, og-pravedna-tranzicija-pljevlja.png, og-crna-gora-singapur.png, og-monstat-u-brojkama.png, og-mtel-sponzorstva.png, og-skupstina.png, favicon.svg, fidelity-logo.svg
 vercel.json, robots.txt, sitemap.xml
 tools/build.js                             upisuje statičke dijelove Velje brda iz #vb-data (vidi dolje); sajt ga ne učitava
 ```
